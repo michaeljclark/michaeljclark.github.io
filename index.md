@@ -88,6 +88,30 @@ Notes:
 
 ---
 
+### Logging
+
+Sample output from `rv-sim` with the `--log-instructions` option_
+
+```
+$ rv-sim -l build/riscv64-unknown-elf/bin/hello-world-pcrel
+rv-sim v0.0-alpha
+0000000000000000000 core-0   :0000000000010078 (4501    ) mv          a0, zero           
+0000000000000000001 core-0   :000000000001007a (00000597) auipc       a1, pc + 0         
+0000000000000000002 core-0   :000000000001007e (02658593) addi        a1, a1, 38         
+0000000000000000003 core-0   :0000000000010082 (4631    ) addi        a2, zero, 12       
+0000000000000000004 core-0   :0000000000010084 (4681    ) mv          a3, zero           
+0000000000000000005 core-0   :0000000000010086 (04000893) addi        a7, zero, 64       
+Hello World
+0000000000000000006 core-0   :000000000001008a (00000073) ecall                          
+0000000000000000007 core-0   :000000000001008e (4501    ) mv          a0, zero           
+0000000000000000008 core-0   :0000000000010090 (4581    ) mv          a1, zero           
+0000000000000000009 core-0   :0000000000010092 (4601    ) mv          a2, zero           
+0000000000000000010 core-0   :0000000000010094 (4681    ) mv          a3, zero           
+0000000000000000011 core-0   :0000000000010096 (05d00893) addi        a7, zero, 93       
+```
+
+---
+
 ### Tracing
 
 Sample output from `rv-jit` with the `--log-jit-trace` option_
