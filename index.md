@@ -16,28 +16,28 @@ The current version is available here: https://github.com/rv8-io/rv8
 _Building riscv-gnu-toolchain_
 
 ```
-sudo apt-get install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev
-git clone https://github.com/riscv/riscv-gnu-toolchain.git
-cd riscv-gnu-toolchain
-git submodule update --init --recursive
-./configure --prefix=/opt/riscv/toolchain
-make
+$ sudo apt-get install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev
+$ git clone https://github.com/riscv/riscv-gnu-toolchain.git
+$ cd riscv-gnu-toolchain
+$ git submodule update --init --recursive
+$ ./configure --prefix=/opt/riscv/toolchain
+$ make
 ```
 
 _Building rv8_
 
 ```
-export RISCV=/opt/riscv/toolchain
-git clone https://github.com/rv8-io/rv8.git
-cd rv8
-git submodule update --init --recursive
-make
-sudo make install
+$ export RISCV=/opt/riscv/toolchain
+$ git clone https://github.com/rv8-io/rv8.git
+$ cd rv8
+$ git submodule update --init --recursive
+$ make
+$ sudo make install
 ```
 
 _Running rv8_
 
 ```
-make test-build
-rv-jit build/riscv64-unknown-elf/bin/test-dhrystone
+$ make test-build
+$ rv-jit build/riscv64-unknown-elf/bin/test-dhrystone
 ```
