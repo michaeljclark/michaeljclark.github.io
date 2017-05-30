@@ -25,32 +25,32 @@ The current version is available [here](https://github.com/rv8-io/rv8).
 
 _Building riscv-gnu-toolchain_
 
-{% highlight bash %}
+```
 $ sudo apt-get install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev
 $ git clone https://github.com/riscv/riscv-gnu-toolchain.git
 $ cd riscv-gnu-toolchain
 $ git submodule update --init --recursive
 $ ./configure --prefix=/opt/riscv/toolchain
 $ make
-{% endhighlight %}
+```
 
 _Building rv8_
 
-{% highlight bash %}
+```
 $ export RISCV=/opt/riscv/toolchain
 $ git clone https://github.com/rv8-io/rv8.git
 $ cd rv8
 $ git submodule update --init --recursive
 $ make
 $ sudo make install
-{% endhighlight %}
+```
 
 _Running rv8_
 
-{% highlight bash %}
+```
 $ make test-build
 $ rv-jit build/riscv64-unknown-elf/bin/test-dhrystone
-{% endhighlight %}
+```
 
 ---
 
@@ -140,21 +140,21 @@ Sample output from `rv-jit` with the `--log-jit-trace` option_
 
 _Building riscv-gnu-toolchain_ for linux
 
-{% highlight bash %}
+```
 $ cd riscv-gnu-toolchain
 $ make linux
-{% endhighlight %}
+```
 
 _Building linux, busybox and bbl-lite_
 
-{% highlight bash %}
+```
 $ cd rv8
 $ make linux
-{% endhighlight %}
+```
 
 _Running the full system emulator_
 
-{% highlight bash %}
+```
 $ rv-sys build/riscv64-unknown-elf/bin/bbl
               vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
                   vvvvvvvvvvvvvvvvvvvvvvvvvvvv
@@ -233,4 +233,4 @@ BusyBox v1.26.1 (2017-05-28 10:59:45 NZST) built-in shell (ash)
 Enter 'help' for a list of built-in commands.
 
 / # 
-{% endhighlight %}
+```
