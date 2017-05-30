@@ -95,7 +95,7 @@ Notes:
 
 ### Logging
 
-Sample output from `rv-sim` with the `--log-instructions` option_
+_Sample output from `rv-sim` with the `--log-instructions` option_
 
 ```
 $ rv-sim -l build/riscv64-unknown-elf/bin/hello-world-pcrel
@@ -119,7 +119,7 @@ Hello World
 
 ### Tracing
 
-Sample output from `rv-jit` with the `--log-jit-trace` option_
+_Sample output from `rv-jit` with the `--log-jit-trace` option_
 
 ```
 	# 0x0000000000103d70	addi        a0, zero, 1
