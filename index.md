@@ -88,9 +88,9 @@ Notes:
 
 ---
 
-### Binary translation tracing
+### Tracing
 
-_example output from `rv-jit` with the `--log-jit-trace` option_
+Sample output from `rv-jit` with the `--log-jit-trace` option_
 
 ```
 	# 0x0000000000103d70	addi        a0, zero, 1
