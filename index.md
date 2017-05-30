@@ -13,19 +13,16 @@ The current version is available [here](https://github.com/rv8-io/rv8).
 
 ---
 
-### Supported Targets
+### Supported Platforms
 
-* RV32IMAFDC
-* RV64IMAFDC
-* Privilged ISA 1.9.1
-
----
-
-### Supported Hosts
-
-* Linux x86-64
-* macOS 10.11 x86-64 (alpha)
-* FreeBSD 11 x86-64 (alpha)
+- Target
+  - RV32IMAFDC
+  - RV64IMAFDC
+  - Privilged ISA 1.9.1
+- Host
+  - Linux x86-64
+  - macOS 10.11 x86-64 (alpha)
+  - FreeBSD 11 x86-64 (alpha)
 
 ---
 
