@@ -110,6 +110,8 @@ _example output from `rv-jit` with the `--log-jit-trace` option_
 		L7:
 ```
 
+---
+
 ### Building and running Linux
 
 _Building riscv-gnu-toolchain_ for linux
