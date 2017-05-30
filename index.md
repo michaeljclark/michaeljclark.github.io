@@ -13,6 +13,14 @@ The current version is available [here](https://github.com/rv8-io/rv8).
 
 ---
 
+### Supported Platforms
+
+* Linux x86-64
+* macOS 10.11 x86-64 (alpha)
+* FreeBSD 11 x86-64 (alpha)
+
+---
+
 ### Getting Started
 
 _Building riscv-gnu-toolchain_
