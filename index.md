@@ -20,9 +20,9 @@ The current version is available [here](https://github.com/rv8-io/rv8).
   - RV64IMAFDC
   - Privilged ISA 1.9.1
 - Host
-  - Linux x86-64
-  - macOS 10.11 x86-64 (alpha)
-  - FreeBSD 11 x86-64 (alpha)
+  - Linux x86-64 _(stable)_
+  - macOS 10.11 x86-64 _(alpha)_
+  - FreeBSD 11 x86-64 _(alpha)_
 
 ---
 
