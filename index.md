@@ -88,6 +88,28 @@ Notes:
 
 ---
 
+### Binary translation tracing
+
+_example output from `rv-jit` with the `--log-jit-trace` option_
+
+```
+	# 0x0000000000103d70	addi        a0, zero, 1
+		mov r8, 1                               ; 41B801000000
+		L3:
+	# 0x0000000000103d74	slli        a0, a0, 28
+		shl r8, 1C                              ; 49C1E01C
+		L4:
+	# 0x0000000000103d78	addi        a1, zero, -1
+		mov r9, FFFFFFFFFFFFFFFF                ; 49C7C1FFFFFFFF
+		L5:
+	# 0x0000000000103d7c	sb          a1, 0(a0)
+		rex mov byte [r8], r9b                  ; 458808
+		L6:
+	# 0x0000000000103d80	lbu         a2, 0(a0)
+		movzx r10d, byte [r8]                   ; 450FB610
+		L7:
+```
+
 ### Building and running Linux
 
 _Building riscv-gnu-toolchain_ for linux
