@@ -101,7 +101,6 @@ _Sample output from `rv-sim` with the `--log-instructions` option_
 
 ```
 $ rv-sim -l build/riscv64-unknown-elf/bin/hello-world-pcrel
-rv-sim v0.0-alpha
 0000000000000000000 core-0   :0000000000010078 (4501    ) mv          a0, zero           
 0000000000000000001 core-0   :000000000001007a (00000597) auipc       a1, pc + 0         
 0000000000000000002 core-0   :000000000001007e (02658593) addi        a1, a1, 38         
