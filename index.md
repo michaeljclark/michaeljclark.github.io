@@ -11,6 +11,8 @@ The rv8 simulator suite contains libraries and command line tools for creating i
 
 ![rv8 binary translation]({{ site.url }}/images/bintrans.png)
 
+_*Figure 1: RISC-V to x86-64 binary translation*_
+
 The rv8 binary translation engine works by interpreting code while profiling it for hot paths. Hot paths are translated on the fly to native code. The translation engine maintains a call stack to allow runtime inlining of hot functions. A branch target cache is used to accelerate returns and indirect calls through function pointers. The translator supports hybrid binary translation and interpretation to handle instructions that do not have native translations. Currently ‘IM’ code is translated and ‘AFD’ is interpreted. The translator supports RVC compressed code.
 
 The current version is available [here](https://github.com/rv8-io/rv8).
