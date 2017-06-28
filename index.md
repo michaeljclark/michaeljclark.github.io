@@ -73,7 +73,7 @@ _Runtime (seconds)_
 program         | rv8-sim | rv8-jit | qemu-user | native
 ---             | ---     | ---     | ---       | ---
 primes          |  5.07   | 0.16    | 0.27      | 0.11
-miniz           | 41.52   | 1.82    | 2.20      | 0.76
+miniz           | 41.52   | 1.67    | 2.20      | 0.76
 SHA-512         | 23.69   | 0.70    | 1.12      | 0.24
 AES             | 38.39   | 1.00    | 1.61      | 0.27
 qsort           |  3.96   | 0.19    | 0.94      | 0.13
@@ -85,7 +85,7 @@ _Performance Ratio (smaller is better)_
 program         | rv8-sim | rv8-jit | qemu-user | native
 ---             | ---     | ---     | ---       | ---
 primes          |  44.43  | 1.40    |  2.36     | 1.00
-miniz           |  55.00  | 2.41    |  2.92     | 1.00
+miniz           |  55.00  | 2.22    |  2.92     | 1.00
 SHA-512         | 100.39  | 2.95    |  4.76     | 1.00
 AES             | 140.12  | 3.63    |  5.88     | 1.00
 qsort           |  29.52  | 1.41    |  7.04     | 1.00
