@@ -202,7 +202,7 @@ rrrrrrrrrrrrrrrrrrrr      rrrrrrrrrrrrrrrrrrrr
 rrrrrrrrrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrr
 
        INSTRUCTION SETS WANT TO BE FREE
-[    0.000000] Linux version 4.6.2-00043-g23bf08e-dirty (mclark@minty) (gcc version 7.0.1 20170321 (experimental) (GCC) ) #21 Sun May 28 11:00:48 NZST 2017
+[    0.000000] Linux version 4.6.2-00044-g250754b-dirty (mclark@minty) (gcc version 7.1.1 20170509 (GCC) ) #2 Sat Jul 1 22:42:14 NZST 2017
 [    0.000000] bootconsole [early0] enabled
 [    0.000000] Available physical memory: 1020MB
 [    0.000000] Initial ramdisk at: 0xffffffff800100b0 (261728 bytes)
@@ -252,7 +252,7 @@ rrrrrrrrrrrrrrrrrrrrrr  rrrrrrrrrrrrrrrrrrrrrr
 [    0.010000] This architecture does not have kernel memory protection.
 
 
-BusyBox v1.26.1 (2017-05-28 10:59:45 NZST) built-in shell (ash)
+BusyBox v1.26.1 (2017-06-30 16:46:44 NZST) built-in shell (ash)
 Enter 'help' for a list of built-in commands.
 
 / # 
