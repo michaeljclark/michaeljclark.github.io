@@ -16,6 +16,14 @@ _**RISC-V to x86-64 binary translation**_
 
 The rv8 binary translation engine works by interpreting code while profiling it for hot paths. Hot paths are translated on the fly to native code. The translation engine maintains a call stack to allow runtime inlining of hot functions. A jump target cache is used to accelerate returns and indirect calls through function pointers. The translator supports hybrid binary translation and interpretation to handle instructions that do not have native translations. Currently ‘IM’ code is translated and ‘AFD’ is interpreted. The translator supports RVC compressed code.
 
+The rv8 binary translator supports a number of advanced optimisations:
+
+- Hybrid interpretation and compilation of hot code paths
+- Incremental translation with dynamic trace linking
+- Inline caching of function calls in hot code paths
+- L1 jump target cache for indirect calls and returns
+- Macro-op fusion for common RISC-V instruction sequences
+
 The current version is available [here](https://github.com/rv8-io/rv8).
 
 ---
