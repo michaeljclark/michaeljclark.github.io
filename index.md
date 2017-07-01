@@ -68,6 +68,10 @@ $ rv-jit build/riscv64-unknown-elf/bin/test-dhrystone
 
 ### Benchmarks
 
+These benchmarks compare QEMU and rv8 binary translation with native x86-64:
+
+![rv-jit benchmark]({{ site.url }}/images/bench-v8.svg)
+
 _Runtime (seconds)_
 
 program         | rv8-sim | rv8-jit | qemu-user | native
