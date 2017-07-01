@@ -98,8 +98,8 @@ Ratio (average) |   97:1  | 2.7:1   | 7.4:1     | 1:1
 
 Notes:
 
-- riscv32/riscv64 (gcc -Os) 7.0.1 20170321 (experimental)
-- x86-32/x86-64 (gcc -O3) (Debian 6.3.0-6) 6.3.0 20170205
+- riscv64 (gcc -Os) 7.0.1 20170321 (experimental)
+- x86-64 (gcc -O3) (Debian 6.3.0-6) 6.3.0 20170205
 - native Intel(R) Core(TM) i7-5557U CPU @ 3.10GHz
 
 ---
