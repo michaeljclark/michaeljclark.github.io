@@ -64,6 +64,8 @@ from ISA metadata. The following is an example of PDF output:
 
 [![RISC-V Instruction Set Listing]({{ site.url }}/images/riscv-instructions.png)](https://github.com/rv8-io/rv8/blob/master/doc/pdf/riscv-instructions.pdf)
 
+RISC-V isnstruction set metadata is available [here](https://github.com/rv8-io/rv8/blob/master/meta/).
+
 ---
 
 ### Supported Platforms
