@@ -73,6 +73,10 @@ The rv8 user mode simulator has the following features:
 
 ### Getting Started
 
+Please read the RISC-V toolchain installtion instructions in the
+[riscv-gnu-toolchain](https://github.com/riscv/riscv-gnu-toolchain/)
+repository.
+
 _Building riscv-gnu-toolchain_
 
 ```
@@ -84,10 +88,15 @@ $ ./configure --prefix=/opt/riscv/toolchain
 $ make
 ```
 
+rv8 has minimum external dependencies besides a C++14 compiler,
+the C++ standard libraries and the `asmjit` submodule.
+
+- gcc-5.4 or clang-3.4 (Linux minimum)
+- gcc-6.3 or clang-3.8 (Linux recommended)
+
 _Building rv8_
 
 ```
-$ export RISCV=/opt/riscv/toolchain
 $ git clone https://github.com/rv8-io/rv8.git
 $ cd rv8
 $ git submodule update --init --recursive
@@ -97,8 +106,16 @@ $ sudo make install
 
 _Running rv8_
 
+The `riscv64-unknown-elf` newlib toolchain is required for building
+the rv8 test cases and this build step depends on the `RISCV`
+environment variable.
+
 ```
+$ cd rv8
+$ export RISCV=/opt/riscv/toolchain
 $ make test-build
+$ make test-sim
+$ make test-sys
 $ rv-jit build/riscv64-unknown-elf/bin/test-dhrystone
 ```
 
