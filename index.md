@@ -56,6 +56,14 @@ The rv8 user mode simulator has the following features:
   - `0x000000001000 - 0x7ffdffffffff` (guest)
   - `0x7ffe00000000 - 0x7fffffffffff` (host)
 
+_**RISC-V instruction set metadata**_
+
+The `rv-meta` tool is able to generate opcode maps, instruction
+decoders, source, headers and instruction set listing LaTeX
+from ISA metadata. The following is an example of PDF output:
+
+[![RISC-V Instruction Set Listing]({{ site.url }}/images/riscv-instructions.png)](https://github.com/rv8-io/rv8/blob/master/doc/pdf/riscv-instructions.pdf)
+
 ---
 
 ### Supported Platforms
