@@ -144,6 +144,10 @@ Notes:
 
 ### Logging
 
+`rv-sim` and `rv-sys` support the ability to log instructions
+(`--log-instructions`), register values (`--log-operands`) and
+`rv-sys` can log page table walks (`--log-pagewalks`).
+
 _Sample output from `rv-sim` with the `--log-instructions` option_
 
 ```
@@ -166,6 +170,10 @@ Hello World
 ---
 
 ### Tracing
+
+`rv-jit` supports the ability to log RISC-V instructions along with
+the translated x86-64 assembly and machine code. This mode is useful
+for JIT optimisation analysis.
 
 _Sample output from `rv-jit` with the `--log-jit-trace` option_
 
@@ -191,6 +199,15 @@ _Sample output from `rv-jit` with the `--log-jit-trace` option_
 
 ### Building and running Linux
 
+Please read the RISC-V toolchain installtion instructions in the
+[riscv-gnu-toolchain](https://github.com/riscv/riscv-gnu-toolchain/)
+repository. The `riscv64-unknown-elf` newlib toolchain is required
+for building the rv8 test cases and the `riscv64-unknown-linux-gnu`
+glibc toolchain is required for building `busybox` which is used to
+create the Linux image that runs in the full system emulator.
+
+The toolchain script will download any required dependencies.
+
 _Building riscv-gnu-toolchain_ for linux
 
 ```
@@ -198,12 +215,23 @@ $ cd riscv-gnu-toolchain
 $ make linux
 ```
 
+The linux build script will download any required dependencies.
+
 _Building linux, busybox and bbl-lite_
 
 ```
 $ cd rv8
+$ export RISCV=/opt/riscv/toolchain
+$ export PATH=${PATH}:${RISCV}/bin
 $ make linux
 ```
+
+To start linux, we execute `bbl` (the Berkeley Boot Loader) which
+performs early machine set up and then passes control to an
+embedded linux kernel. After kernel initialisation, `busybox` is
+then executed from the initramfs as pid 1 (init). The linux image
+and the initramfs are combined together and linked into bbl as
+the boot payload.
 
 _Running the full system emulator_
 
