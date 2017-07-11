@@ -237,12 +237,12 @@ dynamic register usage (`--register-usage-histogram`) is supported.
 The `rv-bin` program via the `histogram` subcommand has the ability
 to print static instruction frequency and static register usage.
 
-_Sample output from `rv-sim` with the `--instruction-usage-histogram`
-and `--register-usage-histogram` options_
+_Sample output from `rv-sim` with the `--register-usage-histogram`
+and `--instruction-usage-histogram` options_
 
 ```
-$ rv-sim --instruction-usage-histogram \
-         --register-usage-histogram \
+$ rv-sim --register-usage-histogram \
+         --instruction-usage-histogram \
          build/riscv64-unknown-elf/bin/test-aes 
 
 integer register file
