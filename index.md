@@ -202,7 +202,8 @@ Hello World
 
 The `rv-jit` program supports the ability to log RISC-V instructions
 along with the dynamically translated x86-64 assembly and machine code
-(`--log-jit-trace`). This mode is useful for JIT optimisation analysis.
+(`--log-jit-trace`). This mode is useful for JIT translation debugging
+and optimisation analysis.
 
 _Sample output from `rv-jit` with the `--log-jit-trace` option_
 
