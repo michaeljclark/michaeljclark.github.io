@@ -200,9 +200,9 @@ Hello World
 
 ### Tracing
 
-`rv-jit` supports the ability to log RISC-V instructions along with
-the translated x86-64 assembly and machine code. This mode is useful
-for JIT optimisation analysis.
+The `rv-jit` program supports the ability to log RISC-V instructions
+along with the dynamically translated x86-64 assembly and machine code
+(`--log-jit-trace`). This mode is useful for JIT optimisation analysis.
 
 _Sample output from `rv-jit` with the `--log-jit-trace` option_
 
@@ -228,11 +228,13 @@ _Sample output from `rv-jit` with the `--log-jit-trace` option_
 
 ### Histograms
 
-`rv-sim` and `rv-sys` support the ability to record and print dynamic
-instruction frequency and dynamic register usage histograms.
+The `rv-sim` and `rv-sys` programs support the ability to record and
+print histograms. Program counter frequency (`--pc-usage-histogram`),
+dynamic instruction frequency (`--instruction-usage-histogram`) and
+dynamic register usage (`--register-usage-histogram`) is supported.
 
-The `rv-bin` program via the `histogram` subcommand has the ability to
-print static instruction frequency and static register usage.
+The `rv-bin` program via the `histogram` subcommand has the ability
+to print static instruction frequency and static register usage.
 
 _Sample output from `rv-sim` with the `--instruction-usage-histogram`
 and `--register-usage-histogram` options_
