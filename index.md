@@ -184,10 +184,10 @@ micro-ops) or in some circumstances, explicit `mov` instructions.
 _Translator temporaries_
 
 The rv8 binary translator needs to use a few host registers to
-point to internal structures and for use as temporary registers
-for the emulation of various instructions, for example a store
-instructions require the use of two temporary registers if both
-of its register operands are in the spill area. The translator
+point to translator internal structures and for use as temporary
+registers for the emulation of various instructions, for example
+a store instructions require the use of two temporary registers
+if both register operands are in the spill area. The translator
 uses the following x86-64 host registers as temporaries leaving
 12 registers available for mapping to RISC-V registers:
 
@@ -199,17 +199,17 @@ uses the following x86-64 host registers as temporaries leaving
 _Indirect call acceleration_
 
 Indirect calls through function pointers cannot be statically
-translated as the target address of translated code cannot be
+translated as the target address of their translation is not
 known at the time of translation. rv8 employs a trace cache
-which is a hashtable of guest program counters to translated
-code addresses. This is slow to lookup as it requires saving
-registers and calling into C++ code. To accelerate indirect
-calls through function pointers, a small assembly stub first
-looks up a direct mapped L1 translation cache, and falls back
-to a slower translation cache miss path that saves registers
-and calls into the translator C++ code to populate the L1
-translation cache so that the next indirect call can be
-accelerated.
+which is a hashtable of guest program address to translated native
+code address. A full trace cache lookup is slow because it
+necessitates saving caller-save registers and calling into C++
+code. To accelerate indirect calls through function pointers,
+a small assembly stub looks up the target address in a direct
+mapped L1 translation cache, and only then falls back to a slower
+translation cache miss path that saves registers and calls into
+the translator code to populate the L1 translation cache so that
+the next indirect call can be accelerated.
 
 _Inline caching_
 
@@ -222,6 +222,20 @@ kown return address and if it matches, control flow continues
 along the return path. In the case that the function is not
 inlined, the regular L1 translation cache is used to lookup
 the address of the translated code.
+
+_Branch tail linking_
+
+The translator performs lazy translation of the source program
+during tracing and when it reaches branches, it can only link
+both sides of the branch if there exists an existing translation
+for the not taken side of the branch. To accelerate _branch
+tail exits_, the translator  emits a relative branch to a
+trampoline function that returns to the tracer main loop and
+adds the branch to a table of branch fixup addresses indexed
+by target guest address. If the branch target is hot, after
+if has been translated, all relative branches that point to
+tail exit trampolines will be relinked to branch directly
+to the translated native code.
 
 _Macro-op fusion_
 
