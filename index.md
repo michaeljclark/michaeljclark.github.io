@@ -133,6 +133,22 @@ $ rv-jit build/riscv64-unknown-elf/bin/test-dhrystone
 
 ### Benchmarks
 
+The rv8 binary translator translates RISC-V code to X86-64.
+This is a challenging problem due to RISC-V having 31 integer
+registers and x86-64 only having 16 integer registers. rv8
+solves this by spilling registers to memory using a static
+register allocation (a future versions may use dyanamic
+register allocation). Performance is lost due to register
+allocations that use a larger number of available registers
+with infrequent stack spills. These additional registers need
+to be translated as x86-64 memory operands (which produce load
+and store micro-operations) or in some circumstances, explicit
+`mov` instructions. In addition to this, rv8 also has to make
+sure that 32-bit operations on registers are sign extended
+instead of zero-extended. The register allocation problem and
+the sign extension problem account for a major difference in
+performance between native code and emulated RISC-V code.
+
 The following benchmarks show QEMU, rv8 binary translation
 and native x86-64 runtimes:
 
