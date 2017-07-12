@@ -133,14 +133,15 @@ $ rv-jit build/riscv64-unknown-elf/bin/test-dhrystone
 
 ### Benchmarks
 
-These benchmarks compare QEMU and rv8 binary translation with native x86-64:
+The following benchmarks show QEMU, rv8 binary translation
+and native x86-64 runtimes:
 
-![rv-jit benchmark]({{ site.url }}/images/bench-v8.svg)
+![rv-jit benchmark]({{ site.url }}/images/bench-v8-runtime.svg)
 
 _Runtime (seconds)_
 
 program         | rv8-sim | rv8-jit | qemu-user | native
----             | ---     | ---     | ---       | ---
+---             | --:     | --:     | --:       | --:
 primes          |  5.07   | 0.16    | 0.27      | 0.11
 miniz           | 41.52   | 1.67    | 2.20      | 0.76
 norx            | 22.51   | 1.10    | 1.44      | 0.21
@@ -153,7 +154,7 @@ DMIPS (v1.1)    | 254     | 12492   | 2576      | 55132
 _Performance Ratio (smaller is better)_
 
 program         | rv8-sim | rv8-jit | qemu-user | native
----             | ---     | ---     | ---       | ---
+---             | --:     | --:     | --:       | --:
 primes          |  44.43  | 1.40    |  2.36     | 1.00
 miniz           |  55.00  | 2.22    |  2.92     | 1.00
 norx            | 109.80  | 5.39    |  7.00     | 1.00
@@ -162,6 +163,38 @@ AES             | 140.12  | 3.63    |  5.88     | 1.00
 qsort           |  29.52  | 1.41    |  7.04     | 1.00
 dhrystone       | 214.45  | 4.38    | 21.23     | 1.00
 Ratio (average) |   99:1  | 3.0:1   | 7.3:1     | 1:1
+
+The following benchmarks shows rv8 binary translation
+and native x86-64 total retired instructions and instructions
+per second in millions:
+
+![rv-jit benchmark]({{ site.url }}/images/bench-v8-mips.svg)
+
+_Total retired instructions (RISC-V versus x86-64)_
+
+program         | rv64 | x86-64 | rv64:x86-64
+---             | --:   | --:   | --:
+primes          | 763   |  1025 | 1.34
+miniz           | 5899  |  4225 | 0.72
+norx            | 2638  |  1839 | 0.70
+SHA-512         | 3717  |  2946 | 0.79
+AES             | 4943  |  2894 | 0.59
+qsort           | 577   |   805 | 1.40
+dhrystone       | 2950  |   891 | 0.30
+Total/Ratio     | 21486 | 14625 | 0.83
+
+_Instructions per second (rv8-jit versus native)_
+
+program         | rv8-jit | i7-5557U | rv8-jit:i7-5557U
+---             | --:   | --:   | --: 
+primes          | 4771  |  8987 | 1.88
+miniz           | 3526  |  5597 | 1.59
+norx            | 2389  |  8972 | 3.76
+SHA-512         | 5340  | 12484 | 2.34
+AES             | 4973  | 10561 | 2.12
+qsort           | 3054  |  6010 | 1.97
+dhrystone       | 6469  |  8564 | 1.32
+Average/Ratio   | 4360  |  8739 | 2.14:1
 
 Notes:
 
