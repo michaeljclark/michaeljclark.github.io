@@ -136,26 +136,48 @@ $ rv-jit build/riscv64-unknown-elf/bin/test-dhrystone
 The rv8 binary translator performs JIT (Just In Time) translation
 of RISC-V code to X86-64 code. This is a challenging problem for
 many reasons; with the principle challange due to RISC-V having
-31 integer registers while x86-64 only has 16 integer registers.
+31 integer registers while x86-64 has only 16 integer registers.
 
-rv8 solves this problem by spilling registers to memory (L1 cache)
-using a static register allocation (a future versions may use
-dyanamic register allocation). A large amount of performance is
-lost due to register allocations that take advantage of the larger
-number of physically available registers with less frequent stack
-spills. It is not possible for the translator to rearrange memory
-and registers for optimal stack spills as memory accesses must be
-translated precisely. The additional registers are translated as
-x86-64 memory operands (which produce load and store micro-ops)
-or in some circumstances, explicit `mov` instructions.
+_Register allocation_
+
+rv8 solves the register set size problem by spilling registers
+to memory (L1 cache) using a static register allocation (a future
+versions may use dyanamic register allocation). A large amount of
+performance is lost due to register allocations that take advantage
+of the larger number of physically available registers with less
+frequent stack spills. It is not possible for the translator to
+rearrange memory and registers for optimal stack spills as memory
+accesses must be translated precisely. The additional registers are
+translated as x86-64 memory operands (which produce load and store
+micro-ops) or in some circumstances, explicit `mov` instructions.
+
+_Sign extension versus zero extension_
 
 In addition to the register allocation problem, rv8 has to make
 sure that 32-bit operations on registers are sign extended instead
 of zero-extended. The normal behaviour of 32-bit operations on
-x86-64 is to zero extend bit 31 to bit 63. The combination of the
-register allocation problem and the sign extension problem account
-for the largest proportion of the difference in performance between
-native code and emulated RISC-V code.
+x86-64 is to zero extend bit 31 to bit 63.
+
+_Bit manipulation intrinsics_
+
+Finally the bencharks below contain digest algorithms and ciphers
+which can take advantage of bit manipulation instructions such as
+rotate and bswap. Present day compilers are sophisticated enough
+to detetc rotate and byte swap logical operations and translate
+them into x86-64 bit manipulation instructions (`ROR`, `ROL`,
+`BSWAP`). RISC-V currently lacks bit manipulation instructions
+however there are proposals to add them in the B extension.
+
+- _Rotate right or left pattern (2 shifts, 1 and)_ `(rs1 >> shamt) | (rs1 << (64 - shamt))`
+- _32-bit integer byteswap pattern (4 constants, 4 shifts, 4 ands, 3 ors)_
+  `((rs1 >> 24) & 0x000000ff) | ((rs1 << 8 ) & 0x00ff0000) | ((rs1 >> 8 ) & 0x0000ff00) | ((rs1 << 24) & 0xff000000)`
+
+_Conclusion_
+
+The combination of the register allocation, sign extension and
+lack of bit manipulation intrinsics account for the proportion
+of the difference in instruction count and performance between
+native x86-64 code and emulated RISC-V code.
 
 The following benchmarks show QEMU, rv8 binary translation
 and native x86-64 runtimes:
