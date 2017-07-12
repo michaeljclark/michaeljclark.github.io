@@ -246,9 +246,9 @@ instructions and total retired micro-ops in millions:
 
 ![RISC-V vs x86-64 retired instructions]({{ site.url }}/images/bench-v8-tops.svg)
 
-_Total retired instructions and micro-ops (RISC-V versus x86-64)_
+_Total retired instructions and micro-ops in millions (RISC-V versus x86-64)_
 
-program         | rv64 (inst) | x86 (inst) | x86 (μop) | x86:rv64 (inst:inst) | x86:rv64 (μop:inst)
+program         | rv64 (inst–M) | x86 (inst–M) | x86 (μop–M) | x86:rv64 (inst:inst) | x86:rv64 (μop:inst)
 ---             | --:   | --:   | --:   | --:    | --:
 primes          | 763   |  1025 |  1020 | 1.34   | 1.34
 miniz           | 5899  |  4225 |  4275 | 0.72   | 0.72
@@ -266,7 +266,7 @@ and millions of micro-ops per second:
 
 ![rv-jit vs x86-64 operations per second]({{ site.url }}/images/bench-v8-mops.svg)
 
-_Instructions and micro-ops per second (rv-jit versus Intel i7-5557U x86-64)_
+_Millions of instructions and micro-ops per second (rv-jit versus Intel i7-5557U x86-64)_
 
 program         | rv-jit (MIPS) | x86 (MIPS) | rv-jit:x86 (Mμops) | x86:rv-jit (MIPS:MIPS) | rv-jit:x86 (MIPS:Mμops)
 ---             | --:   | --:   | --:   | --:    | --:
