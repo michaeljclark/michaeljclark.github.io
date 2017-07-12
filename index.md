@@ -181,6 +181,21 @@ accesses must be translated precisely. The additional registers are
 translated as x86-64 memory operands (which produce load and store
 micro-ops) or in some circumstances, explicit `mov` instructions.
 
+_Translator temporaries_
+
+The rv8 binary translator needs to use a few host registers to
+point to internal structures and for use as temporary registers
+for the emulation of various instructions, for example a store
+instructions require the use of two temporary registers if both
+of its register operands are in the spill area. The translator uses
+the following x86-64 host registers as temporaries leaving 12
+registers available for mapping to RISC-V registers:
+
+- `rbp` - pointer to the register spill area and jump target cache
+- `rsp` - pointer to the host stack to allow procedure calls
+- `rax` - translator temporary register
+- `rcx` - translator temporary register
+
 _Sign extension versus zero extension_
 
 In addition to the register allocation problem, rv8 has to make
