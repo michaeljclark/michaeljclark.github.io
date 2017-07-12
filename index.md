@@ -172,7 +172,7 @@ _Register allocation_
 
 rv8 solves the register set size problem by spilling registers
 to memory (L1 cache) using a static register allocation (a future
-versions may use dyanamic register allocation). A large amount of
+versions may use dynamic register allocation). A large amount of
 performance is lost due to register allocations that take advantage
 of the larger number of physically available registers with less
 frequent stack spills. It is not possible for the translator to
@@ -187,9 +187,9 @@ The rv8 binary translator needs to use a few host registers to
 point to internal structures and for use as temporary registers
 for the emulation of various instructions, for example a store
 instructions require the use of two temporary registers if both
-of its register operands are in the spill area. The translator uses
-the following x86-64 host registers as temporaries leaving 12
-registers available for mapping to RISC-V registers:
+of its register operands are in the spill area. The translator
+uses the following x86-64 host registers as temporaries leaving
+12 registers available for mapping to RISC-V registers:
 
 - `rbp` - pointer to the register spill area and jump target cache
 - `rsp` - pointer to the host stack to allow procedure calls
