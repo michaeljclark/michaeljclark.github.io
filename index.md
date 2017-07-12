@@ -161,7 +161,7 @@ $ rv-jit build/riscv64-unknown-elf/bin/test-dhrystone
 
 ---
 
-### Benchmarks
+### Optimisations
 
 The rv8 binary translator performs JIT (Just In Time) translation
 of RISC-V code to X86-64 code. This is a challenging problem for
@@ -250,6 +250,10 @@ The combination of the register allocation problem, sign extension
 and the lack of bit manipulation intrinsics account for a large
 proportion of the difference in instruction count and performance
 between native x86-64 code and translated RISC-V code.
+
+---
+
+### Benchmarks
 
 The following benchmarks show QEMU, rv8 binary translation
 and native x86-64 runtimes:
