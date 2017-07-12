@@ -1,4 +1,4 @@
-### About
+### [About](#about)
 
 **rv8** is a RISC-V simulation suite comprising a high performance
 x86-64 binary translator, a user mode simulator, a full system
@@ -98,7 +98,7 @@ RISC-V isnstruction set metadata is available [here](https://github.com/rv8-io/r
 
 ---
 
-### Supported Platforms
+### [Supported Platforms](#supported-platforms)
 
 - Target
   - RV32IMAFDC
@@ -111,7 +111,7 @@ RISC-V isnstruction set metadata is available [here](https://github.com/rv8-io/r
 
 ---
 
-### Getting Started
+### [Getting Started](#getting-started)
 
 Please read the RISC-V toolchain installtion instructions in the
 [riscv-gnu-toolchain](https://github.com/riscv/riscv-gnu-toolchain/)
@@ -161,7 +161,7 @@ $ rv-jit build/riscv64-unknown-elf/bin/test-dhrystone
 
 ---
 
-### Optimisations
+### [Optimisations](#optimisations)
 
 The rv8 binary translator performs JIT (Just In Time) translation
 of RISC-V code to X86-64 code. This is a challenging problem for
@@ -294,7 +294,7 @@ between native x86-64 code and translated RISC-V code.
 
 ---
 
-### Benchmarks
+### [Benchmarks](#benchmarks)
 
 The following benchmarks show QEMU, rv8 binary translation
 and native x86-64 runtimes:
@@ -374,7 +374,7 @@ Notes:
 
 ---
 
-### Logging
+### [Logging](#logging)
 
 `rv-sim` and `rv-sys` support the ability to log instructions
 (`--log-instructions`), register values (`--log-operands`) and
@@ -401,7 +401,7 @@ Hello World
 
 ---
 
-### Tracing
+### [Tracing](#tracing)
 
 The `rv-jit` program supports the ability to log RISC-V instructions
 along with the dynamically translated x86-64 assembly and machine code
@@ -430,7 +430,7 @@ _Sample output from `rv-jit` with the `--log-jit-trace` option_
 
 ---
 
-### Histograms
+### [Histograms](#histograms)
 
 The `rv-sim` and `rv-sys` programs support the ability to record and
 print histograms. Program counter frequency (`--pc-usage-histogram`),
@@ -544,7 +544,7 @@ instruction usage histogram
 
 ---
 
-### Building and running Linux
+### [Linux](#linux)
 
 Please read the RISC-V toolchain installtion instructions in the
 [riscv-gnu-toolchain](https://github.com/riscv/riscv-gnu-toolchain/)
