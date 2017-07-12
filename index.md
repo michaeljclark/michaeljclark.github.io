@@ -268,7 +268,7 @@ and millions of micro-ops per second:
 
 _Millions of instructions and micro-ops per second (rv-jit versus Intel i7-5557U x86-64)_
 
-program         | rv-jit (MIPS) | x86 (MIPS) | rv-jit:x86 (Mμops) | x86:rv-jit (MIPS:MIPS) | rv-jit:x86 (MIPS:Mμops)
+program         | rv-jit (MIPS) | x86 (MIPS) | rv-jit:x86 (MOPS) | x86:rv-jit (MIPS:MIPS) | rv-jit:x86 (MIPS:MOPS)
 ---             | --:   | --:   | --:   | --:    | --:
 primes          | 4771  |  8987 |  8951 | 1.88   | 1.88
 miniz           | 3526  |  5597 |  5662 | 1.59   | 1.61
