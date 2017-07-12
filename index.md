@@ -223,12 +223,37 @@ along the return path. In the case that the function is not
 inlined, the regular L1 translation cache is used to lookup
 the address of the translated code.
 
+_Macro-op fusion_
+
+The rv8 translator implements an optimisation known as macro-op
+fusion whereby specific patterns of adjacent instructions are
+translated into a single host instruction. The macro-op fusion
+pattern matcher has potential to increase performance further
+with the addition of common patterns. The following is a list
+of macro-op fusion patterns that rv8 currently implements:
+
+- `AUIPC rs, imm20; ADDI rd, rs1, imm12;` (where `rd=rs1`)
+  - PC-relative address is resolved using a single `MOV` instruction.
+- `AUIPC t0, imm20; JALR ra, imm12(t0);` (where `rd=rs1`)
+  - Target address is constructed using a single `MOV` instruction.
+- `AUIPC ra, imm20; JALR ra, imm12(ra);` (where `rd=rs1`)
+  - Target address register write is elided.
+- `SLLI rd, rs1, 32; SRLI rd, rs1, 32` (where `rd=rs1`)
+  - Fused into a single `MOVZX` instruction.
+- `ADDIW rd, rs1, imm12; SLLI rd, rs1, 32; SRLI rd, rs1, 32`
+  (where `rd=rs1`)
+  - Fused into 32-bit zero extending `ADD` instruction.
+
 _Sign extension versus zero extension_
 
 In addition to the register allocation problem, rv8 has to make
 sure that 32-bit operations on registers are sign extended instead
 of zero-extended. The normal behaviour of 32-bit operations on
-x86-64 is to zero extend bit 31 to bit 63.
+x86-64 is to zero extend bit 31 to bit 63. It may be possible
+in a future version of the JIT translation engine to elide
+redundant sign extension operations, however it is important
+that the register state precisely matches before executing an
+instruction that may cause a fault e.g. loads and stores.
 
 _Bit manipulation intrinsics_
 
