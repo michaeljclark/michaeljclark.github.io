@@ -283,7 +283,7 @@ Notes:
 
 - riscv64 (gcc -Os) 7.0.1 20170321 (experimental)
 - x86-64 (gcc -O3) (Debian 6.3.0-6) 6.3.0 20170205
-- native Intel(R) Core(TM) i7-5557U CPU @ 3.10GHz
+- Intel® 6th-gen Core™ i7-5557U Broadwell (3.10GHz, 3.40GHz Turbo, 4MB cache)
 
 ---
 
