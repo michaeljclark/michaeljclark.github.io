@@ -1,6 +1,8 @@
 ### About
 
-**rv8** is a RISC-V simulation suite comprising a high performance x86-64 binary translator, a user mode simulator, a full system emulator, an ELF binary analysis tool and ISA metadata:
+**rv8** is a RISC-V simulation suite comprising a high performance
+x86-64 binary translator, a user mode simulator, a full system
+emulator, an ELF binary analysis tool and ISA metadata:
 
 > * **rv-jit** - _user mode x86-64 binary translator_
 > * **rv-sim** - _user mode system call proxy simulator_
@@ -8,7 +10,14 @@
 > * **rv-bin** - _ELF disassembler and histogram tool_
 > * **rv-meta** - _code and documentation generator_
 
-The rv8 simulator suite contains libraries and command line tools for creating instruction opcode maps, C headers and source containing instruction set metadata, instruction decoders, a JIT assembler, LaTeX documentation, a metadata based RISC-V disassembler, a histogram tool for generating statistics on RISC-V ELF executables, a RISC-V proxy syscall simulator, a RISC-V full system emulator that implements the RISC-V 1.9.1 privileged specification and an x86-64 binary translator.
+The rv8 simulator suite contains libraries and command line tools for
+creating instruction opcode maps, C headers and source containing
+instruction set metadata, instruction decoders, a JIT assembler,
+LaTeX documentation, a metadata based RISC-V disassembler, a
+histogram tool for generating statistics on RISC-V ELF executables,
+a RISC-V proxy syscall simulator, a RISC-V full system emulator that
+implements the RISC-V 1.9.1 privileged specification and an x86-64
+binary translator.
 
 The current version is available [here](https://github.com/rv8-io/rv8).
 
@@ -16,7 +25,15 @@ The current version is available [here](https://github.com/rv8-io/rv8).
 
 _**RISC-V to x86-64 binary translator**_
 
-The rv8 binary translation engine works by interpreting code while profiling it for hot paths. Hot paths are translated on the fly to native code. The translation engine maintains a call stack to allow runtime inlining of hot functions. A jump target cache is used to accelerate returns and indirect calls through function pointers. The translator supports hybrid binary translation and interpretation to handle instructions that do not have native translations. Currently ‘IM’ code is translated and ‘AFD’ is interpreted. The translator supports RVC compressed code.
+The rv8 binary translation engine works by interpreting code while
+profiling it for hot paths. Hot paths are translated on the fly to
+native code. The translation engine maintains a call stack to allow
+runtime inlining of hot functions. A jump target cache is used to
+accelerate returns and indirect calls through function pointers.
+The translator supports hybrid binary translation and interpretation
+to handle instructions that do not have native translations.
+Currently ‘IM’ code is translated and ‘AFD’ is interpreted. The
+translator supports RVC compressed code.
 
 The rv8 binary translator supports a number of simple optimisations:
 
@@ -28,7 +45,13 @@ The rv8 binary translator supports a number of simple optimisations:
 
 _**RISC-V full system emulator**_
 
-The rv8 suite includes a full system emulator that implements the RISC-V privileged ISA with support for interrupts, MMIO (memory mapped input output) devices, a soft MMU (memory management unit) with separate instruction and data TLBs (translation lookaside buffers). The full system emulator has a simple integrated debugger that allows setting breakpoints, single stepping and disassembling instructions as they are executed.
+The rv8 suite includes a full system emulator that implements the
+RISC-V privileged ISA with support for interrupts, MMIO (memory
+mapped input output) devices, a soft MMU (memory management unit)
+with separate instruction and data TLBs (translation lookaside
+buffers). The full system emulator has a simple integrated debugger
+that allows setting breakpoints, single stepping and disassembling
+instructions as they are executed.
 
 The rv8 full system emulator has the following features:
 
@@ -42,7 +65,14 @@ The rv8 full system emulator has the following features:
 
 _**RISC-V user mode simulator**_
 
-The rv8 user mode simulator is a single address space implementation of the RISC-V ISA that implements the RISC-V Linux syscall ABI (application binary interface) and delegates system calls to the underlying native host operating system. The user mode simulator can run RISC-V Linux binaries on non-Linux operating systems via system call emulation. The current user mode simulator implements a small number of system calls to allow running RISC-V Linux ELF static binaries.
+The rv8 user mode simulator is a single address space
+implementation of the RISC-V ISA that implements the RISC-V
+Linux syscall ABI (application binary interface) and delegates
+system calls to the underlying native host operating system.
+The user mode simulator can run RISC-V Linux binaries on non-Linux
+operating systems via system call emulation. The current user mode
+simulator implements a small number of system calls to allow
+running RISC-V Linux ELF static binaries.
 
 The rv8 user mode simulator has the following features:
 
