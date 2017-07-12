@@ -196,6 +196,33 @@ uses the following x86-64 host registers as temporaries leaving
 - `rax` - translator temporary register
 - `rcx` - translator temporary register
 
+_Indirect call acceleration_
+
+Indirect calls through function pointers cannot be statically
+translated as the target address of translated code cannot be
+known at the time of translation. rv8 employs a trace cache
+which is a hashtable of guest program counters to translated
+code addresses. This is slow to lookup as it requires saving
+registers and calling into C++ code. To accelerate indirect
+calls through function pointers, a small assembly stub first
+looks up a direct mapped L1 translation cache, and falls back
+to a slower translation cache miss path that saves registers
+and calls into the translator C++ code to populate the L1
+translation cache so that the next indirect call can be
+accelerated.
+
+_Inline caching_
+
+Returns also make use of the L1 translation cache, however any
+procedure call that is made inside of a hot trace can be inlined
+and to do so the translator maintains a call stack. Upon
+reaching an inlined procedures `RET` (_jalr zero, ra_)
+instruction, the link register is compared against the callers
+kown return address and if it matches, control flow continues
+along the return path. In the case that the function is not
+inlined, the regular L1 translation cache is used to lookup
+the address of the translated code.
+
 _Sign extension versus zero extension_
 
 In addition to the register allocation problem, rv8 has to make
@@ -219,10 +246,10 @@ however there are proposals to add them in the B extension.
 
 _Conclusion_
 
-The combination of the register allocation, sign extension and
-lack of bit manipulation intrinsics account for the proportion
-of the difference in instruction count and performance between
-native x86-64 code and emulated RISC-V code.
+The combination of the register allocation problem, sign extension
+and the lack of bit manipulation intrinsics account for a large
+proportion of the difference in instruction count and performance
+between native x86-64 code and translated RISC-V code.
 
 The following benchmarks show QEMU, rv8 binary translation
 and native x86-64 runtimes:
