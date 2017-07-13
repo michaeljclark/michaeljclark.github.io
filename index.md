@@ -219,14 +219,14 @@ cache so that the next indirect call can be accelerated.
 
 The cache is indexed by `bits[10:1]` of the guest address:
 
-RV code   | |x86 code        | |RV code  | |x86 code
----       |-|---             |-|---      |-|---
-`0x10000` |→|`0x7FFF0000f380`| |         | |
-          | |                | |         | |
-          | |                | |`0x2b086`|→|`0x7FFF0003f480`
-`0x1a808` |→|`0x7FFF0001f580`| |         | |
-          | |                | |         | |
-          | |                | |`0x1708b`|→|`0x7FFF0002fa80`
+RISC-V pc | |x86-64 rip      | |RISC-V pc | |x86-64 rip
+---       |-|---             |-|---       |-|---
+`0x10000` |→|`0x7FFF0000f380`| |          | |
+          | |                | |          | |
+          | |                | |`0x2b086` |→|`0x7FFF0003f480`
+`0x1a808` |→|`0x7FFF0001f580`| |          | |
+          | |                | |          | |
+          | |                | |`0x1708b` |→|`0x7FFF0002fa80`
 
 _Inline caching_
 
@@ -243,7 +243,7 @@ the address of the translated code.
 
 An inlined subroutine call needs to test the return address:
 
-RV code           | |                | |Translated x86 code
+RISC-V code       | |                | |Translated x86 code
 ---               |-|---             |-|---
 `JALR ra, 0x1a808`|→|                | |`MOV rdx, 0x0x1a80c`
                   | |`SLLI a0,a0,32` | |
