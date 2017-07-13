@@ -367,25 +367,6 @@ qsort           |  29.52  | 1.41    |  7.04     | 1.00
 dhrystone       | 214.45  | 4.38    | 21.23     | 1.00
 Ratio (average) |   99:1  | 3.0:1   | 7.3:1     | 1:1
 
-The following chart shows the bencmark programs' RISC-V
-total retired instructions and x86-64 total retired
-instructions and total retired micro-ops in millions:
-
-![RISC-V vs x86-64 retired instructions]({{ site.url }}/images/bench-v8-tops.svg)
-
-_Total retired instructions and micro-ops in millions (RISC-V versus x86-64)_
-
-program         | rv64 (inst–M) | x86 (inst–M) | x86 (μop–M) | x86:rv64 (inst:inst) | x86:rv64 (μop:inst)
----             | --:   | --:   | --:   | --:    | --:
-primes          | 763   |  1025 |  1020 | 1.34   | 1.34
-miniz           | 5899  |  4225 |  4275 | 0.72   | 0.72
-norx            | 2638  |  1839 |  2111 | 0.70   | 0.80
-SHA-512         | 3717  |  2946 |  3262 | 0.79   | 0.88
-AES             | 4943  |  2894 |  3678 | 0.59   | 0.74
-qsort           | 577   |   805 |  1132 | 1.40   | 1.96
-dhrystone       | 2950  |   891 |  1201 | 0.30   | 0.41
-Total/Ratio     | 21486 | 14625 | 16679 | 0.83:1 | 0.98:1
-
 The following chart shows rv8 binary translation performance
 in millions of RISC-V instructions per section and native
 x86-64 performance in millions of instructions per second
@@ -405,6 +386,25 @@ AES             | 4973  | 10561 | 13422 | 2.12   | 2.70
 qsort           | 3054  |  6010 |  8448 | 1.97   | 2.77
 dhrystone       | 6469  |  8564 | 11546 | 1.32   | 1.78
 Average/Ratio   | 4360  |  8739 | 10307 | 2.14:1 | 2.52:1
+
+The following chart shows the bencmark programs' RISC-V
+total retired instructions and x86-64 total retired
+instructions and total retired micro-ops in millions:
+
+![RISC-V vs x86-64 retired instructions]({{ site.url }}/images/bench-v8-tops.svg)
+
+_Total retired instructions and micro-ops in millions (RISC-V versus x86-64)_
+
+program         | rv64 (inst–M) | x86 (inst–M) | x86 (μop–M) | x86:rv64 (inst:inst) | x86:rv64 (μop:inst)
+---             | --:   | --:   | --:   | --:    | --:
+primes          | 763   |  1025 |  1020 | 1.34   | 1.34
+miniz           | 5899  |  4225 |  4275 | 0.72   | 0.72
+norx            | 2638  |  1839 |  2111 | 0.70   | 0.80
+SHA-512         | 3717  |  2946 |  3262 | 0.79   | 0.88
+AES             | 4943  |  2894 |  3678 | 0.59   | 0.74
+qsort           | 577   |   805 |  1132 | 1.40   | 1.96
+dhrystone       | 2950  |   891 |  1201 | 0.30   | 0.41
+Total/Ratio     | 21486 | 14625 | 16679 | 0.83:1 | 0.98:1
 
 Notes:
 
