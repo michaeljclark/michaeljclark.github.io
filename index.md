@@ -705,3 +705,12 @@ Enter 'help' for a list of built-in commands.
 
 / # 
 ```
+
+---
+
+### [References](#references)
+
+- [RISC-V Foundation](http://riscv.org/)
+- [RISC-V ISA Specification](http://riscv.org/specifications/)
+- [RISC-V Privileged ISA Specification](http://riscv.org/specifications/privileged-isa/)
+- [RISC-V GNU Toolchain](https://github.com/riscv/riscv-gnu-toolchain/)
