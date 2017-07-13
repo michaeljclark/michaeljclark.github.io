@@ -219,26 +219,38 @@ cache so that the next indirect call can be accelerated.
 
 The cache is indexed by `bits[10:1]` of the guest address:
 
-RV code | |x86 code      | |RV code | |x86 code
----     |-|---           |-|---     |-|---
-0x10000 |→|0x7FFF0000f380| |        | |
-        | |              | |        | |
-        | |              | |0x2b086 |→|0x7FFF0003f480
-0x1a808 |→|0x7FFF0001f580| |        | |
-        | |              | |        | |
-        | |              | |0x1708b |→|0x7FFF0002fa80
+RV code   | |x86 code        | |RV code  | |x86 code
+---       |-|---             |-|---      |-|---
+`0x10000` |→|`0x7FFF0000f380`| |         | |
+          | |                | |         | |
+          | |                | |`0x2b086`|→|`0x7FFF0003f480`
+`0x1a808` |→|`0x7FFF0001f580`| |         | |
+          | |                | |         | |
+          | |                | |`0x1708b`|→|`0x7FFF0002fa80`
 
 _Inline caching_
 
 Returns also make use of the L1 translation cache, however any
-procedure call that is made inside of a hot trace can be inlined
-and to do so the translator maintains a call stack. Upon
-reaching an inlined procedures `RET` (_jalr zero, ra_)
-instruction, the link register is compared against the callers
-kown return address and if it matches, control flow continues
+procedure call that is made inside of a hot trace can be inlined.
+The translator maintains a call stack to keep track of return
+addresses. Upon reaching an inlined procedures `RET` (_jalr zero, ra_)
+instruction, the link register _(`ra` in RISC-V, `rdx` in
+the x86 translation) is compared against the callers known
+return address and if it matches, control flow continues
 along the return path. In the case that the function is not
 inlined, the regular L1 translation cache is used to lookup
 the address of the translated code.
+
+An inlined subroutine call needs to test the return address:
+
+RV code           | |                | |Translated x86 code
+---               |-|---             |-|---
+`JALR ra, 0x1a808`|→|                | |`MOV rdx, 0x0x1a80c`
+                  | |`SLLI a0,a0,32` | |
+                  | |`SRLI a0,a0,32` | |`MOVZX r8d, r8`
+                  | |`JALR zero,ra`  | |`CMP rdx, 0x1a80c`
+                  |←|                | |`JNE lookup_0x1a80c`       
+`ADDI a0,a0,-1`   | |                | |`ADD r8, -1`
 
 _Branch tail linking_
 
