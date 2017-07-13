@@ -575,7 +575,8 @@ instruction usage histogram
 
 ### [Linux](#linux)
 
-This section describes how to build and boot a Linux image.
+This section describes how to build and boot a Linux image in the
+full system emulator.
 
 Please read the RISC-V toolchain installtion instructions in the
 [riscv-gnu-toolchain](https://github.com/riscv/riscv-gnu-toolchain/)
