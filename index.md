@@ -252,7 +252,7 @@ RISC-V code       | |                | |Translated x86-64 code
                   |←|                | |`JNE lookup_0x1a80c`       
 `ADDI a0,a0,-1`   | |                | |`ADD r8, -1`
 
-_**Branch tail linking**_
+_**Branch tail dynamic linking**_
 
 The translator performs lazy translation of the source program
 during tracing and when it reaches branches, it can only link
