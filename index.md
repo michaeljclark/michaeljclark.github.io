@@ -325,10 +325,12 @@ however there are proposals to add them in the B extension.
 
 _**Conclusion**_
 
-The combination of the register allocation problem, sign extension
-and the lack of bit manipulation intrinsics account for a large
-proportion of the difference in instruction count and performance
-between native x86-64 code and translated RISC-V code.
+The combination of frequent register spills to memory, the
+sign extension versus zero extension behaviour for 32-bit integers,
+the indirect call/return overhead and the lack of bit manipulation
+intrinsics accounts for a large proportion of the difference in
+instruction count and performance between native x86-64 code and
+translated RISC-V code.
 
 ---
 
