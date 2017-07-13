@@ -320,8 +320,8 @@ however there are proposals to add them in the B extension.
 - _Rotate right or left pattern (2 shifts, 1 and)_
   - `(rs1 >> shamt) | (rs1 << (64 - shamt))`
 - _32-bit integer byteswap pattern (4 constants, 4 shifts, 4 ands, 3 ors)_
-  - `((rs1 >> 24) & 0x000000ff) | ((rs1 << 8 ) & 0x00ff0000) |
-    ((rs1 >> 8 ) & 0x0000ff00) | ((rs1 << 24) & 0xff000000)`
+  - `((rs1 >> 24) & 0x000000ff) | ((rs1 << 8 ) & 0x00ff0000) |` <br />
+    `((rs1 >> 8 ) & 0x0000ff00) | ((rs1 << 24) & 0xff000000)`
 
 _Conclusion_
 
