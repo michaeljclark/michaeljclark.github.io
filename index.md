@@ -305,7 +305,7 @@ RISC-V                 | x86-64
 --:                    | --:
 `0x000000007fffffff`   | `0x000000007fffffff`
 `+ 0x000000000fffffff` | `+ 0x000000000fffffff`
-`= 0xffffffff8ffffffe` | `+ 0x000000008ffffffe`
+`= 0xffffffff8ffffffe` | `= 0x000000008ffffffe`
 
 _Bit manipulation intrinsics_
 
