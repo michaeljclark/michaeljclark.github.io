@@ -168,7 +168,7 @@ of RISC-V code to X86-64 code. This is a challenging problem for
 many reasons; with the principle challange due to RISC-V having
 31 integer registers while x86-64 has only 16 integer registers.
 
-_Register allocation_
+_**Register allocation**_
 
 rv8 solves the register set size problem by spilling registers
 to memory (L1 cache) using a static register allocation (a future
@@ -187,7 +187,7 @@ ra |→|rdx|  |t1 |→|rdi|  |a2 |→|r10|  |a5 |→| r13
 sp |→|rbx|  |a0 |→|r8 |  |a3 |→|r11|  |a6 |→| r14
 t0 |→|rsi|  |a1 |→|r9 |  |a4 |→|r12|  |a7 |→| r1
 
-_Translator temporaries_
+_**Translator temporaries**_
 
 The rv8 binary translator needs to use a few host registers to
 point to translator internal structures and for use as temporary
@@ -202,7 +202,7 @@ uses the following x86-64 host registers as temporaries leaving
 - `rax` - translator temporary register
 - `rcx` - translator temporary register
 
-_Indirect call acceleration_
+_**Indirect call acceleration**_
 
 Indirect calls through function pointers cannot be statically
 translated as the target address of their translation is not
@@ -228,7 +228,7 @@ RISC-V pc | |x86-64 rip      | |RISC-V pc | |x86-64 rip
           | |                | |          | |
           | |                | |`0x1708b` |→|`0x7FFF0002fa80`
 
-_Inline caching_
+_**Inline caching**_
 
 Returns also make use of the L1 translation cache, however any
 procedure call that is made inside of a hot trace can be inlined.
@@ -252,7 +252,7 @@ RISC-V code       | |                | |Translated x86 code
                   |←|                | |`JNE lookup_0x1a80c`       
 `ADDI a0,a0,-1`   | |                | |`ADD r8, -1`
 
-_Branch tail linking_
+_**Branch tail linking**_
 
 The translator performs lazy translation of the source program
 during tracing and when it reaches branches, it can only link
@@ -266,7 +266,7 @@ if has been translated, all relative branches that point to
 tail exit trampolines will be relinked to branch directly
 to the translated native code.
 
-_Macro-op fusion_
+_**Macro-op fusion**_
 
 The rv8 translator implements an optimisation known as macro-op
 fusion whereby specific patterns of adjacent instructions are
@@ -287,7 +287,7 @@ of macro-op fusion patterns that rv8 currently implements:
   (where `rd=rs1`)
   - Fused into 32-bit zero extending `ADD` instruction.
 
-_Sign extension versus zero extension_
+_**Sign extension versus zero extension**_
 
 In addition to the register allocation problem, rv8 has to make
 sure that 32-bit operations on registers are sign extended instead
@@ -307,7 +307,7 @@ RISC-V                 | x86-64
 `+ 0x000000000fffffff` | `+ 0x000000000fffffff`
 `= 0xffffffff8ffffffe` | `= 0x000000008ffffffe`
 
-_Bit manipulation intrinsics_
+_**Bit manipulation intrinsics**_
 
 Finally the bencharks below contain digest algorithms and ciphers
 which can take advantage of bit manipulation instructions such as
@@ -323,7 +323,7 @@ however there are proposals to add them in the B extension.
   - `((rs1 >> 24) & 0x000000ff) | ((rs1 << 8 ) & 0x00ff0000) |` <br />
     `((rs1 >> 8 ) & 0x0000ff00) | ((rs1 << 24) & 0xff000000)`
 
-_Conclusion_
+_**Conclusion**_
 
 The combination of the register allocation problem, sign extension
 and the lack of bit manipulation intrinsics account for a large
