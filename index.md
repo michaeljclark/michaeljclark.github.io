@@ -295,8 +295,17 @@ of zero-extended. The normal behaviour of 32-bit operations on
 x86-64 is to zero extend bit 31 to bit 63. It may be possible
 in a future version of the JIT translation engine to elide
 redundant sign extension operations, however it is important
-that the register state precisely matches before executing an
-instruction that may cause a fault e.g. loads and stores.
+that the register state matches the precise semantics of the ISA
+before executing an instruction that may cause a fault e.g.
+loads and stores.
+
+Example of sign extended 32-bit arithmetic on RISC-V and x86-64:
+
+RISC-V                 | x86-64
+--:                    | --:
+`0x000000007fffffff`   | `0x000000007fffffff`
+`+ 0x000000000fffffff` | `+ 0x000000000fffffff`
+`= 0xffffffff8ffffffe` | `+ 0x000000008ffffffe`
 
 _Bit manipulation intrinsics_
 
