@@ -181,6 +181,12 @@ accesses must be translated precisely. The additional registers are
 translated as x86-64 memory operands (which produce load and store
 micro-ops) or in some circumstances, explicit `mov` instructions.
 
+RV | |x86|  |RV | |x86|  |RV | |x86|  |RV | | x86
+--:| |:--|  |--:| |:--|  |--:| |:--|  |--:| |:--
+ra |→|rdx|  |t1 |→|rdi|  |a2 |→|r10|  |a5 |→| r13
+sp |→|rbx|  |a0 |→|r8 |  |a3 |→|r11|  |a6 |→| r14
+t0 |→|rsi|  |a1 |→|r9 |  |a4 |→|r12|  |a7 |→| r1
+
 _Translator temporaries_
 
 The rv8 binary translator needs to use a few host registers to
