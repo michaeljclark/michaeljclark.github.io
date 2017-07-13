@@ -207,15 +207,26 @@ _Indirect call acceleration_
 Indirect calls through function pointers cannot be statically
 translated as the target address of their translation is not
 known at the time of translation. rv8 employs a trace cache
-which is a hashtable of guest program address to translated native
-code address. A full trace cache lookup is slow because it
-necessitates saving caller-save registers and calling into C++
+which is a hashtable of guest program addresses to native code
+addresses. A full trace cache lookup is relatively slow because
+it requires saving caller-save registers and calling into C++
 code. To accelerate indirect calls through function pointers,
-a small assembly stub looks up the target address in a direct
-mapped L1 translation cache, and only then falls back to a slower
-translation cache miss path that saves registers and calls into
-the translator code to populate the L1 translation cache so that
-the next indirect call can be accelerated.
+a small assembly stub looks up the target address in a sparse
+1024 entry direct mapped L1 translation cache, and falls back
+to a slow translation cache miss path that saves registers and
+calls into the translator code to populate the L1 translation
+cache so that the next indirect call can be accelerated.
+
+The cache is indexed by `bits[10:1]` of the guest address:
+
+RV code | |x86 code      | |RV code | |x86 code
+---     |-|---           |-|---     |-|---
+0x10000 |→|0x7FFF0000f380| |        | |
+        | |              | |        | |
+        | |              | |0x2b086 |→|0x7FFF0003f480
+0x1a808 |→|0x7FFF0001f580| |        | |
+        | |              | |        | |
+        | |              | |0x1708b |→|0x7FFF0002fa80
 
 _Inline caching_
 
