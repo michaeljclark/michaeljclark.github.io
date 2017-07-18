@@ -122,7 +122,9 @@ repository.
 _Building riscv-gnu-toolchain_
 
 ```
-$ sudo apt-get install autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev gawk build-essential bison flex texinfo gperf libtool patchutils bc zlib1g-dev
+$ sudo apt-get install autoconf automake autotools-dev curl \
+  libmpc-dev libmpfr-dev libgmp-dev gawk build-essential \
+  bison flex texinfo gperf libtool patchutils bc zlib1g-dev
 $ git clone https://github.com/riscv/riscv-gnu-toolchain.git
 $ cd riscv-gnu-toolchain
 $ git submodule update --init --recursive
