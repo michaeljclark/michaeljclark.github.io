@@ -1,14 +1,16 @@
+> [Platforms](#platforms) \| [Installation](#installation) \| [Optimisations](#optimisations) \| [Benchmarks](#benchmarks) \| [Logging](#logging) \| [Tracing](#tracing) \| [Histograms](#histograms) \| [Linux](#linux)
+
 ### [About](#about)
 
 **rv8** is a RISC-V simulation suite comprising a high performance
 x86-64 binary translator, a user mode simulator, a full system
 emulator, an ELF binary analysis tool and ISA metadata:
 
-> * **rv-jit** - _user mode x86-64 binary translator_
-> * **rv-sim** - _user mode system call proxy simulator_
-> * **rv-sys** - _full system emulator with soft MMU_
-> * **rv-bin** - _ELF disassembler and histogram tool_
-> * **rv-meta** - _code and documentation generator_
+* **rv-jit** - _user mode x86-64 binary translator_
+* **rv-sim** - _user mode system call proxy simulator_
+* **rv-sys** - _full system emulator with soft MMU_
+* **rv-bin** - _ELF disassembler and histogram tool_
+* **rv-meta** - _code and documentation generator_
 
 The rv8 simulator suite contains libraries and command line tools for
 creating instruction opcode maps, C headers and source containing
@@ -98,7 +100,7 @@ RISC-V isnstruction set metadata is available [here](https://github.com/rv8-io/r
 
 ---
 
-### [Supported Platforms](#supported-platforms)
+### [Platforms](#platforms)
 
 - Target
   - RV32IMAFDC
@@ -111,7 +113,7 @@ RISC-V isnstruction set metadata is available [here](https://github.com/rv8-io/r
 
 ---
 
-### [Getting Started](#getting-started)
+### [Installation](#installation)
 
 Please read the RISC-V toolchain installtion instructions in the
 [riscv-gnu-toolchain](https://github.com/riscv/riscv-gnu-toolchain/)
