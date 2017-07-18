@@ -8,7 +8,7 @@ emulator, an ELF binary analysis tool and ISA metadata:
 * **rv-bin** - _ELF disassembler and histogram tool_
 * **rv-meta** - _code and documentation generator_
 
-> [Platforms](#platforms) \| [Installation](#installation) \| [Optimisations](#optimisations) \| [Benchmarks](#benchmarks) \| [Logging](#logging) \| [Tracing](#tracing) \| [Histograms](#histograms) \| [Linux](#linux)
+> [About](#about) \| [Installation](#installation) \| [Optimisations](#optimisations) \| [Benchmarks](#benchmarks) \| [Logging](#logging) \| [Tracing](#tracing) \| [Histograms](#histograms) \| [Linux](#linux)
 
 ---
 
@@ -102,7 +102,9 @@ RISC-V isnstruction set metadata is available [here](https://github.com/rv8-io/r
 
 ---
 
-### [Platforms](#platforms)
+### [Installation](#installation)
+
+rv8 supports the following target architecture and host operating system combinations:
 
 - Target
   - RV32IMAFDC
@@ -112,10 +114,6 @@ RISC-V isnstruction set metadata is available [here](https://github.com/rv8-io/r
   - Linux (Debian 9.0 x86-64, Ubuntu 16.04 x86-64, Fedora 25 x86-64) _(stable)_
   - macOS (Sierra 10.11 x86-64) _(stable)_
   - FreeBSD (11 x86-64) _(alpha)_
-
----
-
-### [Installation](#installation)
 
 Please read the RISC-V toolchain installtion instructions in the
 [riscv-gnu-toolchain](https://github.com/riscv/riscv-gnu-toolchain/)
