@@ -290,6 +290,10 @@ of macro-op fusion patterns that rv8 currently implements:
 - `ADDIW rd, rs1, imm12; SLLI rd, rs1, 32; SRLI rd, rs1, 32`
   (where `rd=rs1`)
   - Fused into 32-bit zero extending `ADD` instruction.
+- `SRLI r1, rs, imm12; SLLI r2, rs, 64 - imm12, OR r1, r1, r2`
+  - Fused into 64-bit ROR with residual SRLI or SLLI temporary
+- `SRLIW r1, rs, imm12; SLLIW r2, rs, 32 - imm12, OR r1, r1, r2`
+  - Fused into 32-bit ROR with residual SRLIW or SLLIW temporary
 
 _**Sign extension versus zero extension**_
 
@@ -321,11 +325,19 @@ them into x86-64 bit manipulation instructions (`ROR`, `ROL`,
 `BSWAP`). RISC-V currently lacks bit manipulation instructions
 however there are proposals to add them in the B extension.
 
-- _Rotate right or left pattern (2 shifts, 1 and)_
-  - `(rs1 >> shamt) | (rs1 << (64 - shamt))`
 - _32-bit integer byteswap pattern (4 constants, 4 shifts, 4 ands, 3 ors)_
   - `((rs1 >> 24) & 0x000000ff) | ((rs1 << 8 ) & 0x00ff0000) |` <br />
     `((rs1 >> 8 ) & 0x0000ff00) | ((rs1 << 24) & 0xff000000)`
+
+rv8 implements rotate macro-op fusion which can translate two
+shift instructions and one `OR` instructions with the correct
+offsets into one shift and one rotate. The rotate macro-op fusion
+needs to create the residual temporary register side effects so
+that the register file contents are precisely matched, as it can't
+easily prove the residual temporary register is not later used.
+
+- _Rotate right or left pattern (2 shifts, 1 and)_
+  - `(rs1 >> shamt) | (rs1 << (64 - shamt))`
 
 _**Conclusion**_
 
@@ -351,8 +363,8 @@ program         | rv8-sim | rv8-jit | qemu-user | native
 ---             | --:     | --:     | --:       | --:
 primes          |  5.07   | 0.16    | 0.27      | 0.11
 miniz           | 41.52   | 1.67    | 2.20      | 0.76
-norx            | 22.51   | 1.10    | 1.44      | 0.21
-SHA-512         | 23.69   | 0.70    | 1.12      | 0.24
+norx            | 22.51   | 0.90    | 1.44      | 0.21
+SHA-512         | 23.69   | 0.66    | 1.12      | 0.24
 AES             | 38.39   | 1.00    | 1.61      | 0.27
 qsort           |  3.96   | 0.19    | 0.94      | 0.13
 dhrystone       | 22.30   | 0.46    | 2.21      | 0.10
@@ -364,12 +376,12 @@ program         | rv8-sim | rv8-jit | qemu-user | native
 ---             | --:     | --:     | --:       | --:
 primes          |  44.43  | 1.40    |  2.36     | 1.00
 miniz           |  55.00  | 2.22    |  2.92     | 1.00
-norx            | 109.80  | 5.39    |  7.00     | 1.00
-SHA-512         | 100.39  | 2.95    |  4.76     | 1.00
+norx            | 109.80  | 4.39    |  7.00     | 1.00
+SHA-512         | 100.39  | 2.80    |  4.76     | 1.00
 AES             | 140.12  | 3.63    |  5.88     | 1.00
 qsort           |  29.52  | 1.41    |  7.04     | 1.00
 dhrystone       | 214.45  | 4.38    | 21.23     | 1.00
-Ratio (average) |   99:1  | 3.0:1   | 7.3:1     | 1:1
+Ratio (average) |   99:1  | 2.9:1   | 7.3:1     | 1:1
 
 The following chart shows rv8 binary translation performance
 in millions of RISC-V instructions per section and native
@@ -384,12 +396,12 @@ program         | rv-jit (MIPS) | x86 (MIPS) | rv-jit:x86 (MOPS) | x86:rv-jit (M
 ---             | --:   | --:   | --:   | --:    | --:
 primes          | 4771  |  8987 |  8951 | 1.88   | 1.88
 miniz           | 3526  |  5597 |  5662 | 1.59   | 1.61
-norx            | 2389  |  8972 | 10299 | 3.76   | 4.31
-SHA-512         | 5340  | 12484 | 13820 | 2.34   | 2.59
+norx            | 2931  |  8972 | 10299 | 3.06   | 3.51
+SHA-512         | 5631  | 12484 | 13820 | 2.22   | 2.45
 AES             | 4973  | 10561 | 13422 | 2.12   | 2.70
 qsort           | 3054  |  6010 |  8448 | 1.97   | 2.77
 dhrystone       | 6469  |  8564 | 11546 | 1.32   | 1.78
-Average/Ratio   | 4360  |  8739 | 10307 | 2.14:1 | 2.52:1
+Average/Ratio   | 4360  |  8739 | 10307 | 2.0:1  | 2.4:1
 
 The following chart shows the bencmark programs' RISC-V
 total retired instructions and x86-64 total retired
