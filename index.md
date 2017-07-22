@@ -285,14 +285,18 @@ of macro-op fusion patterns that rv8 currently implements:
   - Target address is constructed using a single `MOV` instruction.
 - `AUIPC ra, imm20; JALR ra, imm12(ra);` (where `rd=rs1`)
   - Target address register write is elided.
+- `AUIPC rd, imm20; LW rd, imm12(rs1);` (where `rd=rs1`)
+  - Fused into single `MOV` with an immediate addressing mode
+- `AUIPC rd, imm20; LD rd, imm12(rs1);` (where `rd=rs1`)
+  - Fused into single `MOV` with an immediate addressing mode
 - `SLLI rd, rs1, 32; SRLI rd, rs1, 32` (where `rd=rs1`)
   - Fused into a single `MOVZX` instruction.
-- `ADDIW rd, rs1, imm12; SLLI rd, rs1, 32; SRLI rd, rs1, 32`
+- `ADDIW rd, rs1, imm12; SLLI rd, rs1, 32; SRLI rd, rs1, 32;`
   (where `rd=rs1`)
   - Fused into 32-bit zero extending `ADD` instruction.
-- `SRLI r1, rs, imm12; SLLI r2, rs, 64 - imm12; OR r1, r1, r2`
+- `SRLI r1, rs, imm12; SLLI r2, rs, 64 - imm12; OR r1, r1, r2;`
   - Fused into 64-bit `ROR` with one residual `SHL` or `SHR` temporary
-- `SRLIW r1, rs, imm12; SLLIW r2, rs, 32 - imm12; OR r1, r1, r2`
+- `SRLIW r1, rs, imm12; SLLIW r2, rs, 32 - imm12; OR r1, r1, r2;`
   - Fused into 32-bit `ROR` with one residual `SHL` or `SHR` temporary
 
 _**Sign extension versus zero extension**_
@@ -367,8 +371,8 @@ norx            | 22.51   | 0.90    | 1.44      | 0.21
 SHA-512         | 23.69   | 0.66    | 1.12      | 0.24
 AES             | 38.39   | 1.00    | 1.61      | 0.27
 qsort           |  3.96   | 0.19    | 0.94      | 0.13
-dhrystone       | 22.30   | 0.46    | 2.21      | 0.10
-DMIPS (v1.1)    | 254     | 12492   | 2576      | 55132
+dhrystone       | 22.30   | 0.45    | 2.21      | 0.10
+_(DMIPS v1.1)_  | _254_   | _12773_ | _2576_    | _55132_
 
 _Performance Ratio (smaller is better)_
 
@@ -380,8 +384,8 @@ norx            | 109.80  | 4.39    |  7.00     | 1.00
 SHA-512         | 100.39  | 2.80    |  4.76     | 1.00
 AES             | 140.12  | 3.63    |  5.88     | 1.00
 qsort           |  29.52  | 1.41    |  7.04     | 1.00
-dhrystone       | 214.45  | 4.38    | 21.23     | 1.00
-Ratio (average) |   99:1  | 2.9:1   | 7.3:1     | 1:1
+dhrystone       | 214.45  | 4.29    | 21.23     | 1.00
+_(Geomean)_     | _81.51_ | _2.62_  | _5.72_    | _1.00_
 
 The following chart shows rv8 binary translation performance
 in millions of RISC-V instructions per section and native
@@ -400,8 +404,8 @@ norx            | 2931  |  8972 | 10299 | 3.06   | 3.51
 SHA-512         | 5631  | 12484 | 13820 | 2.22   | 2.45
 AES             | 4973  | 10561 | 13422 | 2.12   | 2.70
 qsort           | 3054  |  6010 |  8448 | 1.97   | 2.77
-dhrystone       | 6469  |  8564 | 11546 | 1.32   | 1.78
-Average/Ratio   | 4360  |  8739 | 10307 | 2.0:1  | 2.4:1
+dhrystone       | 6614  |  8564 | 11546 | 1.32   | 1.78
+_(Geomean)_     | _4316_ | _8445_ | _9919_ | _1.96_ | _2.30_
 
 The following chart shows the bencmark programs' RISC-V
 total retired instructions and x86-64 total retired
@@ -420,7 +424,7 @@ SHA-512         | 3717  |  2946 |  3262 | 0.79   | 0.88
 AES             | 4943  |  2894 |  3678 | 0.59   | 0.74
 qsort           | 577   |   805 |  1132 | 1.40   | 1.96
 dhrystone       | 2950  |   891 |  1201 | 0.30   | 0.41
-Total/Ratio     | 21486 | 14625 | 16679 | 0.83:1 | 0.98:1
+_(Total/Geomean)_ | _21486_ | _14625_ | _16679_ | _0.75_ | _0.88_
 
 Notes:
 

@@ -183,9 +183,9 @@
 	<path stroke='black'  d='M426.4,444.0 L426.4,377.8 L440.6,377.8 L440.6,444.0 L426.4,444.0 Z  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g stroke='none' shape-rendering='crispEdges'>
-		<polygon fill = 'rgb( 70, 113, 213)' points = '489.3,444.0 503.6,444.0 503.6,303.8 489.3,303.8 '/>
+		<polygon fill = 'rgb( 70, 113, 213)' points = '489.3,444.0 503.6,444.0 503.6,300.6 489.3,300.6 '/>
 	</g>
-	<path stroke='black'  d='M489.3,444.0 L489.3,303.9 L503.5,303.9 L503.5,444.0 L489.3,444.0 Z  '/></g>
+	<path stroke='black'  d='M489.3,444.0 L489.3,300.7 L503.5,300.7 L503.5,444.0 L489.3,444.0 Z  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 	</g>
