@@ -290,10 +290,10 @@ of macro-op fusion patterns that rv8 currently implements:
 - `ADDIW rd, rs1, imm12; SLLI rd, rs1, 32; SRLI rd, rs1, 32`
   (where `rd=rs1`)
   - Fused into 32-bit zero extending `ADD` instruction.
-- `SRLI r1, rs, imm12; SLLI r2, rs, 64 - imm12, OR r1, r1, r2`
-  - Fused into 64-bit ROR with residual SRLI or SLLI temporary
-- `SRLIW r1, rs, imm12; SLLIW r2, rs, 32 - imm12, OR r1, r1, r2`
-  - Fused into 32-bit ROR with residual SRLIW or SLLIW temporary
+- `SRLI r1, rs, imm12; SLLI r2, rs, 64 - imm12; OR r1, r1, r2`
+  - Fused into 64-bit `ROR` with one residual `SHL` or `SHR` temporary
+- `SRLIW r1, rs, imm12; SLLIW r2, rs, 32 - imm12; OR r1, r1, r2`
+  - Fused into 32-bit `ROR` with one residual `SHL` or `SHR` temporary
 
 _**Sign extension versus zero extension**_
 
