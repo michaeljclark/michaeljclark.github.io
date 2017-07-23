@@ -1,6 +1,6 @@
 ### RISC-V Instruction Set Reference
 
-The following tables describes the RISC-V RV32IM and RV64IM instruction sets.
+The following tables list the RISC-V RV32IM and RV64IM instructions.
 
 _**RV32I Base Integer Instruction Set**_
 
