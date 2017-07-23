@@ -23,7 +23,7 @@ a RISC-V proxy syscall simulator, a RISC-V full system emulator that
 implements the RISC-V 1.9.1 privileged specification and an x86-64
 binary translator.
 
-The current version is available [here](https://github.com/rv8-io/rv8).
+The current version is available at: [https://github.com/rv8-io/rv8](https://github.com/rv8-io/rv8)
 
 ![rv8 binary translation]({{ site.url }}/images/bintrans.png)
 
