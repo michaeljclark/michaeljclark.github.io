@@ -238,7 +238,7 @@ Returns also make use of the L1 translation cache, however any
 procedure call that is made inside of a hot trace can be inlined.
 The translator maintains a call stack to keep track of return
 addresses. Upon reaching an inlined procedures `RET` (_jalr zero, ra_)
-instruction, the link register _(`ra` in RISC-V, `rdx` in
+instruction, the link register (`ra` in RISC-V, `rdx` in
 the x86 translation) is compared against the callers known
 return address and if it matches, control flow continues
 along the return path. In the case that the function is not
