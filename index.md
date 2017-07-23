@@ -322,13 +322,16 @@ RISC-V                 | x86-64
 
 _**Bit manipulation intrinsics**_
 
-Finally the bencharks below contain digest algorithms and ciphers
-which can take advantage of bit manipulation instructions such as
-rotate and bswap. Present day compilers are sophisticated enough
-to detetc rotate and byte swap logical operations and translate
-them into x86-64 bit manipulation instructions (`ROR`, `ROL`,
-`BSWAP`). RISC-V currently lacks bit manipulation instructions
+The bencharks below contain digest algorithms and ciphers which
+can take advantage of bit manipulation instructions such as rotate
+and bswap. Present day compilers detect rotate and byte swap bitwise
+logical operations by matching intermediate representation patterns
+that can be lowered directly to bit manipulation instructions such
+as `ROR`, `ROL`, `BSWAP` on x86-64. This approach has the benefit
+of accelerating code that does not use inline assembly or compiler
+builtin functions. RISC-V currently lacks bit manipulation instructions
 however there are proposals to add them in the B extension.
+The following is a typical byte swap pattern.
 
 - _32-bit integer byteswap pattern (4 constants, 4 shifts, 4 ands, 3 ors)_
   - `((rs1 >> 24) & 0x000000ff) | ((rs1 << 8 ) & 0x00ff0000) |` <br />
