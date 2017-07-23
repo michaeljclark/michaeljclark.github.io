@@ -121,7 +121,7 @@ repository.
 
 _Building riscv-gnu-toolchain_
 
-```
+``` bash
 $ sudo apt-get install autoconf automake autotools-dev curl \
   libmpc-dev libmpfr-dev libgmp-dev gawk build-essential \
   bison flex texinfo gperf libtool patchutils bc zlib1g-dev
@@ -140,7 +140,7 @@ the C/C++ standard libraries and the `asmjit` submodule.
 
 _Building rv8_
 
-```
+``` bash
 $ git clone https://github.com/rv8-io/rv8.git
 $ cd rv8
 $ git submodule update --init --recursive
@@ -154,7 +154,7 @@ The `riscv64-unknown-elf` newlib toolchain is required for building
 the rv8 test cases and this build step depends on the `RISCV`
 environment variable.
 
-```
+``` bash
 $ cd rv8
 $ export RISCV=/opt/riscv/toolchain
 $ make test-build
