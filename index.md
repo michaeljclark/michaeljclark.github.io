@@ -92,13 +92,17 @@ The rv8 user mode simulator has the following features:
 
 _**RISC-V instruction set metadata**_
 
+The `rv-bin` tool contains a meta-data driven disassembler and
+a histogram tool for analysing static register usage and static
+instruction usage.
+
 The `rv-meta` tool is able to generate opcode maps, instruction
 decoders, source, headers and instruction set listing LaTeX
 from ISA metadata. The following is an example of PDF output:
 
 [![RISC-V Instruction Set Listing]({{ site.url }}/images/riscv-instructions.png)](https://github.com/rv8-io/rv8/blob/master/doc/pdf/riscv-instructions.pdf)
 
-RISC-V isnstruction set metadata is available [here](https://github.com/rv8-io/rv8/blob/master/meta/).
+RISC-V instruction set metadata is available [here](https://github.com/rv8-io/rv8/blob/master/meta/).
 
 ---
 
