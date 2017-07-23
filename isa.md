@@ -8,8 +8,8 @@ Format | Name | Pseudocode
 :-- | :-- | :--
 <code><sub>LUI rd,imm</sub></code> | <sub>Load Upper Immediate</sub> | <sub>rd ← imm</sub>
 <code><sub>AUIPC rd,offset</sub></code> | <sub>Add Upper Immediate to PC</sub> | <sub>rd ← pc + imm</sub>
-<code><sub>JAL rd,offset</sub></code> | <sub>Jump and Link</sub> | <sub>rd ← pc + length(inst) ; pc ← pc + imm</sub>
-<code><sub>JALR rd,rs1,offset</sub></code> | <sub>Jump and Link Register</sub> | <sub>rd ← pc + length(inst) ; pc ← rs1 + imm</sub>
+<code><sub>JAL rd,offset</sub></code> | <sub>Jump and Link</sub> | <sub>rd ← pc + length(inst);<br/>pc ← pc + imm</sub>
+<code><sub>JALR rd,rs1,offset</sub></code> | <sub>Jump and Link Register</sub> | <sub>rd ← pc + length(inst);<br/>pc ← rs1 + imm</sub>
 <code><sub>BEQ rs1,rs2,offset</sub></code> | <sub>Branch Equal</sub> | <sub>if rs1 = rs2 then pc ← pc + imm</sub>
 <code><sub>BNE rs1,rs2,offset</sub></code> | <sub>Branch Not Equal</sub> | <sub>if rs1 ≠ rs2 then pc ← pc + imm</sub>
 <code><sub>BLT rs1,rs2,offset</sub></code> | <sub>Branch Less Than</sub> | <sub>if rs1 < rs2 then pc ← pc + imm</sub>
