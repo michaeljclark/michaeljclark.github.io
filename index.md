@@ -274,10 +274,11 @@ _**Macro-op fusion**_
 
 The rv8 translator implements an optimisation known as macro-op
 fusion whereby specific patterns of adjacent instructions are
-translated into a single host instruction. The macro-op fusion
-pattern matcher has potential to increase performance further
-with the addition of common patterns. The following is a list
-of macro-op fusion patterns that rv8 currently implements:
+translated into a smaller sequence of host instruction. The
+macro-op fusion pattern matcher has potential to increase
+performance further with the addition of common patterns.
+The following is a list of macro-op fusion patterns that are
+currently implemented in rv8:
 
 - `AUIPC rs, imm20; ADDI rd, rs1, imm12;` (where `rd=rs1`)
   - PC-relative address is resolved using a single `MOV` instruction.
