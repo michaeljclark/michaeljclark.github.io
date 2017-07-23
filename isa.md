@@ -6,8 +6,8 @@ _**RV32I Base Integer Instruction Set**_
 
 Opcode     | Instruction Name                         | Pseudocode
 :--        | :--                                      | :--
-lui        | Load Upper Immediate                     | rd ← imm
-auipc      | Add Upper Immediate to PC                | rd ← pc + imm
+`lui`        | Load Upper Immediate                     | rd ← imm
+`auipc`      | Add Upper Immediate to PC                | rd ← pc + imm
 jal        | Jump and Link                            | rd ← pc + length(inst) ; pc ← pc + imm
 jalr       | Jump and Link Register                   | rd ← pc + length(inst) ; pc ← rs1 + imm
 beq        | Branch Equal                             | if rs1 = rs2 then pc ← pc + imm
