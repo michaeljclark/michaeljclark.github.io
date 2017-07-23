@@ -133,7 +133,7 @@ $ make
 ```
 
 rv8 has minimum external dependencies besides a C++14 compiler,
-the C++ standard libraries and the `asmjit` submodule.
+the C/C++ standard libraries and the `asmjit` submodule.
 
 - gcc-5.4 or clang-3.4 (Linux minimum)
 - gcc-6.3 or clang-3.8 (Linux recommended)
