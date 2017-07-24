@@ -245,9 +245,9 @@ along the return path. In the case that the function is not
 inlined, the regular L1 translation cache is used to lookup
 the address of the translated code.
 
-An inlined subroutine call needs to test the return address:
-
-![rv8 inline caching]({{ site.url }}/images/inlining.svg){: .center-image }
+| ![rv8 inline caching]({{ site.url }}/images/inlining.svg){: .center-image } |
+|:--:| 
+| inlined subroutine call needs to test the return address |
 
 _**Branch tail dynamic linking**_
 
