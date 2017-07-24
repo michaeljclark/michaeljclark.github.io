@@ -1,5 +1,3 @@
-<a href="https://rv8.io/"><img style="float: right;" src="/images/rv8.svg"></a>
-
 **rv8** is a RISC-V simulation suite comprising a high performance
 x86-64 binary translator, a user mode simulator, a full system
 emulator, an ELF binary analysis tool and ISA metadata:
