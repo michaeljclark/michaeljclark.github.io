@@ -1,0 +1,24 @@
+\documentclass[tikz]{standalone}
+\usepackage[utf8]{inputenc}
+\usetikzlibrary{graphs} 
+\begin{document}
+
+\tikzset{every picture/.append style={scale=1.0}}
+
+\definecolor{bluish}{rgb}{0.1,0.4,0.7}
+\definecolor{yelloish}{rgb}{0.9,0.4,0.0}
+
+\tikzset{
+loop1/.style={to path={.. controls +(80:1) and +(100:1) .. (\tikztotarget) \tikztonodes}},
+loop2/.style={to path={.. controls +(-100:1) and +(-80:1) .. (\tikztotarget) \tikztonodes}},
+state/.style={circle,draw, very thick,draw=black!80,align=center,top color=black!20,bottom color=black!20}
+}
+
+\begin{tikzpicture}[shorten >=2pt]
+
+\node [state] (a) at (0mm,0mm) {$rv\textsuperscript{8}$};
+\draw[->] (a) to [loop1] node[above right] {} (a);
+\draw[->] (a) to [loop2] node[above right] {} (a);
+
+\end{tikzpicture}
+\end{document}
