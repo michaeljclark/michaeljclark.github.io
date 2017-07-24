@@ -298,7 +298,7 @@ currently implemented in rv8:
   - Fused into single `MOV` with an immediate addressing mode
 - `AUIPC rd, imm20; LD rd, imm12(rs1);` (where `rd=rs1`)
   - Fused into single `MOV` with an immediate addressing mode
-- `SLLI rd, rs1, 32; SRLI rd, rs1, 32` (where `rd=rs1`)
+- `SLLI rd, rs1, 32; SRLI rd, rs1, 32;` (where `rd=rs1`)
   - Fused into a single `MOVZX` instruction.
 - `ADDIW rd, rs1, imm12; SLLI rd, rs1, 32; SRLI rd, rs1, 32;`
   (where `rd=rs1`)
