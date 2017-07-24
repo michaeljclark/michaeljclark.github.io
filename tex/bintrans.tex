@@ -1,0 +1,30 @@
+\documentclass[tikz]{standalone}
+\usepackage[utf8]{inputenc}
+\usetikzlibrary{graphs} 
+\begin{document}
+
+\tikzset{every picture/.append style={scale=2.2}}
+
+\tikzset{
+loop/.style={very thick,to path={.. controls +(50:1) and +(100:1) .. (\tikztotarget) \tikztonodes}},
+arc/.style={very thick,to path={.. controls +(-80:1) and +(-100:1) .. (\tikztotarget) \tikztonodes}},
+state/.style={rectangle,rounded corners,draw,very thick,inner sep=8pt,draw=black!50,align=center,top color=white,bottom color=black!20,font=\sffamily}
+}
+
+\begin{tikzpicture}[shorten >=2pt]
+
+\node [state] (a) at (0mm,15mm) {load ELF};
+\node [state] (b) at (20mm,10mm) {interpret and \\ profile};
+\node [state] (c) at (40mm,10mm) {trace and \\ compile};
+\node [state] (d) at (60mm,10mm) {execute \\ native x86-64};
+\node [state] (e) at (0mm,5mm) {halt / exit};
+\draw[->] (a) to node[below] {} (b);
+\draw[->] (b) to node[below] {} (c);
+\draw[->] (c) to node[below] {} (d);
+\draw[->] (b) to node[above] {} (e);
+\draw[->] (b) to [loop] node[above right] {} (b);
+\draw[->] (d) to [loop] node[above right] {} (d);
+\draw[->] (d) to [arc] node[below right] {} (b);
+
+\end{tikzpicture}
+\end{document}
