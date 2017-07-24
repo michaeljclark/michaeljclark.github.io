@@ -1,0 +1,42 @@
+\documentclass[tikz]{standalone}
+\usepackage[utf8]{inputenc}
+\usetikzlibrary{graphs} 
+\begin{document}
+
+\tikzset{every picture/.append style={scale=2.0}}
+
+\tikzset{
+arc/.style={line width=2pt,to path={.. controls +(-80:1) and +(100:1) .. (\tikztotarget) \tikztonodes}},
+line/.style={line width=2pt},
+path/.style={line width=1pt,color=black},
+trans/.style={line width=1pt,color=black!30},
+state/.style={rectangle,draw,align=left,font=\ttfamily}
+}
+
+\begin{tikzpicture}[shorten >=2pt]
+
+\node [state] (a) at (0mm,0mm) {JALR ra, 0x1a808};
+\node [state] (b) at (15mm,-10mm) {SLLI a0,a0,32\\SRLI a0,a0,32};
+\node [state] (c) at (15mm,-20mm) {JALR zero,ra};
+\node [state] (d) at (0mm,-30mm) {ADDI a0,a0,-1};
+
+\node [state] (u) at (40mm,0mm) {MOV rdx, 0x1a80c};
+\node [state] (v) at (40mm,-10mm) {MOVZX r8d, r8};
+\node [state] (w) at (40mm,-20mm) {CMP rdx, 0x1a80\\JNE lookup\_0x1a80c};
+\node [state] (x) at (40mm,-30mm) {ADD r8, -1};
+
+\draw[->] [path] (a) to [arc] node[below] {} (b);
+\draw[->] [path] (b) to [line] node[above] {} (c);
+\draw[->] [path] (c) to [arc] node[below] {} (d);
+
+\draw[->] [path] (u) to [line] node[above] {} (v);
+\draw[->] [path] (v) to [line] node[above] {} (w);
+\draw[->] [path] (w) to [line] node[above] {} (x);
+
+\draw[->] [trans] (a) to node[above] {} (u);
+\draw[->] [trans] (b) to node[above] {} (v);
+\draw[->] [trans] (c) to node[above] {} (w);
+\draw[->] [trans] (d) to node[above] {} (x);
+
+\end{tikzpicture}
+\end{document}

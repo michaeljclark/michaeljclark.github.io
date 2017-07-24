@@ -247,14 +247,7 @@ the address of the translated code.
 
 An inlined subroutine call needs to test the return address:
 
-RISC-V code       | |                | |Translated x86-64 code
----               |-|---             |-|---
-`JALR ra, 0x1a808`|→|                | |`MOV rdx, 0x1a80c`
-                  | |`SLLI a0,a0,32` | |
-                  | |`SRLI a0,a0,32` | |`MOVZX r8d, r8`
-                  | |`JALR zero,ra`  | |`CMP rdx, 0x1a80c`
-                  |←|                | |`JNE lookup_0x1a80c`       
-`ADDI a0,a0,-1`   | |                | |`ADD r8, -1`
+![rv8 inline caching]({{ site.url }}/images/inlining.svg){: .center-image }
 
 _**Branch tail dynamic linking**_
 
