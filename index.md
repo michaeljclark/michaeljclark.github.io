@@ -25,7 +25,7 @@ binary translator.
 
 The current version is available at: [https://github.com/rv8-io/rv8](https://github.com/rv8-io/rv8)
 
-![rv8 binary translation]({{ site.url }}/images/bintrans.png)
+![rv8 binary translation]({{ site.url }}/images/bintrans.svg)
 
 _**RISC-V to x86-64 binary translator**_
 
