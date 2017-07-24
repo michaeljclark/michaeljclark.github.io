@@ -347,14 +347,17 @@ easily prove the residual temporary register is not later used.
 - _Rotate right or left pattern (2 shifts, 1 and)_
   - `(rs1 >> shamt) | (rs1 << (64 - shamt))`
 
-_**Conclusion**_
+_**Measurement**_
 
-The combination of frequent register spills to memory, the
-sign extension versus zero extension behaviour for 32-bit integers,
-the indirect call/return overhead and the lack of bit manipulation
-intrinsics accounts for a large proportion of the difference in
-instruction count and performance between native x86-64 code and
-translated RISC-V code.
+The goal is to quantify the factors that contribute to the performance
+difference between native x86-64 code and translated RISC-V code, so
+future benchmarks may measure the following factors:
+
+- Sign extension overhead
+- Indirect call/return overhead
+- Number of fused instruction sequences
+- Accesses to registers spilled to memory
+- Work per instruction (fused and unfused micro-ops)
 
 ---
 
