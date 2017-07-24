@@ -347,8 +347,8 @@ difference between native x86-64 code and translated RISC-V code, so
 future benchmarks may measure the following factors:
 
 - Sign extension overhead
+- Number of fused macro-ops
 - Indirect call/return overhead
-- Number of fused instruction sequences
 - Accesses to registers spilled to memory
 - Work per instruction (fused and unfused micro-ops)
 
