@@ -256,11 +256,11 @@ The translator performs lazy translation of the source program
 during tracing and when it reaches branches, it can only link
 both sides of the branch if there exists an existing translation
 for the not taken side of the branch. To accelerate _branch
-tail exits_, the translator  emits a relative branch to a
-trampoline function that returns to the tracer main loop and
+tail exits_, the translator emits a relative branch to a
+trampoline that returns to the tracer main loop, and the tracer
 adds the branch to a table of branch fixup addresses indexed
-by target guest address. If the branch target is hot, after
-if has been translated, all relative branches that point to
+by target guest address. If the branch target is hot, once
+it has been translated, all relative branches that point to
 tail exit trampolines will be relinked to branch directly
 to the translated native code.
 
