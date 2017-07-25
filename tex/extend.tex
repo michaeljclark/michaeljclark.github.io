@@ -13,10 +13,10 @@ box/.style={rectangle,draw,align=right,top color=white,bottom color=black!20,fon
 \begin{tikzpicture}[shorten >=2pt]
 
 \node [lab] (r) at (0mm,5mm) {RISC-V};
-\node [lab] (x) at (30mm,5mm) {x86-64};
+\node [lab] (x) at (55mm,5mm) {x86-64};
 
 \node [box] (a) at (0mm,0mm) {0x000000007fffffff\\+ 0x000000000fffffff\\= 0xffffffff8ffffffe};
-\node [box] (u) at (30mm,0mm) {0x000000007fffffff\\+ 0x000000000fffffff\\= 0x000000008ffffffe};
+\node [box] (u) at (55mm,0mm) {0x000000007fffffff\\+ 0x000000000fffffff\\= 0x000000008ffffffe};
 
 \end{tikzpicture}
 \end{document}
