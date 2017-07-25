@@ -364,14 +364,14 @@ easily prove the residual temporary register is not later used.
 
 _**Measurement**_
 
-The goal is to quantify the factors that contribute to the performance
-difference between native x86-64 code and translated RISC-V code, so
-future benchmarks should measure the following factors:
+A future goal is to quantify the factors that contribute to the
+performance differences between native x86-64 code and translated
+RISC-V code, so future benchmarks should measure the following:
 
 - Sign extension overhead
-- Number of fused macro-ops
 - Indirect call/return overhead
-- Accesses to registers spilled to memory
+- Macro-op fusion performance improvement
+- Register allocation and spilled register access
 - Work per instruction (fused and unfused micro-ops)
 
 ---
