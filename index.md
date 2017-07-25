@@ -305,13 +305,9 @@ that the register state matches the precise semantics of the ISA
 before executing an instruction that may cause a fault e.g.
 loads and stores.
 
-Example of sign extended 32-bit arithmetic on RISC-V and x86-64:
+Example of sign-extended vs zero-extended 32-bit arithmetic on RISC-V and x86-64:
 
-RISC-V                 | x86-64
---:                    | --:
-`0x000000007fffffff`   | `0x000000007fffffff`
-`+ 0x000000000fffffff` | `+ 0x000000000fffffff`
-`= 0xffffffff8ffffffe` | `= 0x000000008ffffffe`
+![sign-extension vs zero-extension]({{ site.url }}/images/extend.svg)
 
 _**Bit manipulation intrinsics**_
 
