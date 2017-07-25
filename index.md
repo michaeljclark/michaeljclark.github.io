@@ -140,7 +140,7 @@ $ ./configure --prefix=/opt/riscv/toolchain
 $ make
 ```
 
-rv8 has minimum external dependencies besides a C++14 compiler,
+rv8 has minimal external dependencies besides a C++14 compiler,
 the C/C++ standard libraries and the `asmjit` submodule.
 
 - gcc-5.4 or clang-3.4 (Linux minimum)
@@ -184,7 +184,7 @@ _**Register allocation**_
 
 rv8 solves the register set size problem by spilling registers
 to memory (L1 cache) using a static register allocation (a future
-versions may use dynamic register allocation). A large amount of
+versions may use dynamic register allocator). A large amount of
 performance is lost due to register allocations that take advantage
 of the larger number of physically available registers with less
 frequent stack spills. It is not possible for the translator to
