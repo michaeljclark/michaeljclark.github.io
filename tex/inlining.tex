@@ -6,6 +6,7 @@
 \tikzset{every picture/.append style={scale=2.0}}
 
 \tikzset{
+lab/.style={align=center,font=\sffamily},
 arc/.style={line width=2pt,to path={.. controls +(-80:1) and +(100:1) .. (\tikztotarget) \tikztonodes}},
 line/.style={line width=2pt},
 path/.style={line width=1pt,color=black},
@@ -14,6 +15,9 @@ state/.style={rectangle,draw,align=left,top color=white,bottom color=black!20,fo
 }
 
 \begin{tikzpicture}[shorten >=2pt]
+
+\node [lab] (r) at (0mm,5mm) {RISC-V};
+\node [lab] (x) at (60mm,5mm) {x86-64};
 
 \node [state] (a) at (0mm,0mm) {JALR ra, 0x1a808};
 \node [state] (b) at (15mm,-10mm) {SLLI a0,a0,32\\SRLI a0,a0,32};
