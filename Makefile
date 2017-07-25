@@ -4,7 +4,8 @@ IMAGES = \
 	images/rv8.svg \
 	images/bintrans.svg \
 	images/extend.svg \
-	images/inlining.svg
+	images/inlining.svg \
+	images/operands.svg
 
 images: $(IMAGES)
 
