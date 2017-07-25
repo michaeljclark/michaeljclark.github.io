@@ -16,7 +16,7 @@ state/.style={rectangle,rounded corners,draw,very thick,inner sep=8pt,draw=black
 
 \node [state] (a) at (0mm,15mm) {load ELF};
 \node [state] (b) at (20mm,10mm) {interpret and \\ profile};
-\node [state] (c) at (40mm,10mm) {trace and \\ compile};
+\node [state] (c) at (40mm,10mm) {trace, fuse \\ and emit};
 \node [state] (d) at (60mm,10mm) {execute \\ native x86-64};
 \node [state] (e) at (0mm,5mm) {halt / exit};
 \draw[->] (a) to [line] node[below] {} (b);
