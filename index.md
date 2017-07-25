@@ -340,7 +340,7 @@ _**Measurement**_
 
 The goal is to quantify the factors that contribute to the performance
 difference between native x86-64 code and translated RISC-V code, so
-future benchmarks may measure the following factors:
+future benchmarks should measure the following factors:
 
 - Sign extension overhead
 - Number of fused macro-ops
