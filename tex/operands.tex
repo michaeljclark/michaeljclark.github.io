@@ -1,0 +1,31 @@
+\documentclass[tikz]{standalone}
+\usepackage[utf8]{inputenc}
+\usetikzlibrary{graphs} 
+\begin{document}
+
+\tikzset{every picture/.append style={scale=2.0}}
+
+\tikzset{
+trans/.style={line width=1pt,color=black!30},
+state/.style={rectangle,draw,align=left,top color=white,bottom color=black!20,font=\ttfamily}
+}
+
+\begin{tikzpicture}[shorten >=2pt]
+
+\node [state] (a) at (0mm,0mm) {XOR a1, a5, a6};
+\node [state] (b) at (0mm,-10mm) {XOR a1, a1, a6};
+\node [state] (c) at (0mm,-20mm) {XOR t4, t4, t5};
+\node [state] (d) at (0mm,-30mm) {XOR a5, a5, s1};
+
+\node [state] (u) at (60mm,0mm) {MOV r9, r12\\XOR r9, r14};
+\node [state] (v) at (60mm,-10mm) {XOR r9, r14};
+\node [state] (w) at (60mm,-20mm) {MOV rax, qword [rbp+0xF8]\\XOR qword [rbp+0xF0], rax};
+\node [state] (x) at (60mm,-30mm) {XOR r13, qword [rbp+0x50]};
+
+\draw[->] [trans] (a) to node[above] {} (u);
+\draw[->] [trans] (b) to node[above] {} (v);
+\draw[->] [trans] (c) to node[above] {} (w);
+\draw[->] [trans] (d) to node[above] {} (x);
+
+\end{tikzpicture}
+\end{document}

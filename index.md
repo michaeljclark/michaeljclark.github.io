@@ -199,11 +199,15 @@ ra |→| rdx |  | t1 |→| rdi |  | a2 |→| r10 |  | a5 |→| r13
 sp |→| rbx |  | a0 |→| r8  |  | a3 |→| r11 |  | a6 |→| r14
 t0 |→| rsi |  | a1 |→| r9  |  | a4 |→| r12 |  | a7 |→| r1
 
+The remaining unallocated registers are stored in a memory spill
+area accessed using the `rbp` register. e.g. `qword [rbp+0xF8]`
+would be used to access `t4`.
+
 _**Translator temporaries**_
 
-The rv8 binary translator needs to use a few host registers to
-point to translator internal structures and for use as temporary
-registers for the emulation of various instructions, for example
+The rv8 translator needs to use several host registers to point
+to translator internal structures and for use as temporary
+registers for the emulation of many instructions, for example
 a store instructions require the use of two temporary registers
 if both register operands are in the spill area. The translator
 uses the following x86-64 host registers as temporaries leaving
@@ -213,6 +217,26 @@ uses the following x86-64 host registers as temporaries leaving
 - `rsp` - pointer to the host stack to allow procedure calls
 - `rax` - translator temporary register
 - `rcx` - translator temporary register
+
+_**CISC vs RISC operands**_
+
+The rv8 translator makes use of CISC memory operands to access
+registers residing in the memory backed register spill area,
+which should stay present in L1 cache. The complex memory operands
+end up being cracked back into micro-ops in the CISC pipeline
+however the use of complex memory operands helps increase instruction
+density, which increases performance due to better use of icache.
+There are many combinations of instruction expansions depending
+on whether a register is mapped to a live register, is memory backed
+and whether there are two or three operands. A three operand RISC-V
+instruction is translated into a move and a destructive two operand
+x86-64 instruction. Temporary registers are used if both operands
+are memory backed. The principle is to maintain the densest
+possible mapping to the x86-64 ISA.
+
+Memory operands are used to access registers in the spill area:
+
+![operands]({{ site.url }}/images/operands.svg)
 
 _**Indirect call acceleration**_
 
