@@ -22,7 +22,7 @@ state/.style={rectangle,draw,align=left,top color=white,bottom color=black!20,fo
 
 \node [state] (u) at (60mm,0mm) {MOV rdx, 0x1a80c};
 \node [state] (v) at (60mm,-10mm) {MOVZX r8d, r8};
-\node [state] (w) at (60mm,-20mm) {CMP rdx, 0x1a80\\JNE lookup\_0x1a80c};
+\node [state] (w) at (60mm,-20mm) {CMP rdx, 0x1a80\\JNE tail\_exit};
 \node [state] (x) at (60mm,-30mm) {ADD r8, -1};
 
 \draw[->] [path] (a) to [arc] node[below] {} (b);
