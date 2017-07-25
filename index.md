@@ -274,20 +274,19 @@ performance further with the addition of common patterns.
 The following is a list of macro-op fusion patterns that are
 currently implemented in rv8:
 
-- `AUIPC rs, imm20; ADDI rd, rs1, imm12;` (where `rd=rs1`)
+- `AUIPC rs, imm20; ADDI rd, rs1, imm12;`
   - PC-relative address is resolved using a single `MOV` instruction.
-- `AUIPC t0, imm20; JALR ra, imm12(t0);` (where `rd=rs1`)
+- `AUIPC t0, imm20; JALR ra, imm12(t0);`
   - Target address is constructed using a single `MOV` instruction.
-- `AUIPC ra, imm20; JALR ra, imm12(ra);` (where `rd=rs1`)
+- `AUIPC ra, imm20; JALR ra, imm12(ra);`
   - Target address register write is elided.
-- `AUIPC rd, imm20; LW rd, imm12(rs1);` (where `rd=rs1`)
+- `AUIPC rd, imm20; LW rd, imm12(rs1);`
   - Fused into single `MOV` with an immediate addressing mode
-- `AUIPC rd, imm20; LD rd, imm12(rs1);` (where `rd=rs1`)
+- `AUIPC rd, imm20; LD rd, imm12(rs1);`
   - Fused into single `MOV` with an immediate addressing mode
-- `SLLI rd, rs1, 32; SRLI rd, rs1, 32;` (where `rd=rs1`)
+- `SLLI rd, rs1, 32; SRLI rd, rs1, 32;`
   - Fused into a single `MOVZX` instruction.
 - `ADDIW rd, rs1, imm12; SLLI rd, rs1, 32; SRLI rd, rs1, 32;`
-  (where `rd=rs1`)
   - Fused into 32-bit zero extending `ADD` instruction.
 - `SRLI r1, rs, imm12; SLLI r2, rs, 64 - imm12; OR r1, r1, r2;`
   - Fused into 64-bit `ROR` with one residual `SHL` or `SHR` temporary
