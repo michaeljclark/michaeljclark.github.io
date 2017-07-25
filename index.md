@@ -333,7 +333,9 @@ needs to create the residual temporary register side effects so
 that the register file contents are precisely matched, as it can't
 easily prove the residual temporary register is not later used.
 
-- _Rotate right or left pattern (2 shifts, 1 or)_
+- _32-bit rotate right or left pattern (2 shifts, 1 or)_
+  - `(rs1 >> shamt) | (rs1 << (32 - shamt))`
+- _64-bit rotate right or left pattern (2 shifts, 1 or)_
   - `(rs1 >> shamt) | (rs1 << (64 - shamt))`
 
 _**Measurement**_
