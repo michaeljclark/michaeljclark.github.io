@@ -125,7 +125,8 @@ rv8 supports the following target architecture and host operating system combina
 
 Please read the RISC-V toolchain installtion instructions in the
 [riscv-gnu-toolchain](https://github.com/riscv/riscv-gnu-toolchain/)
-repository.
+repository. To experiment with the RISC-V toolchain online try the
+RISC-V [Compiler Explorer](https://cx.rv8.io/).
 
 _Building riscv-gnu-toolchain_
 
