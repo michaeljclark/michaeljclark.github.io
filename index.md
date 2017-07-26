@@ -366,7 +366,7 @@ _**Measurement**_
 
 A future goal is to quantify the factors that contribute to the
 performance differences between native x86-64 code and translated
-RISC-V code, so future benchmarks should measure the following:
+RISC-V code, so future benchmarks should measure:
 
 - Sign extension overhead
 - Indirect call/return overhead
