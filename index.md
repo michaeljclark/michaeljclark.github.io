@@ -632,7 +632,7 @@ instruction usage histogram
 This section describes how to build and boot a Linux image in the
 full system emulator.
 
-Please read the RISC-V toolchain installtion instructions in the
+Please read the RISC-V toolchain installation instructions in the
 [riscv-gnu-toolchain](https://github.com/riscv/riscv-gnu-toolchain/)
 repository. The `riscv64-unknown-elf` newlib toolchain is required
 for building the rv8 test cases and the `riscv64-unknown-linux-gnu`
