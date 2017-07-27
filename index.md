@@ -293,7 +293,7 @@ _**Macro-op fusion**_
 
 The rv8 translator implements an optimisation known as macro-op
 fusion whereby specific patterns of adjacent instructions are
-translated into a smaller sequence of host instruction. The
+translated into a smaller sequence of host instructions. The
 macro-op fusion pattern matcher has potential to increase
 performance further with the addition of common patterns.
 The following is a list of macro-op fusion patterns that are
