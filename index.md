@@ -318,6 +318,17 @@ currently implemented in rv8:
 - `SRLIW r1, rs, imm12; SLLIW r2, rs, 32 - imm12; OR r1, r1, r2;`
   - Fused into 32-bit `ROR` with one residual `SHL` or `SHR` temporary
 
+A technique known as deoptimisation can be employed to allow
+elision of temporary registers in macro-op fusion patterns
+assuming the translator sees the register killed within its
+translation window. Deoptimisation requires that the optimised
+translation has an accompanying deoptimisation sequence to
+fill in elided register values, and this is played back in the
+case of a fault (device or debug interrupt) so that the visible
+machine state precisely matches that which the ISA dictates. rv8
+does not presently implement deoptimisation, however it may
+be necessary to allow more sophisticated optimisations.
+
 _**Sign extension versus zero extension**_
 
 In addition to the register allocation problem, rv8 has to make
@@ -357,6 +368,7 @@ offsets into one shift and one rotate. The rotate macro-op fusion
 needs to create the residual temporary register side effects so
 that the register file contents are precisely matched, as it can't
 easily prove the residual temporary register is not later used.
+Deoptimisation would be required to elide the temporary register.
 
 - _32-bit rotate right or left pattern (2 shifts, 1 or)_
   - `(rs1 >> shamt) | (rs1 << (32 - shamt))`
