@@ -3,65 +3,65 @@ RISC-V Assembler
 
 This document gives an overview of RISC-V assembly language.
 
-Assembler Directives
--------------------------
+
+### Assembler Directives
 
 The following table lists assembler directives:
 
 Directive    | Arguments                      | Description
 :----------- | :-------------                 | :---------------
-.align       | integer                        | align to power of 2 (alias for .p2align)
-.file        | "filename"                     | emit filename FILE LOCAL symbol table
-.globl       | symbol_name                    | emit symbol_name to symbol table (scope GLOBAL)
-.local       | symbol_name                    | emit symbol_name to symbol table (scope LOCAL)
-.comm        | symbol_name,size,align         | emit common object to .bss section
-.common      | symbol_name,size,align         | emit common object to .bss section
-.ident       | "string"                       | accepted for source compatibility
-.section     | [{.text,.data,.rodata,.bss}]   | emit section (if not present, default .text) and make current
-.size        | symbol, symbol                 | accepted for source compatibility
-.text        |                                | emit .text section (if not present) and make current
-.data        |                                | emit .data section (if not present) and make current
-.rodata      |                                | emit .rodata section (if not present) and make current
-.bss         |                                | emit .bss section (if not present) and make current
-.string      | "string"                       | emit string
-.asciz       | "string"                       | emit string (alias for .string)
-.equ         | name, value                    | constant definition
-.macro       | name arg1 [, argn]             | begin macro definition \argname to substitute
-.endm        |                                | end macro definition
-.type        | symbol, @function              | accepted for source compatibility
-.option      | {rvc,norvc,pic,nopic,push,pop} | RISC-V options
-.byte        |                                | 8-bit comma separated words
-.2byte       |                                | 16-bit comma separated words (unaligned)
-.4byte       |                                | 32-bit comma separated words (unaligned)
-.8byte       |                                | 64-bit comma separated words (unaligned)
-.half        |                                | 16-bit comma separated words (naturally aligned)
-.word        |                                | 32-bit comma separated words (naturally aligned)
-.dword       |                                | 64-bit comma separated words (naturally aligned)
-.dtprelword  |                                | 32-bit thread local word
-.dtpreldword |                                | 64-bit thread local word
-.sleb128     | expression                     | signed little endian base 128, DWARF
-.uleb128     | expression                     | unsigned little endian base 128, DWARF
-.p2align     | p2,[pad_val=0],max             | align to power of 2
-.balign      | b,[pad_val=0]                  | byte align
-.zero        | integer                        | zero bytes
+<code><sub>.align</sub></code>       | <sub>integer</sub>                        | <sub>align to power of 2 (alias for .p2align)</sub>
+<code><sub>.file</sub></code>        | <sub>"filename"</sub>                     | <sub>emit filename FILE LOCAL symbol table</sub>
+<code><sub>.globl</sub></code>       | <sub>symbol_name</sub>                    | <sub>emit symbol_name to symbol table (scope GLOBAL)</sub>
+<code><sub>.local</sub></code>       | <sub>symbol_name</sub>                    | <sub>emit symbol_name to symbol table (scope LOCAL)</sub>
+<code><sub>.comm</sub></code>        | <sub>symbol_name,size,align</sub>         | <sub>emit common object to .bss section</sub>
+<code><sub>.common</sub></code>      | <sub>symbol_name,size,align</sub>         | <sub>emit common object to .bss section</sub>
+<code><sub>.ident</sub></code>       | <sub>"string"</sub>                       | <sub>accepted for source compatibility</sub>
+<code><sub>.section</sub></code>     | <sub>[{.text,.data,.rodata,.bss}]</sub>   | <sub>emit section (if not present, default .text) and make current</sub>
+<code><sub>.size</sub></code>        | <sub>symbol, symbol</sub>                 | <sub>accepted for source compatibility</sub>
+<code><sub>.text</sub></code>        |                                           | <sub>emit .text section (if not present) and make current</sub>
+<code><sub>.data</sub></code>        |                                           | <sub>emit .data section (if not present) and make current</sub>
+<code><sub>.rodata</sub></code>      |                                           | <sub>emit .rodata section (if not present) and make current</sub>
+<code><sub>.bss</sub></code>         |                                           | <sub>emit .bss section (if not present) and make current</sub>
+<code><sub>.string</sub></code>      | <sub>"string"</sub>                       | <sub>emit string</sub>
+<code><sub>.asciz</sub></code>       | <sub>"string"</sub>                       | <sub>emit string (alias for .string)</sub>
+<code><sub>.equ</sub></code>         | <sub>name, value</sub>                    | <sub>constant definition</sub>
+<code><sub>.macro</sub></code>       | <sub>name arg1 [, argn]</sub>             | <sub>begin macro definition \argname to substitute</sub>
+<code><sub>.endm</sub></code>        |                                           | <sub>end macro definition</sub>
+<code><sub>.type</sub></code>        | <sub>symbol, @function</sub>              | <sub>accepted for source compatibility</sub>
+<code><sub>.option</sub></code>      | <sub>{rvc,norvc,pic,nopic,push,pop}</sub> | <sub>RISC-V options</sub>
+<code><sub>.byte</sub></code>        |                                           | <sub>8-bit comma separated words</sub>
+<code><sub>.2byte</sub></code>       |                                           | <sub>16-bit comma separated words (unaligned)</sub>
+<code><sub>.4byte</sub></code>       |                                           | <sub>32-bit comma separated words (unaligned)</sub>
+<code><sub>.8byte</sub></code>       |                                           | <sub>64-bit comma separated words (unaligned)</sub>
+<code><sub>.half</sub></code>        |                                           | <sub>16-bit comma separated words (naturally aligned)</sub>
+<code><sub>.word</sub></code>        |                                           | <sub>32-bit comma separated words (naturally aligned)</sub>
+<code><sub>.dword</sub></code>       |                                           | <sub>64-bit comma separated words (naturally aligned)</sub>
+<code><sub>.dtprelword</sub></code>  |                                           | <sub>32-bit thread local word</sub>
+<code><sub>.dtpreldword</sub></code> |                                           | <sub>64-bit thread local word</sub>
+<code><sub>.sleb128</sub></code>     | <sub>expression</sub>                     | <sub>signed little endian base 128, DWARF</sub>
+<code><sub>.uleb128</sub></code>     | <sub>expression</sub>                     | <sub>unsigned little endian base 128, DWARF</sub>
+<code><sub>.p2align</sub></code>     | <sub>p2,[pad_val=0],max</sub>             | <sub>align to power of 2</sub>
+<code><sub>.balign</sub></code>      | <sub>b,[pad_val=0]</sub>                  | <sub>byte align</sub>
+<code><sub>.zero</sub></code>        | <sub>integer</sub>                        | <sub>zero bytes</sub>
 
-Function expansions
--------------------------
+
+### Function expansions
 
 The following table lists assembler function expansions:
 
 Assembler Notation       | Description                 | Instruction / Macro
 :----------------------  | :---------------            | :-------------------
-%hi(symbol)              | Absolute (HI20)             | lui
-%lo(symbol)              | Absolute (LO12)             | load, store, add
-%pcrel_hi(symbol)        | PC-relative (HI20)          | auipc
-%pcrel_lo(label)         | PC-relative (LO12)          | load, store, add
-%tprel_hi(symbol)        | TLS LE "Local Exec"         | auipc
-%tprel_lo(label)         | TLS LE "Local Exec"         | load, store, add
-%tprel_add(offset)       | TLS LE "Local Exec"         | add
+<code><sub>%hi(symbol)</sub></code>              | <sub>Absolute (HI20)</sub>             | <sub>lui</sub>
+<code><sub>%lo(symbol)</sub></code>              | <sub>Absolute (LO12)</sub>             | <sub>load, store, add</sub>
+<code><sub>%pcrel_hi(symbol)</sub></code>        | <sub>PC-relative (HI20)</sub>          | <sub>auipc</sub>
+<code><sub>%pcrel_lo(label)</sub></code>         | <sub>PC-relative (LO12)</sub>          | <sub>load, store, add</sub>
+<code><sub>%tprel_hi(symbol)</sub></code>        | <sub>TLS LE "Local Exec"</sub>         | <sub>auipc</sub>
+<code><sub>%tprel_lo(label)</sub></code>         | <sub>TLS LE "Local Exec"</sub>         | <sub>load, store, add</sub>
+<code><sub>%tprel_add(offset)</sub></code>       | <sub>TLS LE "Local Exec"</sub>         | <sub>add</sub>
 
-Labels
-------------
+
+### Labels
 
 Text labels are used as branch, unconditional jump targets and symbol offsets.
 Text labels are added to the symbol table of the compiled module.
@@ -79,8 +79,8 @@ suffixed with 'f' for a forward reference or 'b' for a backwards reference.
         j 1b
 ```
 
-Absolute addressing
-------------------------
+
+### Absolute addressing
 
 The following example shows how to load an absolute address:
 
@@ -109,8 +109,8 @@ as seen by objdump:
 			4: R_RISCV_LO12_I	msg
 ```
 
-Relative addressing
-------------------------
+
+### Relative addressing
 
 The following example shows how to load a PC-relative address:
 
@@ -139,8 +139,7 @@ as seen by objdump:
 			4: R_RISCV_PCREL_LO12_I	.L11
 ```
 
-Load Immediate
--------------------
+### Load Immediate
 
 The following example shows the `li` psuedo instruction which
 is used to load immediate values:
@@ -165,8 +164,8 @@ which generates the following assembler output as seen by objdump:
    c:	abe50513          	addi	a0,a0,-1346
 ```
 
-Load Address
------------------
+
+### Load Address
 
 The following example shows the `la` psuedo instruction which
 is used to load symbol addresses:
@@ -194,8 +193,8 @@ as seen by objdump:
 			4: R_RISCV_PCREL_LO12_I	.L11
 ```
 
-Constants
---------------
+
+### Constants
 
 The following example shows loading a constant using the %hi and
 %lo assembler functions.
@@ -243,8 +242,8 @@ msg:
 	    .string "Hello World\n"
 ```
 
-Control and Status Registers
----------------------------------
+
+### Control and Status Registers
 
 The following code sample shows how to enable timer interrupts,
 set and wait for a timer interrupt to occur:
