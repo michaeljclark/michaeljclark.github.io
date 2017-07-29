@@ -388,7 +388,7 @@ RISC-V code, so future benchmarks should measure:
 - Sign extension overhead
 - Indirect call/return overhead
 - Macro-op fusion performance improvement
-- Register allocation and spilled register access
+- Register allocation and spilled register accesses
 - Work per instruction (fused and unfused micro-ops)
 
 ---
