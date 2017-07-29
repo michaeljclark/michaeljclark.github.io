@@ -50,10 +50,10 @@ The rv8 binary translator supports a number of simple optimisations:
 _**RISC-V full system emulator**_
 
 The rv8 suite includes a full system emulator that implements the
-RISC-V privileged ISA with support for interrupts, MMIO (memory
-mapped input output) devices, a soft MMU (memory management unit)
-with separate instruction and data TLBs (translation lookaside
-buffers). The full system emulator has a simple integrated debugger
+RISC-V privileged ISA with support for interrupts, MMIO _(memory
+mapped input output)_ devices, a soft MMU _(memory management unit)_
+with separate instruction and data TLBs _(translation lookaside
+buffers)_. The full system emulator has a simple integrated debugger
 that allows setting breakpoints, single stepping and disassembling
 instructions as they are executed.
 
@@ -71,8 +71,8 @@ _**RISC-V user mode simulator**_
 
 The rv8 user mode simulator is a single address space
 implementation of the RISC-V ISA that implements a subset of the
-RISC-V Linux syscall ABI (application binary interface) and delegates
-system calls to the underlying native host operating system.
+RISC-V Linux syscall ABI _(application binary interface)_ and
+delegates system calls to the underlying native host operating system.
 The user mode simulator can run RISC-V Linux binaries on non-Linux
 operating systems via system call emulation. The current user mode
 simulator implements a small number of [system calls](/syscalls.html)
@@ -176,7 +176,7 @@ $ rv-jit build/riscv64-unknown-elf/bin/test-dhrystone
 
 ### [Optimisations](#optimisations)
 
-The rv8 binary translator performs JIT (Just In Time) translation
+The rv8 binary translator performs JIT _(Just In Time)_ translation
 of RISC-V code to X86-64 code. This is a challenging problem for
 many reasons; with the principle challange due to RISC-V having
 31 integer registers while x86-64 has only 16 integer registers.
