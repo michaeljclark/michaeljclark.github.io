@@ -1,6 +1,6 @@
 <a href="https://rv8.io/"><img style="float: right;" src="/images/rv8.svg"></a>
 
-### Linux syscalls
+## Linux syscalls
 
 The following tables list the syscalls supported by the user-mode
 simulators `rv-sim` and `rv-jit`. Note: the user-mode simulator supports

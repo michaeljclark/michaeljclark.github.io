@@ -1,6 +1,6 @@
 <a href="https://rv8.io/"><img style="float: right;" src="/images/rv8.svg"></a>
 
-### RISC-V Instruction Set Reference
+## RISC-V Instruction Set Reference
 
 The following tables list the RISC-V RV32IM and RV64IM instructions.
 
