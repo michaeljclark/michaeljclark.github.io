@@ -254,6 +254,8 @@ to a slow translation cache miss path that saves registers and
 calls into the translator code to populate the L1 translation
 cache so that the next indirect call can be accelerated.
 
+![L1 translation cache]({{ site.url }}/images/cache.svg)
+
 The direct mapped L1 translation cache is indexed by `bits[10:1]`
 of the guest address. Bit zero can be ignored because RISC-V
 instructions must start on a 2-byte boundary
@@ -273,7 +275,7 @@ the address of the translated code.
 
 An inlined subroutine call needs to test the return address:
 
-![rv8 inline caching]({{ site.url }}/images/inlining.svg)
+![inline caching]({{ site.url }}/images/inlining.svg)
 
 _**Branch tail dynamic linking**_
 

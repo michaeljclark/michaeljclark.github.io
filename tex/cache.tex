@@ -1,0 +1,47 @@
+\documentclass[tikz]{standalone}
+\usepackage[utf8]{inputenc}
+\usetikzlibrary{graphs} 
+\usetikzlibrary{shapes.arrows}
+\usetikzlibrary{decorations.pathmorphing}
+\begin{document}
+
+\tikzset{every picture/.append style={scale=2.0}}
+
+\tikzset{
+lab/.style={align=center,font=\sffamily},
+trans/.style={line width=1pt,color=black!30},
+key/.style={rectangle,draw,minimum height=5mm,minimum width=20mm,top color=white,bottom color=black!20,font=\ttfamily},
+val/.style={rectangle,draw,align=left,top color=white,bottom color=black!20,font=\ttfamily}
+}
+
+\begin{tikzpicture}[shorten >=2pt]
+
+\tikzset{box/.style={arrow box, draw=#1}}
+
+\node [lab] (r) at (0mm,5mm) {RISC-V pc};
+\node [lab] (x) at (60mm,5mm) {x86-64 rip};
+
+\node[key]     at (0mm,-0mm) {0x104 - 0x00000};
+\node[key] (a) at (0mm,-3mm) {0x106 - 0x10104};
+\node[key] (b) at (0mm,-6mm) {0x108 - 0x12106};
+\node[key]     at (0mm,-9mm) {0x10a - 0x00000};
+
+\node[key] (c) at (0mm,-15mm) {0x2f2 - 0x112f2};
+\node[key]     at (0mm,-18mm) {0x2f4 - 0x00000};
+\node[key]     at (0mm,-21mm) {0x2f6 - 0x00000};
+\node[key] (d) at (0mm,-24mm) {0x2f8 - 0x102f8};
+
+\node [val] (u) at (60mm,-3mm) {0x7fff000003c0};
+\node [val] (v) at (60mm,-6mm) {0x7fff000004c0};
+\node [val] (w) at (60mm,-15mm) {0x7fff00001800};
+\node [val] (x) at (60mm,-24mm) {0x7fff00002a40};
+
+\draw[decorate,decoration=zigzag] (-7.5mm,-12mm) --   (7.5mm,-12mm);
+
+\draw[->] [trans] (a) to node[above] {} (u);
+\draw[->] [trans] (b) to node[above] {} (v);
+\draw[->] [trans] (c) to node[above] {} (w);
+\draw[->] [trans] (d) to node[above] {} (x);
+
+\end{tikzpicture}
+\end{document}
