@@ -226,7 +226,9 @@ registers residing in the memory backed register spill area,
 which should stay present in L1 cache. The complex memory operands
 end up being cracked back into micro-ops in the CISC pipeline
 however the use of complex memory operands helps increase instruction
-density, which increases performance due to better use of icache.
+density, which increases performance due to better use of I$
+_(instruction cache)_.
+
 There are many combinations of instruction expansions depending
 on whether a register is mapped to a live register, is memory backed
 and whether there are two or three operands. A three operand RISC-V
