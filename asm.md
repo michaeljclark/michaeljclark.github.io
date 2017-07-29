@@ -55,9 +55,9 @@ Assembler Notation       | Description                 | Instruction / Macro
 <code><sub>%lo(symbol)</sub></code>              | <sub>Absolute (LO12)</sub>             | <sub>load, store, add</sub>
 <code><sub>%pcrel_hi(symbol)</sub></code>        | <sub>PC-relative (HI20)</sub>          | <sub>auipc</sub>
 <code><sub>%pcrel_lo(label)</sub></code>         | <sub>PC-relative (LO12)</sub>          | <sub>load, store, add</sub>
-<code><sub>%tprel_hi(symbol)</sub></code>        | <sub>TLS LE "Local Exec"</sub>         | <sub>auipc</sub>
-<code><sub>%tprel_lo(label)</sub></code>         | <sub>TLS LE "Local Exec"</sub>         | <sub>load, store, add</sub>
-<code><sub>%tprel_add(offset)</sub></code>       | <sub>TLS LE "Local Exec"</sub>         | <sub>add</sub>
+<code><sub>%tprel_hi(symbol)</sub></code>        | <sub>TLS LE (Local Exec)</sub>         | <sub>auipc</sub>
+<code><sub>%tprel_lo(label)</sub></code>         | <sub>TLS LE (Local Exec)</sub>         | <sub>load, store, add</sub>
+<code><sub>%tprel_add(offset)</sub></code>       | <sub>TLS LE (Local Exec)</sub>         | <sub>add</sub>
 
 
 ### Labels
