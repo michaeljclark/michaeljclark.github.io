@@ -184,7 +184,7 @@ many reasons; with the principle challange due to RISC-V having
 _**Register allocation**_
 
 rv8 solves the register set size problem by spilling registers
-to memory (L1 cache) using a static register allocation (a future
+to memory _(L1 cache)_ using a static register allocation (a future
 versions may use dynamic register allocator). A large amount of
 performance is lost due to register allocations that take advantage
 of the larger number of physically available registers with less
