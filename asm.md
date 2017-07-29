@@ -307,3 +307,5 @@ pass_msg:
 fail_msg:
         .string "FAIL\n"
 ```
+
+[![rv8]({{ site.url }}/images/rv8.svg)](https://rv8.io/)
