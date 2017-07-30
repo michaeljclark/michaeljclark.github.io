@@ -7,11 +7,11 @@ instructions, relocation functions, and assembler concepts
 such as labels, relative and absolute addressing, immediate
 values, constants and finally control and status registers.
 
-A brief listing of all instruction in the `I` _(Integer)_
-and `M` _(Multiply-Divide)_ extensions is present in the
-[RISC-V Instruction Set Reference](/isa). For detailed
-information on the RISC-V instruction set refer to the
-[RISC-V ISA Specification](http://riscv.org/specifications/).
+The accompanying [RISC-V Instruction Set Reference](/isa)
+contains a listing of instruction in the `I` _(Base Integer
+Instruction Set)_ and `M` _(Multiply and Divide)_ extension.
+For detailed information on the RISC-V instruction set refer to
+the [RISC-V ISA Specification](http://riscv.org/specifications/).
 
 ### Concepts
 
