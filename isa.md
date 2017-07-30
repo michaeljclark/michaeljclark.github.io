@@ -2,6 +2,13 @@
 
 ## RISC-V Instruction Set Reference
 
+This document contains a brief listing of instructions and pseudocode
+for the RISC-V "I" _(Integer)_ and "M" _(Multiply-Divide)_
+extensions. The [RISC-V Assembler Reference](/asm) contains
+information on programming in assembly language for RISC-V.
+For detailed information on the instruction set refer to the
+[RISC-V ISA Specification](http://riscv.org/specifications/).
+
 The following tables list the RISC-V RV32IM and RV64IM instructions.
 
 _**RV32I Base Integer Instruction Set**_
