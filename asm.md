@@ -223,8 +223,12 @@ as seen by objdump:
 
 ### Constants
 
-The following example shows loading a constant using the %hi and
-%lo assembler functions.
+Constants are emitted to the symbol table of the object but they
+do not take any space in the code or data sections. Constants
+can be referenced in expressions which emit relocations.
+
+The following example shows loading a constant using the `%hi` and
+`%lo` assembler functions.
 
 ```
 .equ UART_BASE, 0x40003000
