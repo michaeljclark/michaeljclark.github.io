@@ -376,8 +376,10 @@ CSR Op  | Description
 `CSRRSI rd, csr, imm5` | Control and Status Register Atomic Read and Set Bits Immediate
 `CSRRCI rd, csr, imm5` | Control and Status Register Atomic Read and Write Immediate
 
-The following code sample shows how to enable and set timer
-interrupts using CSR instructions:
+The following code sample shows how to enable interrupts, enable
+timer interuppts, and then set and wait for a timer interrupt to
+occur. The example uses CSR instructions and access to a platform
+specific MMIO _(memory mapped input output)_ region:
 
 ```
 .equ RTC_BASE,      0x40000000
