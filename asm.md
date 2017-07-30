@@ -367,14 +367,14 @@ mode and accessing floating point accrued exception state.
 The following instructions allow reading, writing, setting and
 clearing bits in CSRs _(control and status registers)_:
 
-CSR Op  | Description
-:--     | :--
-`CSRRW rd, csr, rs1` | Control and Status Register Atomic Read and Write
-`CSRRS rd, csr, rs1` | Control and Status Register Atomic Read and Set Bits
-`CSRRC rd, csr, rs1` | Control and Status Register Atomic Read and Clear Bits
-`CSRRWI rd, csr, imm5` | Control and Status Register Atomic Read and Write Immediate
-`CSRRSI rd, csr, imm5` | Control and Status Register Atomic Read and Set Bits Immediate
-`CSRRCI rd, csr, imm5` | Control and Status Register Atomic Read and Write Immediate
+CSR Operation                                | Description
+:------------------------------------------  | :------------------------------------------------------
+<code><sub>CSRRW rd, csr, rs1</sub></code>   | <sub>Control and Status Register Atomic Read and Write</sub>
+<code><sub>CSRRS rd, csr, rs1</sub></code>   | <sub>Control and Status Register Atomic Read and Set Bits</sub>
+<code><sub>CSRRC rd, csr, rs1</sub></code>   | <sub>Control and Status Register Atomic Read and Clear Bits</sub>
+<code><sub>CSRRWI rd, csr, imm5</sub></code> | <sub>Control and Status Register Atomic Read and Write Immediate</sub>
+<code><sub>CSRRSI rd, csr, imm5</sub></code> | <sub>Control and Status Register Atomic Read and Set Bits Immediate</sub>
+<code><sub>CSRRCI rd, csr, imm5</sub></code> | <sub>Control and Status Register Atomic Read and Write Immediate</sub>
 
 The following code sample shows how to enable interrupts, enable
 timer interuppts, and then set and wait for a timer interrupt to
