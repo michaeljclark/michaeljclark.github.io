@@ -276,8 +276,21 @@ msg:
 
 ### Control and Status Registers
 
-The following code sample shows how to enable timer interrupts,
-set and wait for a timer interrupt to occur:
+The following instructions allow reading, writing, setting and
+clearing bits in CSRs _(control and status registers)_:
+
+CSR Op  | Description
+:--     | :--
+`CSRRW rd, csr, rs1` | Control and Status Register Atomic Read and Write
+`CSRRS rd, csr, rs1` | Control and Status Register Atomic Read and Set Bits
+`CSRRC rd, csr, rs1` | Control and Status Register Atomic Read and Clear Bits
+`CSRRWI rd, csr, imm5` | Control and Status Register Atomic Read and Write Immediate
+`CSRRSI rd, csr, imm5` | Control and Status Register Atomic Read and Set Bits Immediate
+`CSRRCI rd, csr, imm5` | Control and Status Register Atomic Read and Write Immediate
+
+The following code sample shows how to enable timer interrupts
+using CSR instructions, and to set and wait for a timer interrupt
+to occur:
 
 ```
 .equ RTC_BASE,      0x40000000
