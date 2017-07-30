@@ -7,6 +7,90 @@ assembler concepts such as labels, relative and absolute
 addressing, immediate values, constants and finally control
 and status registers.
 
+### Concepts
+
+This section briefly covers some high level concepts that
+are required to understand the process of assembling and
+linking executable code from source files.
+
+_**Assembly file**_
+
+An assembly file contains assembly language directives,
+macros and instructions. It can be emitted by a compiler
+or it can be handwritten. An assembly file is the input file
+to the assembler. The standard extensions for assembly files
+are `.s` and `.S`, with the later indicating that the assembly
+file should be pre-processed using the C preprocessor.
+
+_**Relocatable Object file**_
+
+A relocatable object file contains compiled object code and
+data emitted by the assembler. An object file cannot be run,
+rather it is used as input to the linker. The standard extension
+for object files is `.o`. The most common cross-platform file
+format for RISC-V executables is the ELF _(Electronic Linker
+Format)_ object file format. The `objdump` utility can be used
+to disassemble an object file, `objcopy` can be used to copy
+and extract sections from ELF files and the `nm` utility can
+list symbols in an object file.
+
+_**Executable Header**_
+
+An ELF file has an executable header that contains _magic_ to
+indicate the file is ELF formatted, the architecture of the
+binary, the endianness of the binary _(little-endian for RISC-V)_,
+the ELF file type _(Relocatable Object File, Executable File,
+Shared Library)_, the number of program headers and their offset
+in the file, the number of section headers and their offset in
+the file, fields indicating the ELF version and ABI _(Application
+Binary Interface)_ version of the file and finally flags indicating
+various ABI options such as RVC compression and which floating-
+point ABI that the executable code in the binary conforms to.
+
+_**Program Header**_
+
+Program Headers provide size and offsets of loadable segments
+within an executable file or shared object along with protection
+attributes used by the operating system _(read, write and exec)_.
+Program headers are not present in relocatable object files
+and are primarily for use by the operating system to and dynamic
+linker to map code and data into memory.
+
+_**Section Header**_
+
+Section Headers provice size, offset, type, alignment and
+flags of the sections contained within the ELF file. Section
+headers are not required to execute a static binary but are
+necessary for dynamic linking as well as program linking.
+Various section types refer to the location of the symbol
+table, relocations and dynamic symbols in the ELF binary file.
+
+_**Sections**_
+
+An object file is made up of multiple sections, with each
+section corresponding to distinct types of executable code
+or data. There are a variety of different section types. This
+list shows the four most common sections:
+
+- `.text` is a read-only section containing executable code
+- `.data` is a read-write section containing global or static variables
+- `.rodata` is a read-only section containing const variables
+- `.bss` is a read-write section containing uninitialised data
+
+_**Program linking**_
+
+Program linking is the process of reading multiple relocatable
+object files, merging the sections from each of the source files,
+calculating the new addresses for symbols and applying relocation
+fixups to text or data that is pointed to in relocation entries.
+
+_**Linker Script**_
+
+A linker script is a text source file that is optionally input
+to the linker and it contains rules for the linker to use when
+calculating the load address and alignment of the various sections
+when creating an executable output file. The standard extension
+for linker scripts is `.ld`.
 
 ### Assembler Directives
 
