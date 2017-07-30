@@ -24,15 +24,15 @@ Directive                            | Arguments                                
 <code><sub>.2byte</sub></code>       |                                           | <sub>16-bit comma separated words (unaligned)</sub>
 <code><sub>.4byte</sub></code>       |                                           | <sub>32-bit comma separated words (unaligned)</sub>
 <code><sub>.8byte</sub></code>       |                                           | <sub>64-bit comma separated words (unaligned)</sub>
-<code><sub>.asciz</sub></code>       | <sub>"string"</sub>                       | <sub>emit string (alias for .string)</sub>
-<code><sub>.byte</sub></code>        |                                           | <sub>8-bit comma separated words</sub>
-<code><sub>.dtpreldword</sub></code> |                                           | <sub>64-bit thread local word</sub>
-<code><sub>.dtprelword</sub></code>  |                                           | <sub>32-bit thread local word</sub>
 <code><sub>.half</sub></code>        |                                           | <sub>16-bit comma separated words (naturally aligned)</sub>
 <code><sub>.word</sub></code>        |                                           | <sub>32-bit comma separated words (naturally aligned)</sub>
 <code><sub>.dword</sub></code>       |                                           | <sub>64-bit comma separated words (naturally aligned)</sub>
+<code><sub>.byte</sub></code>        |                                           | <sub>8-bit comma separated words</sub>
+<code><sub>.dtpreldword</sub></code> |                                           | <sub>64-bit thread local word</sub>
+<code><sub>.dtprelword</sub></code>  |                                           | <sub>32-bit thread local word</sub>
 <code><sub>.sleb128</sub></code>     | <sub>expression</sub>                     | <sub>signed little endian base 128, DWARF</sub>
 <code><sub>.uleb128</sub></code>     | <sub>expression</sub>                     | <sub>unsigned little endian base 128, DWARF</sub>
+<code><sub>.asciz</sub></code>       | <sub>"string"</sub>                       | <sub>emit string (alias for .string)</sub>
 <code><sub>.string</sub></code>      | <sub>"string"</sub>                       | <sub>emit string</sub>
 <code><sub>.incbin</sub></code>      | <sub>"filename"</sub>                     | <sub>emit the included file as a binary sequence of octets</sub>
 <code><sub>.zero</sub></code>        | <sub>integer</sub>                        | <sub>zero bytes</sub>
