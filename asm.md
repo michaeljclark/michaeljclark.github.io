@@ -45,7 +45,7 @@ Directive    | Arguments                      | Description
 <code><sub>.zero</sub></code>        | <sub>integer</sub>                        | <sub>zero bytes</sub>
 
 
-### Assembler pseudo-instructions
+### Assembler Pseudo-instructions
 
 The following table list assembler pseudo instructions:
 
@@ -78,7 +78,7 @@ The following table list assembler pseudo instructions:
 <code><sub>ret</sub></code>              | <code><sub>jalr x0, x1, 0</sub></code>         | <sub>Return from subroutine</sub>
 
 
-### Function expansions
+### Function Expansions
 
 The following table lists assembler function expansions:
 
@@ -112,7 +112,7 @@ suffixed with 'f' for a forward reference or 'b' for a backwards reference.
 ```
 
 
-### Absolute addressing
+### Absolute Addressing
 
 Absolute addresses are used in position dependent code. An
 absolute address is formed using two instructions, the U-Type
@@ -149,7 +149,7 @@ as seen by objdump:
 ```
 
 
-### Relative addressing
+### Relative Addressing
 
 Relative addresses are used in position independent code. A
 relative address is formed using two instructions, the U-Type
