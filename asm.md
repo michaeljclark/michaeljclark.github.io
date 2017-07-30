@@ -12,8 +12,10 @@ and status registers.
 
 The assembler implements a number of directives that control
 the assembly of instructions into an object file. These directives
+give the ability to include arbitrary data in the object file,
 control exporting of symbols, selection of sections, alignment
-of data and the ability to include arbitrary data in the object file.
+of data, assembly options for compression, position dependent
+and position independent code.
 
 The following are assembler directives for emitting data:
 
