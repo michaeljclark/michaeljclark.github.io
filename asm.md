@@ -21,6 +21,7 @@ Directive                            | Arguments                                
 <code><sub>.comm</sub></code>        | <sub>symbol_name,size,align</sub>         | <sub>emit common object to .bss section</sub>
 <code><sub>.common</sub></code>      | <sub>symbol_name,size,align</sub>         | <sub>emit common object to .bss section</sub>
 <code><sub>.ident</sub></code>       | <sub>"string"</sub>                       | <sub>accepted for source compatibility</sub>
+<code><sub>.incbin</sub></code>      | <sub>"filename"</sub>                     | <sub>emit the included file as a binary sequence of octets</sub>
 <code><sub>.section</sub></code>     | <sub>[{.text,.data,.rodata,.bss}]</sub>   | <sub>emit section (if not present, default .text) and make current</sub>
 <code><sub>.size</sub></code>        | <sub>symbol, symbol</sub>                 | <sub>accepted for source compatibility</sub>
 <code><sub>.text</sub></code>        |                                           | <sub>emit .text section (if not present) and make current</sub>
