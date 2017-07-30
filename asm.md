@@ -1,6 +1,11 @@
 ## RISC-V Assembler Reference
 
 This document gives an overview of RISC-V assembly language.
+The sections describe assembler directives, assembler
+pseudo-instructions, assembler relocation functions, basic
+assembler concepts such as labels, relative and absolute
+addressing, immediate values, constants and finally control
+and status registers.
 
 
 ### Assembler Directives
