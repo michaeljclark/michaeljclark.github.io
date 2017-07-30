@@ -356,6 +356,14 @@ msg:
 
 ### Control and Status Registers
 
+Control and status registers are typically used to update
+privileged processor state however there are a few non-privileged
+instructions that access control and status registers such
+as the CSR pseudo-instructions `rdcycle`, `rdtime`, `rdinstret`
+for access to counters and `frcsr`, `frrm`, `frflags`, `fscsr`,
+`fsrm`, `fsflags`, `fsrmi` and `fsflagsi` for controling round
+mode and accessing floating point accrued exception state. 
+
 The following instructions allow reading, writing, setting and
 clearing bits in CSRs _(control and status registers)_:
 
@@ -368,9 +376,8 @@ CSR Op  | Description
 `CSRRSI rd, csr, imm5` | Control and Status Register Atomic Read and Set Bits Immediate
 `CSRRCI rd, csr, imm5` | Control and Status Register Atomic Read and Write Immediate
 
-The following code sample shows how to enable timer interrupts
-using CSR instructions, and to set and wait for a timer interrupt
-to occur:
+The following code sample shows how to enable and set timer
+interrupts using CSR instructions:
 
 ```
 .equ RTC_BASE,      0x40000000
