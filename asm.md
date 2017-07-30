@@ -154,8 +154,14 @@ as seen by objdump:
 
 ### Load Immediate
 
-The following example shows the `li` psuedo instruction which
-is used to load immediate values:
+The `li` _(load immediate)_ instruction is an assembler pseudo
+instruction that is used to synthesize constants. The `li` pseudo
+instruction will emit a sequence starting with `lui` followed by
+`addi` and `slli` _(shift left logical immediate)_ to construct
+constants by shifting and adding.
+
+The following example shows the `li` psuedo instruction being used
+to load an immediate value:
 
 ```
 .section .text
@@ -179,6 +185,14 @@ which generates the following assembler output as seen by objdump:
 
 
 ### Load Address
+
+The `la` _(load address)_ instruction is an assembler pseudo
+instruction used to load the address of a symbol or label. The
+instruction can emit either absolute or relative addresses
+depending on whether the `-fpic` or `-fno-pic` assembler options
+are specified. The pseduo instruction also emits relocation
+information so that the address of the symbol can be fixed up
+during program linking.
 
 The following example shows the `la` psuedo instruction which
 is used to load symbol addresses:
