@@ -176,10 +176,10 @@ The following example shows how to load an absolute address:
 .section .text
 .globl _start
 _start:
-	    lui a1,       %hi(msg)       # load msg(hi)
+	    lui  a1,      %hi(msg)       # load msg(hi)
 	    addi a1, a1,  %lo(msg)       # load msg(lo)
 	    jalr ra, puts
-2:	    j2b
+2:	    j    2b
 
 .section .rodata
 msg:
@@ -215,8 +215,8 @@ The following example shows how to load a PC-relative address:
 _start:
 1:	    auipc a1,     %pcrel_hi(msg) # load msg(hi)
 	    addi  a1, a1, %pcrel_lo(1b)  # load msg(lo)
-	    jalr ra, puts
-2:	    j2b
+	    jalr  ra, puts
+2:	    j     2b
 
 .section .rodata
 msg:
@@ -259,10 +259,10 @@ which generates the following assembler output as seen by objdump:
 
 ```
 0000000000000000 <_start>:
-   0:	00032537          	lui	    a0,0x32
-   4:	bfb50513          	addi	a0,a0,-1029
-   8:	00e51513          	slli	a0,a0,0xe
-   c:	abe50513          	addi	a0,a0,-1346
+   0:	00032537          	lui     a0,0x32
+   4:	bfb50513          	addi    a0,a0,-1029
+   8:	00e51513          	slli    a0,a0,0xe
+   c:	abe50513          	addi    a0,a0,-1346
 ```
 
 
@@ -323,10 +323,10 @@ This example uses the `li` pseudo instruction to load a constant
 and writes a string using polled IO to a UART:
 
 ```
-.equ UART_BASE, 0x40003000
-.equ REG_RBR, 0
-.equ REG_TBR, 0
-.equ REG_IIR, 2
+.equ UART_BASE,  0x40003000
+.equ REG_RBR,    0
+.equ REG_TBR,    0
+.equ REG_IIR,    2
 .equ IIR_TX_RDY, 2
 .equ IIR_RX_RDY, 4
 
@@ -334,20 +334,20 @@ and writes a string using polled IO to a UART:
 .globl _start
 _start:
 1:      auipc a0, %pcrel_hi(msg)    # load msg(hi)
-        addi a0, a0, %pcrel_lo(1b)  # load msg(lo)
-2:      jal ra, puts
-3:      j 3b
+        addi  a0, a0, %pcrel_lo(1b)  # load msg(lo)
+2:      jal   ra, puts
+3:      j     3b
 
 puts:
-        li a2, UART_BASE
-1:      lbu a1, (a0)
-        beqz a1, 3f
-2:      lbu a3, REG_IIR(a2)
-        andi a3, a3, IIR_TX_RDY
-        beqz a3, 2b
-        sb a1, REG_TBR(a2)
-        addi a0, a0, 1
-        j 1b
+        li    a2, UART_BASE
+1:      lbu   a1, (a0)
+        beqz  a1, 3f
+2:      lbu   a3, REG_IIR(a2)
+        andi  a3, a3, IIR_TX_RDY
+        beqz  a3, 2b
+        sb    a1, REG_TBR(a2)
+        addi  a0, a0, 1
+        j     1b
 3:      ret
 
 .section .rodata
@@ -417,23 +417,23 @@ loop:
 
 # break on interrupt
 mtvec:
-        csrrc  t0, mcause, zero
-        bgez t0, fail       # interrupt causes are less than zero
-        slli t0, t0, 1      # shift off high bit
-        srli t0, t0, 1
-        li t1, 7            # check this is an m_timer interrupt
+        csrrc   t0, mcause, zero
+        bgez    t0, fail       # interrupt causes are less than zero
+        slli    t0, t0, 1      # shift off high bit
+        srli    t0, t0, 1
+        li      t1, 7          # check this is an m_timer interrupt
         bne t0, t1, fail
         j pass
 
 pass:
-        la a0, pass_msg
-        jal puts
-        j shutdown
+        la      a0, pass_msg
+        jal     puts
+        j       shutdown
 
 fail:
-        la a0, fail_msg
-        jal puts
-        j shutdown
+        la      a0, fail_msg
+        jal     puts
+        j       shutdown
 
 .section .rodata
 
