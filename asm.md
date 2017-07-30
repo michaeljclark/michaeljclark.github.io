@@ -85,7 +85,7 @@ that are formed from instructions in the base ISA, but have implicit
 arguments or in some case reversed arguments, that result in distinct
 semantics.
 
-The following table list assembler pseudo instructions:
+The following table lists RISC-V assembler pseudo instructions:
 
 Pesudo-instruction                          | Expansion                                      | Description
 :------------------------------------------ | :--------------------------------------------- | :---------------
