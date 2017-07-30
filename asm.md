@@ -122,6 +122,11 @@ Pesudo-instruction                          | Expansion                         
 
 ### Relocation Functions
 
+The relocation function directives create synthesize operand values
+that are resolved at program link time and are used as immediate parameters
+to specific instructions. The sections on absolute and relative addressing
+give examples of using the relocation functions.
+
 The following table lists assembler functions used to generate relocations:
 
 Assembler Notation                               | Description                            | Instructions
