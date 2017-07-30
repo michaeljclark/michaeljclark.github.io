@@ -7,8 +7,8 @@ This document gives an overview of RISC-V assembly language.
 
 The following table lists assembler directives:
 
-Directive    | Arguments                      | Description
-:----------- | :-------------                 | :---------------
+Directive                            | Arguments                                 | Description
+:----------------------------------- | :---------------------------------------- | :---------------
 <code><sub>.align</sub></code>       | <sub>integer</sub>                        | <sub>align to power of 2 (alias for .p2align)</sub>
 <code><sub>.file</sub></code>        | <sub>"filename"</sub>                     | <sub>emit filename FILE LOCAL symbol table</sub>
 <code><sub>.globl</sub></code>       | <sub>symbol_name</sub>                    | <sub>emit symbol_name to symbol table (scope GLOBAL)</sub>
@@ -84,18 +84,18 @@ Pesudo-instruction                          | Expansion                         
 <code><sub>ret</sub></code>                 | <code><sub>jalr x0, x1, 0</sub></code>         | <sub>Return from subroutine</sub>
 
 
-### Function Expansions
+### Relocation Functions
 
-The following table lists assembler function expansions:
+The following table lists assembler functions used to generate relocations:
 
-Assembler Notation       | Description                 | Instruction / Macro
-:----------------------  | :---------------            | :-------------------
+Assembler Notation                               | Description                            | Instructions
+:----------------------------------------------  | :------------------------------------  | :-------------------
 <code><sub>%hi(symbol)</sub></code>              | <sub>Absolute (HI20)</sub>             | <sub>lui</sub>
-<code><sub>%lo(symbol)</sub></code>              | <sub>Absolute (LO12)</sub>             | <sub>load, store, add</sub>
+<code><sub>%lo(symbol)</sub></code>              | <sub>Absolute (LO12)</sub>             | <sub>loads, stores, adds</sub>
 <code><sub>%pcrel_hi(symbol)</sub></code>        | <sub>PC-relative (HI20)</sub>          | <sub>auipc</sub>
-<code><sub>%pcrel_lo(label)</sub></code>         | <sub>PC-relative (LO12)</sub>          | <sub>load, store, add</sub>
+<code><sub>%pcrel_lo(label)</sub></code>         | <sub>PC-relative (LO12)</sub>          | <sub>loads, stores, adds</sub>
 <code><sub>%tprel_hi(symbol)</sub></code>        | <sub>TLS LE (Local Exec)</sub>         | <sub>auipc</sub>
-<code><sub>%tprel_lo(label)</sub></code>         | <sub>TLS LE (Local Exec)</sub>         | <sub>load, store, add</sub>
+<code><sub>%tprel_lo(label)</sub></code>         | <sub>TLS LE (Local Exec)</sub>         | <sub>loads, stores, adds</sub>
 <code><sub>%tprel_add(offset)</sub></code>       | <sub>TLS LE (Local Exec)</sub>         | <sub>add</sub>
 
 
