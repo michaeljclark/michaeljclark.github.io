@@ -90,7 +90,7 @@ The following table lists RISC-V assembler pseudo instructions:
 Pesudo-instruction                          | Expansion                                      | Description
 :------------------------------------------ | :--------------------------------------------- | :---------------
 <code><sub>nop</sub></code>                 | <code><sub>addi zero,zero,0</sub></code>       | <sub>No operation</sub>
-<code><sub>li rd, symbol</sub></code>       | <sub>(several expansions)</sub>                | <sub>Load immediate</sub>
+<code><sub>li rd, expression</sub></code>   | <sub>(several expansions)</sub>                | <sub>Load immediate</sub>
 <code><sub>la rd, symbol</sub></code>       | <sub>(several expansions)</sub>                | <sub>Load address</sub>
 <code><sub>mv rd, rs1</sub></code>          | <code><sub>addi rd, rs, 0</sub></code>         | <sub>Copy register</sub>
 <code><sub>not rd, rs1</sub></code>         | <code><sub>xori rd, rs, -1</sub></code>        | <sub>One’s complement</sub>
