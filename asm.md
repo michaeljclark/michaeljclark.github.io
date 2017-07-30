@@ -112,8 +112,8 @@ Pesudo-instruction                          | Expansion                         
 <code><sub>bltz rs1, offset</sub></code>    | <code><sub>blt rs, x0, offset</sub></code>     | <sub>Branch if < zero</sub>
 <code><sub>bgtz rs1, offset</sub></code>    | <code><sub>blt x0, rs, offset</sub></code>     | <sub>Branch if > zero</sub>
 <code><sub>bgt rs, rt, offset</sub></code>  | <code><sub>blt rt, rs, offset</sub></code>     | <sub>Branch if ></sub>
-<code><sub>ble rs, rt, offset</sub></code> | <code><sub>bge rt, rs, offset</sub></code>     | <sub>Branch if <</sub>
-<code><sub>bgtu rs, rt, offset</sub></code>  | <code><sub>bltu rt, rs, offset</sub></code>    | <sub>Branch if >, unsigned</sub>
+<code><sub>ble rs, rt, offset</sub></code>  | <code><sub>bge rt, rs, offset</sub></code>     | <sub>Branch if ≤</sub>
+<code><sub>bgtu rs, rt, offset</sub></code> | <code><sub>bltu rt, rs, offset</sub></code>    | <sub>Branch if >, unsigned</sub>
 <code><sub>bleu rs, rt, offset</sub></code> | <code><sub>bltu rt, rs, offset</sub></code>    | <sub>Branch if ≤, unsigned</sub>
 <code><sub>j offset</sub></code>            | <code><sub>jal x0, offset</sub></code>         | <sub>Jump</sub>
 <code><sub>jr offset</sub></code>           | <code><sub>jal x1, offset</sub></code>         | <sub>Jump register</sub>
