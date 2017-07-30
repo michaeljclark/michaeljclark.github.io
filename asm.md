@@ -5,6 +5,11 @@ This document gives an overview of RISC-V assembly language.
 
 ### Assembler Directives
 
+The assembler implements a number of directives that control
+the assembly of instructions into an object file. These directives
+control exporting of symbols, selection of sections, alignment
+of data and the ability to include arbitrary data in the object file.
+
 The following table lists assembler directives:
 
 Directive                            | Arguments                                 | Description
