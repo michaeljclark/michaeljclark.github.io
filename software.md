@@ -9,7 +9,7 @@ emulators and dynamic binary translators.
 
 __*Spike*__
 
-URL: [https://github.com/riscv/riscv-isa-sim](https://github.com/riscv/riscv-isa-sim)
+URL: [https://github.com/riscv/riscv-isa-sim/](https://github.com/riscv/riscv-isa-sim/)
 
 Spike is the official RISC-V Instruction Set Simulator. Spike
 serves as the behavioural reference model for the RISC-V ISA.
@@ -27,7 +27,7 @@ and runs riscv-linux with BusyBox inside a web browser.
 
 __*QEMU (riscv)*__
 
-URL: [https://github.com/riscv/riscv-qemu](https://github.com/riscv/riscv-qemu)
+URL: [https://github.com/riscv/riscv-qemu/](https://github.com/riscv/riscv-qemu/)
 
 QEMU, the fast processor emulator, is a multiplatform user mode
 simulator and a full system emulator that emulates CPUs via dynamic
@@ -56,7 +56,7 @@ pipeline model for a wide variety of architecures.
 
 __*rv8*__
 
-URL: [https://github.com/rv8-io/rv8](https://github.com/rv8-io/rv8])
+URL: [https://github.com/rv8-io/rv8/](https://github.com/rv8-io/rv8/])
 
 rv8 is a simulation suite that features a user mode simulator,
 a full system emulator, a dynamic binary translator along with
