@@ -266,13 +266,13 @@ which generates the following assembler output as seen by objdump:
 
 ### Load Address
 
-The `la` _(load address)_ instruction is an assembler pseudo
+The `la` _(load address)_ instruction is an assembler pseudo-
 instruction used to load the address of a symbol or label. The
-instruction can emit either absolute or relative addresses
-depending on whether the `-fpic` or `-fno-pic` assembler options
-are specified. The pseduo instruction also emits relocation
-information so that the address of the symbol can be fixed up
-during program linking.
+instruction can emit absolute or relative addresses depending
+on the `-fpic` or `-fno-pic` assembler command line options or
+an `.options pic` or `.options nopic` assembler directive. The
+pseduo-instruction emits a relocation so that the address of
+the symbol can be fixed up during program linking.
 
 The following example uses the `la` psuedo instruction to load
 a symbol address:
