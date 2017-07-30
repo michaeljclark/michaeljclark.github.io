@@ -35,7 +35,7 @@ Directive                            | Arguments                                
 <code><sub>.incbin</sub></code>      | <sub>"filename"</sub>                     | <sub>emit the included file as a binary sequence of octets</sub>
 <code><sub>.zero</sub></code>        | <sub>integer</sub>                        | <sub>zero bytes</sub>
 
-The following are assembler directives for alignment:
+The following are assembler directives for control of alignment:
 
 Directive                            | Arguments                                 | Description
 :----------------------------------- | :---------------------------------------- | :---------------
@@ -51,7 +51,7 @@ Directive                            | Arguments                                
 <code><sub>.local</sub></code>       | <sub>symbol_name</sub>                    | <sub>emit symbol_name to symbol table (scope LOCAL)</sub>
 <code><sub>.equ</sub></code>         | <sub>name, value</sub>                    | <sub>constant definition</sub>
 
-The following directives are for selection of section:
+The following directives are for selection of sections:
 
 Directive                            | Arguments                                 | Description
 :----------------------------------- | :---------------------------------------- | :---------------
@@ -63,7 +63,7 @@ Directive                            | Arguments                                
 <code><sub>.common</sub></code>      | <sub>symbol_name,size,align</sub>         | <sub>emit common object to .bss section</sub>
 <code><sub>.section</sub></code>     | <sub>[{.text,.data,.rodata,.bss}]</sub>   | <sub>emit section (if not present, default .text) and make current</sub>
 
-The following are miscellaneous directives including options and macros:
+The following directives includes options, macros and other miscellaneous functions:
 
 Directive                            | Arguments                                 | Description
 :----------------------------------- | :---------------------------------------- | :---------------
