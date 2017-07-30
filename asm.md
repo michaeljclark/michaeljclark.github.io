@@ -49,6 +49,8 @@ Directive    | Arguments                      | Description
 
 The following table list assembler pseudo instructions:
 
+Pesudo-instruction                          | Expansion                                      | Description
+:------------------------------------------ | :--------------------------------------------- | :---------------
 <code><sub>nop</sub></code>                 | <code><sub>addi zero,zero,0</sub></code>       | <sub>No operation</sub>
 <code><sub>li rd, symbol</sub></code>       | <sub>(several expansions)</sub>                | <sub>Load immediate</sub>
 <code><sub>la rd, symbol</sub></code>       | <sub>(several expansions)</sub>                | <sub>Load address</sub>
