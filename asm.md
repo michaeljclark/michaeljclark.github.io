@@ -81,6 +81,13 @@ suffixed with 'f' for a forward reference or 'b' for a backwards reference.
 
 ### Absolute addressing
 
+Absolute addresses are used in position dependent code. An
+absolute address is formed using two instructions, the U-Type
+`lui` _(Load Upper Immediate)_ instruction to load `bits[31:20]`
+and an I-Type or S-Type instruction such as 'addi' _(add
+immediate)_, `lw` _(load word)_ or `sw` _(store word)_ that
+fills in the low 12 bits relative to the upper immediate.
+
 The following example shows how to load an absolute address:
 
 ```
@@ -110,6 +117,13 @@ as seen by objdump:
 
 
 ### Relative addressing
+
+Relative addresses are used in position independent code. A
+relative address is formed using two instructions, the U-Type
+`auipc` _(Add Upper Immediate Program Counter)_ instruction to
+load `bits[31:20]` relative to the program counter of the `auipc`
+instruction followed by an I-Type or S-Type instruction such as
+'addi' _(add immediate)_, `lw` _(load word)_ or `sw` _(store word)_.
 
 The following example shows how to load a PC-relative address:
 
