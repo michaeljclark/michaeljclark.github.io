@@ -10,45 +10,65 @@ the assembly of instructions into an object file. These directives
 control exporting of symbols, selection of sections, alignment
 of data and the ability to include arbitrary data in the object file.
 
-The following table lists assembler directives:
+The following are assembler directives for emitting data:
+
+Directive                            | Arguments                                 | Description
+:----------------------------------- | :---------------------------------------- | :---------------
+<code><sub>.2byte</sub></code>       |                                           | <sub>16-bit comma separated words (unaligned)</sub>
+<code><sub>.4byte</sub></code>       |                                           | <sub>32-bit comma separated words (unaligned)</sub>
+<code><sub>.8byte</sub></code>       |                                           | <sub>64-bit comma separated words (unaligned)</sub>
+<code><sub>.asciz</sub></code>       | <sub>"string"</sub>                       | <sub>emit string (alias for .string)</sub>
+<code><sub>.byte</sub></code>        |                                           | <sub>8-bit comma separated words</sub>
+<code><sub>.dtpreldword</sub></code> |                                           | <sub>64-bit thread local word</sub>
+<code><sub>.dtprelword</sub></code>  |                                           | <sub>32-bit thread local word</sub>
+<code><sub>.half</sub></code>        |                                           | <sub>16-bit comma separated words (naturally aligned)</sub>
+<code><sub>.word</sub></code>        |                                           | <sub>32-bit comma separated words (naturally aligned)</sub>
+<code><sub>.dword</sub></code>       |                                           | <sub>64-bit comma separated words (naturally aligned)</sub>
+<code><sub>.sleb128</sub></code>     | <sub>expression</sub>                     | <sub>signed little endian base 128, DWARF</sub>
+<code><sub>.uleb128</sub></code>     | <sub>expression</sub>                     | <sub>unsigned little endian base 128, DWARF</sub>
+<code><sub>.string</sub></code>      | <sub>"string"</sub>                       | <sub>emit string</sub>
+<code><sub>.incbin</sub></code>      | <sub>"filename"</sub>                     | <sub>emit the included file as a binary sequence of octets</sub>
+<code><sub>.zero</sub></code>        | <sub>integer</sub>                        | <sub>zero bytes</sub>
+
+The following are assembler directives for alignment:
 
 Directive                            | Arguments                                 | Description
 :----------------------------------- | :---------------------------------------- | :---------------
 <code><sub>.align</sub></code>       | <sub>integer</sub>                        | <sub>align to power of 2 (alias for .p2align)</sub>
-<code><sub>.file</sub></code>        | <sub>"filename"</sub>                     | <sub>emit filename FILE LOCAL symbol table</sub>
+<code><sub>.balign</sub></code>      | <sub>b,[pad_val=0]</sub>                  | <sub>byte align</sub>
+<code><sub>.p2align</sub></code>     | <sub>p2,[pad_val=0],max</sub>             | <sub>align to power of 2</sub>
+
+The following are assembler directives for definition and exporing of symbols:
+
+Directive                            | Arguments                                 | Description
+:----------------------------------- | :---------------------------------------- | :---------------
 <code><sub>.globl</sub></code>       | <sub>symbol_name</sub>                    | <sub>emit symbol_name to symbol table (scope GLOBAL)</sub>
 <code><sub>.local</sub></code>       | <sub>symbol_name</sub>                    | <sub>emit symbol_name to symbol table (scope LOCAL)</sub>
-<code><sub>.comm</sub></code>        | <sub>symbol_name,size,align</sub>         | <sub>emit common object to .bss section</sub>
-<code><sub>.common</sub></code>      | <sub>symbol_name,size,align</sub>         | <sub>emit common object to .bss section</sub>
-<code><sub>.ident</sub></code>       | <sub>"string"</sub>                       | <sub>accepted for source compatibility</sub>
-<code><sub>.incbin</sub></code>      | <sub>"filename"</sub>                     | <sub>emit the included file as a binary sequence of octets</sub>
-<code><sub>.section</sub></code>     | <sub>[{.text,.data,.rodata,.bss}]</sub>   | <sub>emit section (if not present, default .text) and make current</sub>
-<code><sub>.size</sub></code>        | <sub>symbol, symbol</sub>                 | <sub>accepted for source compatibility</sub>
+<code><sub>.equ</sub></code>         | <sub>name, value</sub>                    | <sub>constant definition</sub>
+
+The following directives are for selection of section:
+
+Directive                            | Arguments                                 | Description
+:----------------------------------- | :---------------------------------------- | :---------------
 <code><sub>.text</sub></code>        |                                           | <sub>emit .text section (if not present) and make current</sub>
 <code><sub>.data</sub></code>        |                                           | <sub>emit .data section (if not present) and make current</sub>
 <code><sub>.rodata</sub></code>      |                                           | <sub>emit .rodata section (if not present) and make current</sub>
 <code><sub>.bss</sub></code>         |                                           | <sub>emit .bss section (if not present) and make current</sub>
-<code><sub>.string</sub></code>      | <sub>"string"</sub>                       | <sub>emit string</sub>
-<code><sub>.asciz</sub></code>       | <sub>"string"</sub>                       | <sub>emit string (alias for .string)</sub>
-<code><sub>.equ</sub></code>         | <sub>name, value</sub>                    | <sub>constant definition</sub>
+<code><sub>.comm</sub></code>        | <sub>symbol_name,size,align</sub>         | <sub>emit common object to .bss section</sub>
+<code><sub>.common</sub></code>      | <sub>symbol_name,size,align</sub>         | <sub>emit common object to .bss section</sub>
+<code><sub>.section</sub></code>     | <sub>[{.text,.data,.rodata,.bss}]</sub>   | <sub>emit section (if not present, default .text) and make current</sub>
+
+The following are miscellaneous directives including options and macros:
+
+Directive                            | Arguments                                 | Description
+:----------------------------------- | :---------------------------------------- | :---------------
+<code><sub>.option</sub></code>      | <sub>{rvc,norvc,pic,nopic,push,pop}</sub> | <sub>RISC-V options</sub>
 <code><sub>.macro</sub></code>       | <sub>name arg1 [, argn]</sub>             | <sub>begin macro definition \argname to substitute</sub>
 <code><sub>.endm</sub></code>        |                                           | <sub>end macro definition</sub>
+<code><sub>.file</sub></code>        | <sub>"filename"</sub>                     | <sub>emit filename FILE LOCAL symbol table</sub>
+<code><sub>.ident</sub></code>       | <sub>"string"</sub>                       | <sub>accepted for source compatibility</sub>
+<code><sub>.size</sub></code>        | <sub>symbol, symbol</sub>                 | <sub>accepted for source compatibility</sub>
 <code><sub>.type</sub></code>        | <sub>symbol, @function</sub>              | <sub>accepted for source compatibility</sub>
-<code><sub>.option</sub></code>      | <sub>{rvc,norvc,pic,nopic,push,pop}</sub> | <sub>RISC-V options</sub>
-<code><sub>.byte</sub></code>        |                                           | <sub>8-bit comma separated words</sub>
-<code><sub>.2byte</sub></code>       |                                           | <sub>16-bit comma separated words (unaligned)</sub>
-<code><sub>.4byte</sub></code>       |                                           | <sub>32-bit comma separated words (unaligned)</sub>
-<code><sub>.8byte</sub></code>       |                                           | <sub>64-bit comma separated words (unaligned)</sub>
-<code><sub>.half</sub></code>        |                                           | <sub>16-bit comma separated words (naturally aligned)</sub>
-<code><sub>.word</sub></code>        |                                           | <sub>32-bit comma separated words (naturally aligned)</sub>
-<code><sub>.dword</sub></code>       |                                           | <sub>64-bit comma separated words (naturally aligned)</sub>
-<code><sub>.dtprelword</sub></code>  |                                           | <sub>32-bit thread local word</sub>
-<code><sub>.dtpreldword</sub></code> |                                           | <sub>64-bit thread local word</sub>
-<code><sub>.sleb128</sub></code>     | <sub>expression</sub>                     | <sub>signed little endian base 128, DWARF</sub>
-<code><sub>.uleb128</sub></code>     | <sub>expression</sub>                     | <sub>unsigned little endian base 128, DWARF</sub>
-<code><sub>.p2align</sub></code>     | <sub>p2,[pad_val=0],max</sub>             | <sub>align to power of 2</sub>
-<code><sub>.balign</sub></code>      | <sub>b,[pad_val=0]</sub>                  | <sub>byte align</sub>
-<code><sub>.zero</sub></code>        | <sub>integer</sub>                        | <sub>zero bytes</sub>
 
 
 ### Assembler Pseudo-instructions
