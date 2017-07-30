@@ -201,7 +201,7 @@ as seen by objdump:
 ### Relative Addressing
 
 Relative addresses are used in position independent code. A
-relative address is formed using two instructions, the U-Type
+PC-relative address is formed using two instructions, the U-Type
 `auipc` _(Add Upper Immediate Program Counter)_ instruction to
 load `bits[31:20]` relative to the program counter of the `auipc`
 instruction followed by an I-Type or S-Type instruction such as
