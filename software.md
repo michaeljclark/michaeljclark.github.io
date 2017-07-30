@@ -25,7 +25,7 @@ ANGEL is a Javascript RISC-V ISA (RV64) Simulator that boots
 and runs riscv-linux with BusyBox inside a web browser.
 
 
-__*QEMU (riscv)*__
+__*QEMU*__
 
 URL: [https://github.com/riscv/riscv-qemu/](https://github.com/riscv/riscv-qemu/)
 
