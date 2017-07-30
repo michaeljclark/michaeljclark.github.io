@@ -47,6 +47,11 @@ Directive                            | Arguments                                
 
 ### Assembler Pseudo-instructions
 
+The assembler implements a number of convenience psuedo-instructions
+that are formed in relation to instructions in the base ISA, but the
+pseudo-instructions have implicit arguments or in some case reversed
+arguments.
+
 The following table list assembler pseudo instructions:
 
 Pesudo-instruction                          | Expansion                                      | Description
@@ -75,10 +80,10 @@ Pesudo-instruction                          | Expansion                         
 <code><sub>bgez rs1, offset</sub></code>    | <code><sub>bge rs, x0, offset</sub></code>     | <sub>Branch if ≥ zero</sub>
 <code><sub>bltz rs1, offset</sub></code>    | <code><sub>blt rs, x0, offset</sub></code>     | <sub>Branch if < zero</sub>
 <code><sub>bgtz rs1, offset</sub></code>    | <code><sub>blt x0, rs, offset</sub></code>     | <sub>Branch if > zero</sub>
-<code><sub>ble rs, rt, offset</sub></code>  | <code><sub>blt rt, rs, offset</sub></code>     | <sub>Branch if ></sub>
-<code><sub>bleu rs, rt, offset</sub></code> | <code><sub>bge rt, rs, offset</sub></code>     | <sub>Branch if <</sub>
-<code><sub>bgt rs, rt, offset</sub></code>  | <code><sub>bltu rt, rs, offset</sub></code>    | <sub>Branch if >, unsigned</sub>
-<code><sub>bgtu rs, rt, offset</sub></code> | <code><sub>bltu rt, rs, offset</sub></code>    | <sub>Branch if ≤, unsigned</sub>
+<code><sub>bgt rs, rt, offset</sub></code>  | <code><sub>blt rt, rs, offset</sub></code>     | <sub>Branch if ></sub>
+<code><sub>ble rs, rt, offset</sub></code> | <code><sub>bge rt, rs, offset</sub></code>     | <sub>Branch if <</sub>
+<code><sub>bgtu rs, rt, offset</sub></code>  | <code><sub>bltu rt, rs, offset</sub></code>    | <sub>Branch if >, unsigned</sub>
+<code><sub>bleu rs, rt, offset</sub></code> | <code><sub>bltu rt, rs, offset</sub></code>    | <sub>Branch if ≤, unsigned</sub>
 <code><sub>j offset</sub></code>            | <code><sub>jal x0, offset</sub></code>         | <sub>Jump</sub>
 <code><sub>jr offset</sub></code>           | <code><sub>jal x1, offset</sub></code>         | <sub>Jump register</sub>
 <code><sub>ret</sub></code>                 | <code><sub>jalr x0, x1, 0</sub></code>         | <sub>Return from subroutine</sub>
