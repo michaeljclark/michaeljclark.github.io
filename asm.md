@@ -274,8 +274,8 @@ are specified. The pseduo instruction also emits relocation
 information so that the address of the symbol can be fixed up
 during program linking.
 
-The following example shows the `la` psuedo instruction which
-is used to load symbol addresses:
+The following example uses the `la` psuedo instruction to load
+a symbol address:
 
 ```
 .section .text
