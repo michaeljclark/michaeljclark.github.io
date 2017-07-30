@@ -74,9 +74,9 @@ Directive                            | Arguments                                
 ### Assembler Pseudo-instructions
 
 The assembler implements a number of convenience psuedo-instructions
-that are formed in relation to instructions in the base ISA, but the
-pseudo-instructions have implicit arguments or in some case reversed
-arguments.
+that are formed from instructions in the base ISA, but have implicit
+arguments or in some case reversed arguments, that result in distinct
+semantics.
 
 The following table list assembler pseudo instructions:
 
