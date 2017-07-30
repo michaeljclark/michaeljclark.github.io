@@ -45,6 +45,39 @@ Directive    | Arguments                      | Description
 <code><sub>.zero</sub></code>        | <sub>integer</sub>                        | <sub>zero bytes</sub>
 
 
+### Assembler pseudo-instructions
+
+The following table list assembler pseudo instructions:
+
+<code><sub>nop</sub></code>              | <code><sub>addi zero,zero,0</sub></code>       | <sub>No operation</sub>
+<code><sub>li rd, symbol</sub></code>    | <sub>(several expansions)</sub>                | <sub>Load immediate</sub>
+<code><sub>la rd, symbol</sub></code>    | <sub>(several expansions)</sub>                | <sub>Load address</sub>
+<code><sub>mv rd, rs1</sub></code>       | <code><sub>addi rd, rs, 0</sub></code>         | <sub>Copy register</sub>
+<code><sub>not rd, rs1</sub></code>      | <code><sub>xori rd, rs, -1</sub></code>        | <sub>One’s complement</sub>
+<code><sub>neg rd, rs1</sub></code>      | <code><sub>sub rd, x0, rs</sub></code>         | <sub>Two’s complement</sub>
+<code><sub>negw rd, rs1</sub></code>     | <code><sub>subw rd, x0, rs</sub></code>        | <sub>Two’s complement Word</sub>
+<code><sub>sext.w rd, rs1</sub></code>   | <code><sub>addiw rd, rs, 0</sub></code>        | <sub>Sign extend Word</sub>
+<code><sub>seqz rd, rs1</sub></code>     | <code><sub>sltiu rd, rs, 1</sub></code>        | <sub>Set if = zero</sub>
+<code><sub>snez rd, rs1</sub></code>     | <code><sub>sltu rd, x0, rs</sub></code>        | <sub>Set if ≠ zero</sub>
+<code><sub>sltz rd, rs1</sub></code>     | <code><sub>slt rd, rs, x0</sub></code>         | <sub>Set if < zero</sub>
+<code><sub>sgtz rd, rs1</sub></code>     | <code><sub>slt rd, x0, rs</sub></code>         | <sub>Set if > zero</sub>
+<code><sub>fmv.s frd, frs1</sub></code>  | <code><sub>fsgnj.s frd, frs, frs</sub></code>  | <sub>Single-precision move</sub>
+<code><sub>fabs.s frd, frs1</sub></code> | <code><sub>fsgnjx.s frd, frs, frs</sub></code> | <sub>Single-precision absolute value</sub>
+<code><sub>fneg.s frd, frs1</sub></code> | <code><sub>fsgnjn.s frd, frs, frs</sub></code> | <sub>Single-precision negate</sub>
+<code><sub>fmv.d frd, frs1</sub></code>  | <code><sub>fsgnj.d frd, frs, frs</sub></code>  | <sub>Double-precision move</sub>
+<code><sub>fabs.d frd, frs1</sub></code> | <code><sub>fsgnjx.d frd, frs, frs</sub></code> | <sub>Double-precision absolute value</sub>
+<code><sub>fneg.d frd, frs1</sub></code> | <code><sub>fsgnjn.d frd, frs, frs</sub></code> | <sub>Double-precision negate</sub>
+<code><sub>beqz rs1, offset</sub></code> | <code><sub>beq rs, x0, offset</sub></code>     | <sub>Branch if = zero</sub>
+<code><sub>bnez rs1, offset</sub></code> | <code><sub>bne rs, x0, offset</sub></code>     | <sub>Branch if ≠ zero</sub>
+<code><sub>blez rs1, offset</sub></code> | <code><sub>bge x0, rs, offset</sub></code>     | <sub>Branch if ≤ zero</sub>
+<code><sub>bgez rs1, offset</sub></code> | <code><sub>bge rs, x0, offset</sub></code>     | <sub>Branch if ≥ zero</sub>
+<code><sub>bltz rs1, offset</sub></code> | <code><sub>blt rs, x0, offset</sub></code>     | <sub>Branch if < zero</sub>
+<code><sub>bgtz rs1, offset</sub></code> | <code><sub>blt x0, rs, offset</sub></code>     | <sub>Branch if > zero</sub>
+<code><sub>j offset</sub></code>         | <code><sub>jal x0, offset</sub></code>         | <sub>Jump</sub>
+<code><sub>jr offset</sub></code>        | <code><sub>jal x1, offset</sub></code>         | <sub>Jump register</sub>
+<code><sub>ret</sub></code>              | <code><sub>jalr x0, x1, 0</sub></code>         | <sub>Return from subroutine</sub>
+
+
 ### Function expansions
 
 The following table lists assembler function expansions:
