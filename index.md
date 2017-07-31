@@ -187,12 +187,12 @@ rv8 solves the register set size problem by spilling registers
 to memory _(L1 cache)_ using a static register allocation (a future
 versions may use dynamic register allocator). A large amount of
 performance is lost due to register allocations that take advantage
-of the larger number of physically available registers with less
-frequent stack spills. It is not possible for the translator to
-rearrange memory and registers for optimal stack spills as memory
-accesses must be translated precisely. The additional registers are
-translated as x86-64 memory operands (which produce load and store
-micro-ops) or in some circumstances, explicit `mov` instructions.
+of the larger number of available registers and less frequent stack
+spills. It is not possible for the translator to rearrange memory
+and registers for optimal stack spills as memory accesses must be
+translated precisely. The additional registers are translated as
+x86-64 memory operands (which produce load and store micro-ops)
+or in some circumstances, explicit `mov` instructions.
 
 RV | | x86 |  | RV | | x86 |  | RV | | x86 |  | RV | | x86
 --:| | :-- |  | --:| | :-- |  | --:| | :-- |  | --:| |:--
