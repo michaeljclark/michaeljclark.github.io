@@ -75,7 +75,7 @@ RISC-V Linux syscall ABI _(application binary interface)_ and
 delegates system calls to the underlying native host operating system.
 The user mode simulator can run RISC-V Linux binaries on non-Linux
 operating systems via system call emulation. The current user mode
-simulator implements a small number of [system calls](/syscalls)
+simulator implements a small number of [Linux system calls](/syscalls)
 to allow running RISC-V Linux ELF static binaries.
 
 The rv8 user mode simulator has the following features:
