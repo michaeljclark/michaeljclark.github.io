@@ -338,12 +338,13 @@ _**Sign extension versus zero extension**_
 In addition to the register allocation problem, rv8 has to make
 sure that 32-bit operations on registers are sign extended instead
 of zero-extended. The normal behaviour of 32-bit operations on
-x86-64 is to zero extend bit 31 to bit 63. It may be possible
-in a future version of the JIT translation engine to elide
-redundant sign extension operations, however it is important
-that the register state matches the precise semantics of the ISA
-before executing an instruction that may cause a fault e.g.
-loads and stores.
+x86-64 is to _zero extend_ bit 31 to bit 63 whereas RISC-V _sign
+extends_ bit 31 to bit 63. One potential optimisation is lazy sign
+extension. It may be possible in a future version of the JIT
+translation engine to elide redundant sign extension operations,
+however it is important that the register state precisely matches
+the semantics of the ISA before executing an instruction that may
+cause a fault e.g. loads and stores.
 
 Example of sign-extended vs zero-extended 32-bit arithmetic on RISC-V and x86-64:
 
