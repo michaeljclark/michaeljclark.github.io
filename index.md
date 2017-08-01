@@ -776,5 +776,7 @@ Enter 'help' for a list of built-in commands.
 - [RISC-V Privileged ISA Specification](http://riscv.org/specifications/privileged-isa/)
 - [RISC-V GNU Toolchain](https://github.com/riscv/riscv-gnu-toolchain/)
 - [RISC-V Open Source Software Implementations](/software)
+- [RISC-V Assembler Reference](/asm)
+- [RISC-V Instruction Set Reference](/isa)
 
 [![rv8]({{ site.url }}/images/rv8.svg)](https://rv8.io/)
