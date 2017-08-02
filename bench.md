@@ -2,26 +2,47 @@
 
 ## rv8 benchmarks
 
-Some preliminary runtime results comparing qemu, rv-jit and native x86:
+This document contains [rv8-bench](https://github.com/rv8-io/rv8-bench/)
+benchmark results using [GCC 7.1.0 and musl libc](https://github.com/rv8-io/musl-riscv-toolchain/):
+
+- rv8-bench: [https://github.com/rv8-io/rv8-bench/](https://github.com/rv8-io/rv8-bench/)
+- musl-riscv-toolchain: [https://github.com/rv8-io/musl-riscv-toolchain/](https://github.com/rv8-io/musl-riscv-toolchain/)
+
+The following results have been plotted:
+
+- [Runtimes](#runtimes)
+- [File Sizes](#file-sizes)
+- [Dynamic Micro-ops](#dynamic-micro-ops)
+- [Register allocation](#register-allocation)
+
+### [Runtimes](#runtimes)
+
+Runtime results comparing qemu, rv-jit and native x86:
 
 ![benchmark runtimes -O3 64-bit]({{ site.url }}/plots/runtime-O3-64.svg)
 ![benchmark runtimes -Os 64-bit]({{ site.url }}/plots/runtime-Os-64.svg)
 ![benchmark runtimes -O3 32-bit]({{ site.url }}/plots/runtime-O3-32.svg)
 ![benchmark runtimes -Os 32-bit]({{ site.url }}/plots/runtime-Os-32.svg)
 
-Some preliminary micro-op/instruction count results comparing RISC-V and x86:
+### [File Sizes](#file-sizes)
+
+GCC filesize results comparing aarch64, riscv32, riscv64, x86-32 and x86-64:
+
+![benchmark filesizes -O3]({{ site.url }}/plots/filesize-O3.svg)
+![benchmark filesizes -Os]({{ site.url }}/plots/filesize-Os.svg)
+
+### [Dynamic Micro-ops](#dynamic-micro-ops)
+
+Dynamic micro-op/instruction counts comparing RISC-V and x86:
 
 ![operation counts -O3 64-bit]({{ site.url }}/plots/operations-O3-64.svg)
 ![operation counts -Os 64-bit]({{ site.url }}/plots/operations-Os-64.svg)
 ![operation counts -O3 32-bit]({{ site.url }}/plots/operations-O3-32.svg)
 ![operation counts -Os 32-bit]({{ site.url }}/plots/operations-Os-32.svg)
 
-Some preliminary gcc filesize results comparing aarch64, riscv32, riscv64, x86-32 and x86-64:
+### [Register allocation](#register-allocation)
 
-![benchmark filesizes -O3]({{ site.url }}/plots/filesize-O3.svg)
-![benchmark filesizes -Os]({{ site.url }}/plots/filesize-Os.svg)
-
-Some preliminary gcc register allocation results comparing riscv64 -O3 vs -Os
+GCC register allocation results comparing riscv64 -O3 vs -Os
 
 ![aes registers -O3 vs -Os]({{ site.url }}/plots/registers-aes-rv64-1.svg)
 ![aes registers -O3 vs -Os]({{ site.url }}/plots/registers-aes-rv64-2.svg)
