@@ -13,14 +13,14 @@ The following sources were used:
 - qemu-riscv: [https://github.com/riscv/riscv-qemu/](https://github.com/riscv/riscv-qemu/)
 - musl-riscv-toolchain: [https://github.com/rv8-io/musl-riscv-toolchain/](https://github.com/rv8-io/musl-riscv-toolchain/)
 
-The following benchmark results have been plotted:
+The following results have been plotted:
 
 - [Runtimes](#runtimes)
 - [File Sizes](#file-sizes)
 - [Dynamic Micro-ops](#dynamic-micro-ops)
 - [Register allocation](#register-allocation)
 
-_Compiler details:_
+**Compiler details:**
 
 Architecture | Compiler  | C Library
 :--          | :--       | :--
@@ -30,10 +30,11 @@ riscv32      | GCC 7.1.0 | musl libc
 riscv64      | GCC 7.1.0 | musl libc
 aarch64      | GCC 7.1.0 | musl libc
 
-_Host details:_
+**Host details:**
 
 - Intel® 6th-gen Core™ i7-5557U Broadwell (3.10GHz, 3.40GHz Turbo, 4MB cache)
-- x86-64 μops measured with `perf stat -e cycles,instructions,r1b1,r10e,r2c2,r1c2 <cmd>`
+- x86-64 μops measured with
+  - `perf stat -e cycles,instructions,r1b1,r10e,r2c2,r1c2 <cmd>`
 
 ### [Runtimes](#runtimes)
 
