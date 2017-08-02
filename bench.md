@@ -3,8 +3,7 @@
 ## rv8 benchmarks
 
 This document contains [rv8-bench](https://github.com/rv8-io/rv8-bench/)
-benchmark results compiled with GCC 7.1.0 and musl libc and run on an
-Intel Core i7 Broadwell CPU.
+benchmark results for GCC 7.1.0 and musl libc on an Intel Core i7 Broadwell CPU.
 
 The following sources were used:
 
