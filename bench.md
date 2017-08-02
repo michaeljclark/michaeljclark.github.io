@@ -8,10 +8,10 @@ Intel Core i7 Broadwell CPU.
 
 The following sources were used:
 
-- rv8: [https://github.com/rv8-io/rv8/](https://github.com/rv8-io/rv8/)
-- rv8-bench: [https://github.com/rv8-io/rv8-bench/](https://github.com/rv8-io/rv8-bench/)
-- qemu-riscv: [https://github.com/riscv/riscv-qemu/](https://github.com/riscv/riscv-qemu/)
-- musl-riscv-toolchain: [https://github.com/rv8-io/musl-riscv-toolchain/](https://github.com/rv8-io/musl-riscv-toolchain/)
+- rv8 - [https://github.com/rv8-io/rv8/](https://github.com/rv8-io/rv8/)
+- rv8-bench - [https://github.com/rv8-io/rv8-bench/](https://github.com/rv8-io/rv8-bench/)
+- qemu-riscv - [https://github.com/riscv/riscv-qemu/](https://github.com/riscv/riscv-qemu/)
+- musl-riscv-toolchain - [https://github.com/rv8-io/musl-riscv-toolchain/](https://github.com/rv8-io/musl-riscv-toolchain/)
 
 The following results have been plotted:
 
@@ -20,7 +20,7 @@ The following results have been plotted:
 - [Dynamic Micro-ops](#dynamic-micro-ops)
 - [Register allocation](#register-allocation)
 
-**Compiler details:**
+**Compiler details**
 
 Architecture | Compiler  | C Library | Compile options
 :--          | :--       | :--       | :--
@@ -30,7 +30,7 @@ riscv32      | GCC 7.1.0 | musl libc | `-O3, -Os`
 riscv64      | GCC 7.1.0 | musl libc | `-O3, -Os`
 aarch64      | GCC 7.1.0 | musl libc | `-O3, -Os`
 
-**Host details:**
+**Host details**
 
 - Intel® 6th-gen Core™ i7-5557U Broadwell (3.10GHz, 3.40GHz Turbo, 4MB cache)
 - x86-64 μops measured with
