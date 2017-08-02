@@ -22,13 +22,13 @@ The following results have been plotted:
 
 **Compiler details:**
 
-Architecture | Compiler  | C Library
-:--          | :--       | :--
-x86-32       | GCC 7.1.0 | musl libc
-x86-64       | GCC 7.1.0 | musl libc
-riscv32      | GCC 7.1.0 | musl libc
-riscv64      | GCC 7.1.0 | musl libc
-aarch64      | GCC 7.1.0 | musl libc
+Architecture | Compiler  | C Library | Compile options
+:--          | :--       | :--       | :--
+x86-32       | GCC 7.1.0 | musl libc | `-O3, -Os`
+x86-64       | GCC 7.1.0 | musl libc | `-O3, -Os`
+riscv32      | GCC 7.1.0 | musl libc | `-O3, -Os`
+riscv64      | GCC 7.1.0 | musl libc | `-O3, -Os`
+aarch64      | GCC 7.1.0 | musl libc | `-O3, -Os`
 
 **Host details:**
 
