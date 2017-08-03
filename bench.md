@@ -5,7 +5,7 @@
 This document contains [rv8-bench](https://github.com/rv8-io/rv8-bench/)
 benchmark results for GCC 7.1.0 and musl libc on an Intel Core i7 Broadwell CPU.
 
-The following sources were used:
+The following sources are used:
 
 - rv8 - [https://github.com/rv8-io/rv8/](https://github.com/rv8-io/rv8/)
 - rv8-bench - [https://github.com/rv8-io/rv8-bench/](https://github.com/rv8-io/rv8-bench/)
@@ -17,7 +17,7 @@ The following results have been plotted:
 - [Runtimes](#runtimes)
 - [File Sizes](#file-sizes)
 - [Dynamic Micro-ops](#dynamic-micro-ops)
-- [Dynamic register usage](#dynamic-register-usage)
+- [Dynamic Register Usage](#dynamic-register-usage)
 
 **Compiler details**
 
@@ -77,7 +77,7 @@ _Dynamic operation counts -O3 32-bit_
 ![operation counts -Os 32-bit]({{ site.url }}/plots/operations-Os-32.svg)
 _Dynamic operation counts -Os 32-bit_
 
-### [Dynamic register usage](#dynamic-register-usage)
+### [Dynamic Register Usage](#dynamic-register-usage)
 
 Dynamic register usage results comparing riscv64 -O3 vs -Os
 
