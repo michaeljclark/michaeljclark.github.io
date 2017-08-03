@@ -44,64 +44,6 @@ _Figure 1: Benchmark runtimes -O3 64-bit_
 
 **Runtime 64-bit -O3 (seconds)**
 
-program | qemu-rv64 | jit-rv64 | native
-:-- | --: | --: | --:
-aes | 2.053  | 1.671 | 0.501
-dhrystone | 1.245  | 0.583 | 0.355
-miniz | 2.207  | 1.432 | 0.904
-norx | 0.958  | 1.07 | 0.306
-primes | 2.744  | 2.342 | 1.65
-qsort | 5.129  | 1.203 | 0.749
-sha512 | 3.183  | 2.274 | 0.671
-Sum | 17.519  | 10.575 | 5.136
-
-**Performance Ratio 64-bit -O3 (smaller is better)**
-
-program | qemu-rv64 | jit-rv64 | native
-:-- | --: | --: | --:
-aes | 4.098 | 3.335 | 1 
-dhrystone | 3.507 | 1.642 | 1 
-miniz | 2.441 | 1.584 | 1 
-norx | 3.131 | 3.497 | 1 
-primes | 1.663 | 1.419 | 1 
-qsort | 6.848 | 1.606 | 1 
-sha512 | 4.744 | 3.389 | 1 
-Geomean | 3.46 | 2.18 | 1 
-
-![benchmark runtimes -Os 64-bit]({{ site.url }}/plots/runtime-Os-64.svg)
-_Figure 2: Benchmark runtimes -Os 64-bit_
-
-**Runtime 64-bit -Os (seconds)**
-
-program | qemu-rv64 | jit-rv64 | native
-:-- | --: | --: | --:
-aes | 1.704 | 1.322 | 0.536 
-dhrystone | 3.096 | 2.266 | 0.989 
-miniz | 2.227 | 1.581 | 1.269 
-norx | 1.314 | 1.264 | 0.373 
-primes | 3.017 | 2.886 | 1.652 
-qsort | 5.566 | 0.859 | 0.801 
-sha512 | 2.96 | 2.588 | 0.814 
-Sum | 19.884 | 12.766 | 6.434 
-
-**Performance Ratio 64-bit -Os (smaller is better)**
-
-program | qemu-rv64 | jit-rv64 | native
-:-- | --: | --: | --:
-aes | 3.179 | 2.466 | 1
-dhrystone | 3.13 | 2.291 | 1
-miniz | 1.755 | 1.246 | 1
-norx | 3.523 | 3.389 | 1
-primes | 1.826 | 1.747 | 1
-qsort | 6.949 | 1.072 | 1
-sha512 | 3.636 | 3.179 | 1
-Geomean | 3.114 | 2.03 | 1
-
-![benchmark runtimes -O3 32-bit]({{ site.url }}/plots/runtime-O3-32.svg)
-_Figure 3: Benchmark runtimes -O3 32-bit_
-
-**Runtime 32-bit -O3 (seconds)**
-
 program | qemu-rv64 | qemu-arm64 | rv-jit | native
 :-- | --: | --: | --: | --:
 aes | 2.27 | 1.358 | 1.608 | 0.34
@@ -113,7 +55,7 @@ qsort | 4.996 | 7.683 | 1.26 | 0.668
 sha512 | 1.374 | 0.693 | 0.868 | 0.295
 Sum | 14.873 | 17.55 | 7.655 | 3.076
 
-**Performance Ratio 32-bit -O3 (smaller is better)**
+**Performance Ratio 64-bit -O3 (smaller is better)**
 
 program | qemu-rv64 | qemu-arm64 | rv-jit | native
 :-- | --: | --: | --: | --:
@@ -126,10 +68,10 @@ qsort | 7.479 | 11.501 | 1.886 | 1
 sha512 | 4.658 | 2.349 | 2.942 | 1
 Geomean | 4.916 | 4.991 | 2.515 | 1
 
-![benchmark runtimes -Os 32-bit]({{ site.url }}/plots/runtime-Os-32.svg)
-_Figure 4: Benchmark runtimes -Os 32-bit_
+![benchmark runtimes -Os 64-bit]({{ site.url }}/plots/runtime-Os-64.svg)
+_Figure 2: Benchmark runtimes -Os 64-bit_
 
-**Runtime 32-bit -Os (seconds)**
+**Runtime 64-bit -Os (seconds)**
 
 program | qemu-rv64 | qemu-arm64 | rv-jit | native
 :-- | --: | --: | --: | --:
@@ -142,7 +84,7 @@ qsort | 5.624 | 8.352 | 0.938 | 0.675
 sha512 | 1.206 | 0.688 | 0.697 | 0.267
 Sum | 17.178 | 23.662 | 8.627 | 3.99
 
-**Performance Ratio 32-bit -Os (smaller is better)**
+**Performance Ratio 64-bit -Os (smaller is better)**
 
 program | qemu-rv64 | qemu-arm64 | rv-jit | native
 :-- | --: | --: | --: | --:
@@ -154,6 +96,64 @@ primes | 1.352 | 2.677 | 1.079 | 1
 qsort | 8.332 | 12.373 | 1.39 | 1
 sha512 | 4.517 | 2.577 | 2.61 | 1
 Geomean | 4.187 | 4.824 | 2.283 | 1
+
+![benchmark runtimes -O3 32-bit]({{ site.url }}/plots/runtime-O3-32.svg)
+_Figure 3: Benchmark runtimes -O3 32-bit_
+
+**Runtime 32-bit -O3 (seconds)**
+
+program | qemu-rv64 | jit-rv64 | native
+:-- | --: | --: | --:
+aes | 2.053  | 1.671 | 0.501
+dhrystone | 1.245  | 0.583 | 0.355
+miniz | 2.207  | 1.432 | 0.904
+norx | 0.958  | 1.07 | 0.306
+primes | 2.744  | 2.342 | 1.65
+qsort | 5.129  | 1.203 | 0.749
+sha512 | 3.183  | 2.274 | 0.671
+Sum | 17.519  | 10.575 | 5.136
+
+**Performance Ratio 32-bit -O3 (smaller is better)**
+
+program | qemu-rv64 | jit-rv64 | native
+:-- | --: | --: | --:
+aes | 4.098 | 3.335 | 1 
+dhrystone | 3.507 | 1.642 | 1 
+miniz | 2.441 | 1.584 | 1 
+norx | 3.131 | 3.497 | 1 
+primes | 1.663 | 1.419 | 1 
+qsort | 6.848 | 1.606 | 1 
+sha512 | 4.744 | 3.389 | 1 
+Geomean | 3.46 | 2.18 | 1 
+
+![benchmark runtimes -Os 32-bit]({{ site.url }}/plots/runtime-Os-32.svg)
+_Figure 4: Benchmark runtimes -Os 32-bit_
+
+**Runtime 32-bit -Os (seconds)**
+
+program | qemu-rv64 | jit-rv64 | native
+:-- | --: | --: | --:
+aes | 1.704 | 1.322 | 0.536 
+dhrystone | 3.096 | 2.266 | 0.989 
+miniz | 2.227 | 1.581 | 1.269 
+norx | 1.314 | 1.264 | 0.373 
+primes | 3.017 | 2.886 | 1.652 
+qsort | 5.566 | 0.859 | 0.801 
+sha512 | 2.96 | 2.588 | 0.814 
+Sum | 19.884 | 12.766 | 6.434 
+
+**Performance Ratio 32-bit -Os (smaller is better)**
+
+program | qemu-rv64 | jit-rv64 | native
+:-- | --: | --: | --:
+aes | 3.179 | 2.466 | 1
+dhrystone | 3.13 | 2.291 | 1
+miniz | 1.755 | 1.246 | 1
+norx | 3.523 | 3.389 | 1
+primes | 1.826 | 1.747 | 1
+qsort | 6.949 | 1.072 | 1
+sha512 | 3.636 | 3.179 | 1
+Geomean | 3.114 | 2.03 | 1
 
 
 ### [File Sizes](#file-sizes)
