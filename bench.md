@@ -37,14 +37,14 @@ aarch64      | GCC 7.1.0 | musl libc | `-O3, -Os`
 
 ### [Runtimes](#runtimes)
 
-Runtime results comparing qemu, jit-rv64 and native x86:
+Runtime results comparing qemu, rv8 and native x86:
 
 ![benchmark runtimes -O3 64-bit]({{ site.url }}/plots/runtime-O3-64.svg)
 _Figure 1: Benchmark runtimes -O3 64-bit_
 
 **Runtime 64-bit -O3 (seconds)**
 
-program | qemu-rv64 | qemu-arm64 | jit-rv64 | x86-64
+program | qemu-rv64 | qemu-arm64 | rv8-rv64 | x86-64
 :-- | --: | --: | --: | --:
 aes | 2.27 | 1.358 | 1.608 | 0.34
 dhrystone | 0.774 | 1.678 | 0.22 | 0.122
@@ -57,7 +57,7 @@ _(Sum)_ | _14.873_ | _17.55_ | _7.655_ | _3.076_
 
 **Performance Ratio 64-bit -O3 (smaller is better)**
 
-program | qemu-rv64 | qemu-arm64 | jit-rv64 | x86-64
+program | qemu-rv64 | qemu-arm64 | rv8-rv64 | x86-64
 :-- | --: | --: | --: | --:
 aes | 6.676 | 3.994 | 4.729 | 1
 dhrystone | 6.344 | 13.754 | 1.803 | 1
@@ -73,7 +73,7 @@ _Figure 2: Benchmark runtimes -Os 64-bit_
 
 **Runtime 64-bit -Os (seconds)**
 
-program | qemu-rv64 | qemu-arm64 | jit-rv64 | x86-64
+program | qemu-rv64 | qemu-arm64 | rv8-rv64 | x86-64
 :-- | --: | --: | --: | --:
 aes | 2.081 | 1.258 | 1.364 | 0.384
 dhrystone | 2.839 | 6.174 | 1.648 | 0.577
@@ -86,7 +86,7 @@ _(Sum)_ | _17.178_ | _23.662_ | _8.627_ | _3.99_
 
 **Performance Ratio 64-bit -Os (smaller is better)**
 
-program | qemu-rv64 | qemu-arm64 | jit-rv64 | x86-64
+program | qemu-rv64 | qemu-arm64 | rv8-rv64 | x86-64
 :-- | --: | --: | --: | --:
 aes | 5.419 | 3.276 | 3.552 | 1
 dhrystone | 4.92 | 10.7 | 2.856 | 1
@@ -102,7 +102,7 @@ _Figure 3: Benchmark runtimes -O3 32-bit_
 
 **Runtime 32-bit -O3 (seconds)**
 
-program | qemu-rv32 | jit-rv32 | x86-32
+program | qemu-rv32 | rv8-rv32 | x86-32
 :-- | --: | --: | --:
 aes | 2.053  | 1.671 | 0.501
 dhrystone | 1.245  | 0.583 | 0.355
@@ -115,7 +115,7 @@ _(Sum)_ | _17.519 _ | _10.575_ | _5.136_
 
 **Performance Ratio 32-bit -O3 (smaller is better)**
 
-program | qemu-rv32 | jit-rv32 | x86-32
+program | qemu-rv32 | rv8-rv32 | x86-32
 :-- | --: | --: | --:
 aes | 4.098 | 3.335 | 1 
 dhrystone | 3.507 | 1.642 | 1 
@@ -131,7 +131,7 @@ _Figure 4: Benchmark runtimes -Os 32-bit_
 
 **Runtime 32-bit -Os (seconds)**
 
-program | qemu-rv32 | jit-rv32 | x86-32
+program | qemu-rv32 | rv8-rv32 | x86-32
 :-- | --: | --: | --:
 aes | 1.704 | 1.322 | 0.536 
 dhrystone | 3.096 | 2.266 | 0.989 
@@ -144,7 +144,7 @@ _(Sum)_ | _19.884_ | _12.766_ | _6.434 _
 
 **Performance Ratio 32-bit -Os (smaller is better)**
 
-program | qemu-rv32 | jit-rv32 | x86-32
+program | qemu-rv32 | rv8-rv32 | x86-32
 :-- | --: | --: | --:
 aes | 3.179 | 2.466 | 1
 dhrystone | 3.13 | 2.291 | 1
