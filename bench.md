@@ -37,14 +37,14 @@ aarch64      | GCC 7.1.0 | musl libc | `-O3, -Os`
 
 ### [Runtimes](#runtimes)
 
-Runtime results comparing qemu, rv-jit and native x86:
+Runtime results comparing qemu, jit-rv64 and native x86:
 
 ![benchmark runtimes -O3 64-bit]({{ site.url }}/plots/runtime-O3-64.svg)
 _Figure 1: Benchmark runtimes -O3 64-bit_
 
 **Runtime 64-bit -O3 (seconds)**
 
-program | qemu-rv64 | qemu-arm64 | rv-jit | x86-64
+program | qemu-rv64 | qemu-arm64 | jit-rv64 | x86-64
 :-- | --: | --: | --: | --:
 aes | 2.27 | 1.358 | 1.608 | 0.34
 dhrystone | 0.774 | 1.678 | 0.22 | 0.122
@@ -57,7 +57,7 @@ _(Sum)_ | _14.873_ | _17.55_ | _7.655_ | _3.076_
 
 **Performance Ratio 64-bit -O3 (smaller is better)**
 
-program | qemu-rv64 | qemu-arm64 | rv-jit | x86-64
+program | qemu-rv64 | qemu-arm64 | jit-rv64 | x86-64
 :-- | --: | --: | --: | --:
 aes | 6.676 | 3.994 | 4.729 | 1
 dhrystone | 6.344 | 13.754 | 1.803 | 1
@@ -73,7 +73,7 @@ _Figure 2: Benchmark runtimes -Os 64-bit_
 
 **Runtime 64-bit -Os (seconds)**
 
-program | qemu-rv64 | qemu-arm64 | rv-jit | x86-64
+program | qemu-rv64 | qemu-arm64 | jit-rv64 | x86-64
 :-- | --: | --: | --: | --:
 aes | 2.081 | 1.258 | 1.364 | 0.384
 dhrystone | 2.839 | 6.174 | 1.648 | 0.577
@@ -86,7 +86,7 @@ _(Sum)_ | _17.178_ | _23.662_ | _8.627_ | _3.99_
 
 **Performance Ratio 64-bit -Os (smaller is better)**
 
-program | qemu-rv64 | qemu-arm64 | rv-jit | x86-64
+program | qemu-rv64 | qemu-arm64 | jit-rv64 | x86-64
 :-- | --: | --: | --: | --:
 aes | 5.419 | 3.276 | 3.552 | 1
 dhrystone | 4.92 | 10.7 | 2.856 | 1
