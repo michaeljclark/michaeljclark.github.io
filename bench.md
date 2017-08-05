@@ -45,7 +45,7 @@ _Figure 1: Benchmark runtimes -O3 64-bit_
 
 **Runtime 64-bit -O3 (seconds)**
 
-program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | x86-64
+program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | native-x86-64
 :-- | --: | --: | --: | --:
 aes | 1.35 | 2.24 | 1.58 | 0.32
 dhrystone | 1.00 | 0.59 | 0.21 | 0.10
@@ -58,7 +58,7 @@ _(Sum)_ | 16.17 | 13.80 | 7.45 | 2.89
 
 **Performance Ratio 64-bit -O3 (smaller is better)**
 
-program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | x86-64
+program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | native-x86-64
 :-- | --: | --: | --: | --:
 aes | 4.16 | 6.91 | 4.86 | 1.00
 dhrystone | 9.88 | 5.87 | 2.04 | 1.00
@@ -74,7 +74,7 @@ _Figure 2: Benchmark runtimes -Os 64-bit_
 
 **Runtime 64-bit -Os (seconds)**
 
-program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | x86-64
+program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | native-x86-64
 :-- | --: | --: | --: | --:
 aes | 1.25 | 2.01 | 1.34 | 0.38
 dhrystone | 5.60 | 2.69 | 1.33 | 0.40
@@ -87,7 +87,7 @@ _(Sum)_ | 22.23 | 16.46 | 8.01 | 3.35
 
 **Performance Ratio 64-bit -Os (smaller is better)**
 
-program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | x86-64
+program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | native-x86-64
 :-- | --: | --: | --: | --:
 aes | 3.34 | 5.35 | 3.57 | 1.00
 dhrystone | 13.94 | 6.70 | 3.30 | 1.00
@@ -103,7 +103,7 @@ _Figure 3: Benchmark runtimes -O3 32-bit_
 
 **Runtime 32-bit -O3 (seconds)**
 
-program | qemu-riscv32 | rv8-riscv32 | x86-32
+program | qemu-riscv32 | rv8-riscv32 | native-x86-32
 :-- | --: | --: | --:
 aes | 1.96 | 1.66 | 0.48
 dhrystone | 1.15 | 0.40 | 0.30
@@ -116,7 +116,7 @@ _(Sum)_ | 16.21 | 9.80 | 4.84
 
 **Performance Ratio 32-bit -O3 (smaller is better)**
 
-program | qemu-riscv32 | rv8-riscv32 | x86-32
+program | qemu-riscv32 | rv8-riscv32 | native-x86-32
 :-- | --: | --: | --:
 aes | 4.06 | 3.44 | 1.00
 dhrystone | 3.86 | 1.34 | 1.00
@@ -132,7 +132,7 @@ _Figure 4: Benchmark runtimes -Os 32-bit_
 
 **Runtime 32-bit -Os (seconds)**
 
-program | qemu-riscv32 | rv8-riscv32 | x86-32
+program | qemu-riscv32 | rv8-riscv32 | native-x86-32
 :-- | --: | --: | --:
 aes | 1.63 | 1.27 | 0.51
 dhrystone | 2.40 | 1.44 | 0.60
@@ -145,7 +145,7 @@ _(Sum)_ | 17.67 | 11.62 | 5.71
 
 **Performance Ratio 32-bit -Os (smaller is better)**
 
-program | qemu-riscv32 | rv8-riscv32 | x86-32
+program | qemu-riscv32 | rv8-riscv32 | native-x86-32
 :-- | --: | --: | --:
 aes | 3.21 | 2.51 | 1.00
 dhrystone | 4.02 | 2.42 | 1.00
