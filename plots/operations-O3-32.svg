@@ -203,12 +203,12 @@
 	<path stroke='black'  d='M88.5,54.1 L88.5,444.0 L575.0,444.0 L575.0,54.1 L88.5,54.1 Z  '/></g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(17.0,249.1) rotate(270)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >Operations</tspan></text>
+		<text><tspan font-family="Arial" >Retired Operations</tspan></text>
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(331.7,31.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >rv8-bench (Operations -O3 32-bit)</tspan></text>
+		<text><tspan font-family="Arial" >rv8-bench (Retired Operations -O3 32-bit)</tspan></text>
 	</g>
 </g>
 	<g id="gnuplot_plot_1" ><title>native-x86-32-O3-instret</title>

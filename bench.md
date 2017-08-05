@@ -233,9 +233,9 @@ _(Geomean)_ | 7152 | 2789
 Total retired micro-op/instruction counts comparing RISC-V and x86:
 
 ![operation counts -O3 64-bit]({{ site.url }}/plots/operations-O3-64.svg)
-_Figure 9: Dynamic operation counts -O3 64-bit_
+_Figure 9: Retired operation counts -O3 64-bit_
 
-**Total Dynamic Operations (Mops) x86-64 vs riscv64 -O3**
+**Retired Operations (Mops) x86-64 vs riscv64 -O3**
 
 program | x86-instret | x86-uops-executed | x86-uops-issued | x86-uops-retired | x86-uops-slots | riscv64-instret
 :-- | --: | --: | --: | --: | --: | --:
@@ -249,9 +249,9 @@ sha512 | 2947 | 2623 | 3073 | 3264 | 3045 | 3704
 _(Geomean)_ | 2674 | 2840 | 2759 | 3099 | 2638 | 3125
 
 ![operation counts -Os 64-bit]({{ site.url }}/plots/operations-Os-64.svg)
-_Figure 10: Dynamic operation counts -Os 64-bit_
+_Figure 10: Retired operation counts -Os 64-bit_
 
-**Total Dynamic Operations (Mops) x86-64 vs riscv64 -Os**
+**Retired Operations (Mops) x86-64 vs riscv64 -Os**
 
 program | x86-instret | x86-uops-executed | x86-uops-issued | x86-uops-retired | x86-uops-slots | riscv64-instret
 :-- | --: | --: | --: | --: | --: | --:
@@ -265,9 +265,9 @@ sha512 | 3039 | 2750 | 3155 | 3359 | 3155 | 3730
 _(Geomean)_ | 3388 | 3747 | 3577 | 4032 | 3447 | 3630
 
 ![operation counts -O3 32-bit]({{ site.url }}/plots/operations-O3-32.svg)
-_Figure 11: Dynamic operation counts -O3 32-bit_
+_Figure 11: Retired operation counts -O3 32-bit_
 
-**Total Dynamic Operations (Mops) x86-32 vs riscv32 -O3**
+**Retired Operations (Mops) x86-32 vs riscv32 -O3**
 
 program | x86-instret | x86-uops-executed | x86-uops-issued | x86-uops-retired | x86-uops-slots | riscv32-instret
 :-- | --: | --: | --: | --: | --: | --:
@@ -281,9 +281,9 @@ sha512 | 7010 | 6841 | 7074 | 8110 | 7056 | 8073
 _(Geomean)_ | 3943 | 5493 | 4881 | 5733 | 4652 | 4072
 
 ![operation counts -Os 32-bit]({{ site.url }}/plots/operations-Os-32.svg)
-_Figure 12: Dynamic operation counts -Os 32-bit_
+_Figure 12: Retired operation counts -Os 32-bit_
 
-**Total Dynamic Operations (Mops) x86-32 vs riscv32 -Os**
+**Retired Operations (Mops) x86-32 vs riscv32 -Os**
 
 program | x86-instret | x86-uops-executed | x86-uops-issued | x86-uops-retired | x86-uops-slots | riscv32-instret
 :-- | --: | --: | --: | --: | --: | --:
