@@ -12,7 +12,7 @@ emulator, an ELF binary analysis tool and ISA metadata:
 
 ---
 
-### [About](#about)
+### About
 
 The rv8 simulator suite contains libraries and command line tools for
 creating instruction opcode maps, C headers and source containing
@@ -110,7 +110,7 @@ generate a number of different output formats.
 
 ---
 
-### [Installation](#installation)
+### Installation
 
 rv8 supports the following target architecture and host operating system combinations:
 
@@ -174,7 +174,7 @@ $ rv-jit build/riscv64-unknown-elf/bin/test-dhrystone
 
 ---
 
-### [Optimisations](#optimisations)
+### Optimisations
 
 The rv8 binary translator performs JIT _(Just In Time)_ translation
 of RISC-V code to X86-64 code. This is a challenging problem for
@@ -394,7 +394,7 @@ RISC-V code, so future benchmarks should measure:
 
 ---
 
-### [Benchmarks](#benchmarks)
+### Benchmarks
 
 The following benchmarks show QEMU, rv8 binary translation
 and native x86-64 runtimes:
@@ -475,7 +475,7 @@ Notes:
 
 ---
 
-### [Logging](#logging)
+### Logging
 
 `rv-sim` and `rv-sys` support the ability to log instructions
 (`--log-instructions`), register values (`--log-operands`) and
@@ -502,7 +502,7 @@ Hello World
 
 ---
 
-### [Tracing](#tracing)
+### Tracing
 
 The `rv-jit` program supports the ability to log RISC-V instructions
 along with the dynamically translated x86-64 assembly and machine code
@@ -531,7 +531,7 @@ _Sample output from `rv-jit` with the `--log-jit-trace` option_
 
 ---
 
-### [Histograms](#histograms)
+### Histograms
 
 The `rv-sim` and `rv-sys` programs support the ability to record and
 print histograms. Program counter frequency (`--pc-usage-histogram`),
@@ -645,7 +645,7 @@ instruction usage histogram
 
 ---
 
-### [Linux](#linux)
+### Linux
 
 This section describes how to build and boot a Linux image in the
 full system emulator.
@@ -769,7 +769,7 @@ Enter 'help' for a list of built-in commands.
 
 ---
 
-### [References](#references)
+### References
 
 - [RISC-V Foundation](http://riscv.org/)
 - [RISC-V ISA Specification](http://riscv.org/specifications/)
