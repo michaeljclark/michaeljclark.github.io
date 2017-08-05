@@ -166,7 +166,7 @@ Instructions per second in millions comparing rv8 and native x86:
 ![operation counts -O3 64-bit]({{ site.url }}/plots/mips-O3-64.svg)
 _Figure 5: Millions of Instructions Per Second -O3 64-bit_
 
-**Instructions per second (MIPS) x86-64 vs riscv64 -O3**
+**Instructions per second (MIPS) native vs rv8 64-bit -O3**
 
 program | native-x86-mip | rv8-riscv64-mips
 :-- | --: | --:
@@ -182,7 +182,7 @@ _(Geomean)_ | 7945 | 3552
 ![operation counts -Os 64-bit]({{ site.url }}/plots/mips-Os-64.svg)
 _Figure 6: Millions of Instructions Per Second -Os 64-bit_
 
-**Instructions per second (MIPS) x86-64 vs riscv64 -Os**
+**Instructions per second (MIPS) native vs rv8 64-bit -Os**
 
 program | native-x86-mips | rv8-riscv64-mips
 :-- | --: | --:
@@ -198,7 +198,7 @@ _(Geomean)_ | 7855 | 3402
 ![operation counts -O3 32-bit]({{ site.url }}/plots/mips-O3-32.svg)
 _Figure 7: Millions of Instructions Per Second -O3 32-bit_
 
-**Instructions per second (MIPS) x86-32 vs riscv32 -O3**
+**Instructions per second (MIPS) native vs rv8 32-bit -O3**
 
 program | native-x86-mips | rv8-riscv32-mips
 :-- | --: | --:
@@ -214,7 +214,7 @@ _(Geomean)_ | 6876 | 3373
 ![operation counts -Os 32-bit]({{ site.url }}/plots/mips-Os-32.svg)
 _Figure 8: Millions of Instructions Per Second -Os 32-bit_
 
-**Instructions per second (MIPS) x86-32 vs riscv32 -Os**
+**Instructions per second (MIPS) native vs rv8 32-bit -Os**
 
 program | native-x86-mips | rv8-riscv32-mips
 :-- | --: | --:
