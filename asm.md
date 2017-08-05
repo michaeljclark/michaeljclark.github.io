@@ -40,9 +40,9 @@ to disassemble an object file, `objcopy` can be used to copy
 and extract sections from ELF files and the `nm` utility can
 list symbols in an object file.
 
-_**Executable Header**_
+_**ELF Header**_
 
-An ELF file has an executable header that contains _magic_ to
+An ELF file has an ELF header that contains _magic_ to
 indicate the file is ELF formatted, the architecture of the
 binary, the endianness of the binary _(little-endian for RISC-V)_,
 the ELF file type _(Relocatable Object File, Executable File,
