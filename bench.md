@@ -168,7 +168,7 @@ _Figure 5: Millions of Instructions Per Second -O3 64-bit_
 
 **Instructions per second (MIPS) native vs rv8 64-bit -O3**
 
-program | native-x86-mip | rv8-riscv64-mips
+program | native-x86-mips | rv8-riscv64-mips
 :-- | --: | --:
 aes | 11035 | 3395
 dhrystone | 8369 | 5274
