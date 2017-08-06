@@ -165,7 +165,7 @@ _(Geomean)_ | 3.11 | 2.11 | 1.00
 Instructions per second in millions comparing rv8 and native x86:
 
 ![operation counts -O3 64-bit]({{ site.url }}/plots/mips-O3-64.svg)
-_Figure 7: Millions of Instructions Per Second -O3 64-bit_
+_Figure 5: Millions of Instructions Per Second -O3 64-bit_
 
 **Instructions per second (MIPS) native vs rv8 64-bit -O3**
 
@@ -181,7 +181,7 @@ sha512 | 12177 | 4556
 _(Geomean)_ | 7945 | 3552
 
 ![operation counts -Os 64-bit]({{ site.url }}/plots/mips-Os-64.svg)
-_Figure 8: Millions of Instructions Per Second -Os 64-bit_
+_Figure 6: Millions of Instructions Per Second -Os 64-bit_
 
 **Instructions per second (MIPS) native vs rv8 64-bit -Os**
 
@@ -197,7 +197,7 @@ sha512 | 12206 | 5567
 _(Geomean)_ | 7855 | 3402
 
 ![operation counts -O3 32-bit]({{ site.url }}/plots/mips-O3-32.svg)
-_Figure 9: Millions of Instructions Per Second -O3 32-bit_
+_Figure 7: Millions of Instructions Per Second -O3 32-bit_
 
 **Instructions per second (MIPS) native vs rv8 32-bit -O3**
 
@@ -213,7 +213,7 @@ sha512 | 11074 | 3671
 _(Geomean)_ | 6876 | 3373
 
 ![operation counts -Os 32-bit]({{ site.url }}/plots/mips-Os-32.svg)
-_Figure 10: Millions of Instructions Per Second -Os 32-bit_
+_Figure 8: Millions of Instructions Per Second -Os 32-bit_
 
 **Instructions per second (MIPS) native vs rv8 32-bit -Os**
 
@@ -231,39 +231,65 @@ _(Geomean)_ | 7152 | 2789
 
 ### Macro-op Fusion
 
-Runtimes and ratios for rv8 with macro-op fusion disabled and enabled:
+Runtimes and ratios for rv8 macro-op fusion (disabled and enabled):
 
 ![fusion runtimes and ratios 64-bit]({{ site.url }}/plots/fusion-64.svg)
-_Figure 5: Fusion disabled and enabled runtimes -Os 64-bit_
+_Figure 9: Fusion disabled and enabled runtimes -Os 64-bit_
 
-**Macro-op fusion performance 64-bit**
+**Macro-op fusion performance 64-bit -O3**
 
-program | rv8-no-fuse-O3 | rv8-no-fuse-Os | rv8-fuse-on-O3 | rv8-fuse-on-Os | rv8-fuse-ratio-O3 | rv8-fuse-ratio-Os
-:-- | --: | --: | --: | --: | --: | --:
-aes | 1.49 | 1.31 | 1.53 | 1.31 | 1.03 | 1.00
-dhrystone | 0.20 | 1.46 | 0.20 | 1.31 | 1.00 | 0.90
-miniz | 1.69 | 1.90 | 1.60 | 1.73 | 0.94 | 0.91
-norx | 1.15 | 1.33 | 1.20 | 1.14 | 1.04 | 0.86
-primes | 0.72 | 0.78 | 0.70 | 0.77 | 0.97 | 0.99
-qsort | 0.93 | 0.90 | 1.22 | 0.90 | 1.32 | 1.00
-sha512 | 0.82 | 0.69 | 0.81 | 0.67 | 1.00 | 0.97
-_(Geomean)_ | 0.85 | 1.13 | 0.88 | 1.07 | 1.04 | 0.95
+program | rv8-no-fuse-O3 | rv8-fuse-on-O3 | rv8-fuse-ratio-O3
+:-- | --: | --: | --:
+aes | 1.49 | 1.53 | 1.03
+dhrystone | 0.20 | 0.20 | 1.00
+miniz | 1.69 | 1.60 | 0.94
+norx | 1.15 | 1.20 | 1.04
+primes | 0.72 | 0.70 | 0.97
+qsort | 0.93 | 1.22 | 1.32
+sha512 | 0.82 | 0.81 | 1.00
+_(Geomean)_ | 0.85 | 0.88 | 1.04
+
+**Macro-op fusion performance 64-bit -Os**
+
+program | rv8-no-fuse-Os | rv8-fuse-on-Os | rv8-fuse-ratio-Os
+:-- | --: | --: | --:
+aes | 1.31 | 1.31 | 1.00
+dhrystone | 1.46 | 1.31 | 0.90
+miniz | 1.90 | 1.73 | 0.91
+norx | 1.33 | 1.14 | 0.86
+primes | 0.78 | 0.77 | 0.99
+qsort | 0.90 | 0.90 | 1.00
+sha512 | 0.69 | 0.67 | 0.97
+_(Geomean)_ | 1.13 | 1.07 | 0.95
 
 ![fusion runtimes and ratios 32-bit]({{ site.url }}/plots/fusion-32.svg)
-_Figure 6: Fusion disabled and enabled runtimes -Os 32-bit_
+_Figure 10: Fusion disabled and enabled runtimes -Os 32-bit_
 
-**Macro-op fusion performance 32-bit**
+**Macro-op fusion performance 32-bit -O3**
 
-program | rv8-no-fuse-O3 | rv8-no-fuse-Os | rv8-fuse-on-O3 | rv8-fuse-on-Os | rv8-fuse-ratio-O3 | rv8-fuse-ratio-Os
-:-- | --: | --: | --: | --: | --: | --:
-aes | 1.49 | 1.25 | 1.62 | 1.25 | 1.08 | 1.00
-dhrystone | 0.40 | 1.44 | 0.39 | 1.42 | 0.98 | 0.98
-miniz | 1.35 | 1.56 | 1.41 | 1.56 | 1.05 | 1.00
-norx | 0.80 | 1.18 | 0.85 | 1.18 | 1.07 | 1.00
-primes | 1.98 | 2.75 | 1.95 | 2.73 | 0.99 | 0.99
-qsort | 0.84 | 0.82 | 1.15 | 0.82 | 1.36 | 1.00
-sha512 | 2.20 | 2.49 | 2.20 | 2.49 | 1.00 | 1.00
-_(Geomean)_ | 1.13 | 1.52 | 1.21 | 1.51 | 1.07 | 1.00
+program | rv8-no-fuse-O3 | rv8-fuse-on-O3 | rv8-fuse-ratio-O3
+:-- | --: | --: | --:
+aes | 1.49 | 1.62 | 1.08
+dhrystone | 0.40 | 0.39 | 0.98
+miniz | 1.35 | 1.41 | 1.05
+norx | 0.80 | 0.85 | 1.07
+primes | 1.98 | 1.95 | 0.99
+qsort | 0.84 | 1.15 | 1.36
+sha512 | 2.20 | 2.20 | 1.00
+_(Geomean)_ | 1.13 | 1.21 | 1.07
+
+**Macro-op fusion performance 32-bit -Os**
+
+program | rv8-no-fuse-Os | rv8-fuse-on-Os | rv8-fuse-ratio-Os
+:-- | --: | --: | --:
+aes | 1.25 | 1.25 | 1.00
+dhrystone | 1.44 | 1.42 | 0.98
+miniz | 1.56 | 1.56 | 1.00
+norx | 1.18 | 1.18 | 1.00
+primes | 2.75 | 2.73 | 0.99
+qsort | 0.82 | 0.82 | 1.00
+sha512 | 2.49 | 2.49 | 1.00
+_(Geomean)_ | 1.52 | 1.51 | 1.00
 
 
 ### Retired Micro-ops
