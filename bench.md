@@ -231,14 +231,14 @@ _(Geomean)_ | 7152 | 2789
 
 ### Macro-op Fusion
 
-Runtimes and ratios for rv8 macro-op fusion (disabled and enabled):
+Runtimes and ratios for rv8 macro-op fusion (fusion=on,off):
 
 ![fusion runtimes and ratios 64-bit]({{ site.url }}/plots/fusion-64.svg)
 _Figure 9: Fusion disabled and enabled runtimes -Os 64-bit_
 
 **Macro-op fusion performance 64-bit -O3**
 
-program | rv8-no-fuse-O3 | rv8-fuse-on-O3 | rv8-fuse-ratio-O3
+program | rv8-fuse-off-O3 | rv8-fuse-on-O3 | rv8-fuse-ratio-O3
 :-- | --: | --: | --:
 aes | 1.49 | 1.53 | 1.03
 dhrystone | 0.20 | 0.20 | 1.00
@@ -251,7 +251,7 @@ _(Geomean)_ | 0.85 | 0.88 | 1.04
 
 **Macro-op fusion performance 64-bit -Os**
 
-program | rv8-no-fuse-Os | rv8-fuse-on-Os | rv8-fuse-ratio-Os
+program | rv8-fuse-off-Os | rv8-fuse-on-Os | rv8-fuse-ratio-Os
 :-- | --: | --: | --:
 aes | 1.31 | 1.31 | 1.00
 dhrystone | 1.46 | 1.31 | 0.90
@@ -267,7 +267,7 @@ _Figure 10: Fusion disabled and enabled runtimes -Os 32-bit_
 
 **Macro-op fusion performance 32-bit -O3**
 
-program | rv8-no-fuse-O3 | rv8-fuse-on-O3 | rv8-fuse-ratio-O3
+program | rv8-fuse-off-O3 | rv8-fuse-on-O3 | rv8-fuse-ratio-O3
 :-- | --: | --: | --:
 aes | 1.49 | 1.62 | 1.08
 dhrystone | 0.40 | 0.39 | 0.98
@@ -280,7 +280,7 @@ _(Geomean)_ | 1.13 | 1.21 | 1.07
 
 **Macro-op fusion performance 32-bit -Os**
 
-program | rv8-no-fuse-Os | rv8-fuse-on-Os | rv8-fuse-ratio-Os
+program | rv8-fuse-off-Os | rv8-fuse-on-Os | rv8-fuse-ratio-Os
 :-- | --: | --: | --:
 aes | 1.25 | 1.25 | 1.00
 dhrystone | 1.44 | 1.42 | 0.98
