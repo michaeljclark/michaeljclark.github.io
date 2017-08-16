@@ -19,14 +19,14 @@ state/.style={rectangle,draw,align=left,top color=white,bottom color=black!20,fo
 \node [lab] (r) at (0mm,5mm) {RISC-V};
 \node [lab] (x) at (60mm,5mm) {x86-64};
 
-\node [state] (a) at (0mm,0mm) {JALR ra, 0x1a808};
+\node [state] (a) at (0mm,0mm) {AUIPC ra,\%pcrel\_hi(fn)\\JALR ra,\%pcrel\_lo(fn)(ra)};
 \node [state] (b) at (15mm,-10mm) {SLLI a0,a0,32\\SRLI a0,a0,32};
 \node [state] (c) at (15mm,-20mm) {JALR zero,ra};
 \node [state] (d) at (0mm,-30mm) {ADDI a0,a0,-1};
 
 \node [state] (u) at (60mm,0mm) {MOV rdx, 0x1a80c};
 \node [state] (v) at (60mm,-10mm) {MOVZX r8d, r8};
-\node [state] (w) at (60mm,-20mm) {CMP rdx, 0x1a80\\JNE tail\_exit};
+\node [state] (w) at (60mm,-20mm) {CMP rdx, 0x1a80c\\JNE tail\_exit};
 \node [state] (x) at (60mm,-30mm) {ADD r8, -1};
 
 \draw[->] [path] (a) to [arc] node[below] {} (b);
