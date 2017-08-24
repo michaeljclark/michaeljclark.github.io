@@ -409,7 +409,7 @@ _(Sum)_ | 48526 | 59852 | 53104 | 63597 | 51354 | 38938
 
 ### Executable File Sizes
 
-GCC executable file sizes comparing aarch64, riscv32, riscv64, x86-32 and x86-64:
+GCC stripped executable sizes comparing aarch64, riscv32, riscv64, x86-32 and x86-64:
 
 ![benchmark filesizes -O3]({{ site.url }}/plots/filesize-O3.svg)
 _Figure 15: Compiled file sizes -O3_
