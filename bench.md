@@ -431,7 +431,7 @@ _(Sum)_ | 999616 | 921728 | 852856 | 983172 | 897240
 ![benchmark filesizes -Os]({{ site.url }}/plots/filesize-Os.svg)
 _Figure 16: Compiled file sizes -Os_
 
-**Compiled File Size (bytes) -O3**
+**Compiled File Size (bytes) -Os**
 
 program | aarch64 | riscv32 | riscv64 | x86-32 | x86-64
 :-- | --: | --: | --: | --: | --:
