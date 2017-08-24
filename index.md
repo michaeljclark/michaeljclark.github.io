@@ -405,20 +405,30 @@ compiled for aarch64, riscv64, riscv32, x86-64 and x86-32. See the
 macro-op fusion performance, executable file sizes and dynamic register
 usage charts.
 
-The following sources are used:
+#### Benchmark source
+
+The following sources have been used to run the benchmarks:
 
 - rv8 - [https://github.com/rv8-io/rv8/](https://github.com/rv8-io/rv8/)
 - rv8-bench - [https://github.com/rv8-io/rv8-bench/](https://github.com/rv8-io/rv8-bench/)
 - qemu-riscv - [https://github.com/riscv/riscv-qemu/](https://github.com/riscv/riscv-qemu/)
 - musl-riscv-toolchain - [https://github.com/rv8-io/musl-riscv-toolchain/](https://github.com/rv8-io/musl-riscv-toolchain/)
 
-The following results have been plotted:
+#### Benchmark metrics
+
+The following benchmark metrics have been plotted and tabulated:
 
 - [Runtimes](#runtimes)
 - [Instructions Per Second](#instructions-per-second)
+- [Macro-op Fusion](#macro-op-fusion)
 - [Retired Micro-ops](#retired-micro-ops)
+- [Executable File Sizes](#executable-file-sizes)
+- [Dynamic Register Usage](#dynamic-register-usage)
 
 #### Benchmark details
+
+The [rv8-bench](https://github.com/rv8-io/rv8-bench/)
+benchmark suite contains the following test programs:
 
 Benchmark | Type        | Description
 :--       | :--         | :--
@@ -432,6 +442,9 @@ qsort     | sorting     | sort array containing 50 million items
 sha512    | digest      | calculate SHA-512 hash of 64MiB of data
 
 #### Compiler details
+
+The following compiler architectures, versions, compile options
+and runtime libraries are used to run the benchmarks:
 
 Architecture | Compiler  | C Library | Compile options
 :--          | :--       | :--       | :--
