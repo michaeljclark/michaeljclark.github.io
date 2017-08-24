@@ -11,7 +11,7 @@ For detailed information on the instruction set refer to the
 
 The following tables list the RISC-V RV32IM and RV64IM instructions.
 
-_**RV32I Base Integer Instruction Set**_
+#### RV32I Base Integer Instruction Set
 
 Format | Name | Pseudocode
 :-- | :-- | :--
@@ -55,7 +55,7 @@ Format | Name | Pseudocode
 <code><sub>FENCE pred,succ</sub></code> | <sub>Fence</sub> | <sub></sub>
 <code><sub>FENCE.I </sub></code> | <sub>Fence Instruction</sub> | <sub></sub>
 
-_**RV64I Base Integer Instruction Set (in addition to RV32I)**_
+#### RV64I Base Integer Instruction Set (in addition to RV32I)
 
 Format | Name | Pseudocode
 :-- | :-- | :--
@@ -75,7 +75,7 @@ Format | Name | Pseudocode
 <code><sub>SRLW rd,rs1,rs2</sub></code> | <sub>Shift Right Logical Word</sub> | <sub>rd ← s32(u32(rs1) » rs2)</sub>
 <code><sub>SRAW rd,rs1,rs2</sub></code> | <sub>Shift Right Arithmetic Word</sub> | <sub>rd ← s32(rs1) » rs2</sub>
 
-_**RV32M Standard Extension for Integer Multiply and Divide**_
+#### RV32M Standard Extension for Integer Multiply and Divide
 
 Format | Name | Pseudocode
 :-- | :-- | :--
@@ -88,7 +88,7 @@ Format | Name | Pseudocode
 <code><sub>REM rd,rs1,rs2</sub></code> | <sub>Remainder Signed</sub> | <sub>rd ← sx(rs1) mod sx(rs2)</sub>
 <code><sub>REMU rd,rs1,rs2</sub></code> | <sub>Remainder Unsigned</sub> | <sub>rd ← ux(rs1) mod ux(rs2)</sub>
 
-_**RV64M Standard Extension for Integer Multiply and Divide (in addition to RV32M)**_
+#### RV64M Standard Extension for Integer Multiply and Divide (in addition to RV32M)
 
 Format | Name | Pseudocode
 :-- | :-- | :--

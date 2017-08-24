@@ -19,7 +19,7 @@ This section briefly covers some high level concepts that
 are required to understand the process of assembling and
 linking executable code from source files.
 
-_**Assembly file**_
+#### Assembly file
 
 An assembly file contains assembly language directives,
 macros and instructions. It can be emitted by a compiler
@@ -28,7 +28,7 @@ to the assembler. The standard extensions for assembly files
 are `.s` and `.S`, with the later indicating that the assembly
 file should be pre-processed using the C preprocessor.
 
-_**Relocatable Object file**_
+#### Relocatable Object file
 
 A relocatable object file contains compiled object code and
 data emitted by the assembler. An object file cannot be run,
@@ -40,7 +40,7 @@ to disassemble an object file, `objcopy` can be used to copy
 and extract sections from ELF files and the `nm` utility can
 list symbols in an object file.
 
-_**ELF Header**_
+#### ELF Header
 
 An ELF file has an ELF header that contains _magic_ to
 indicate the file is ELF formatted, the architecture of the
@@ -53,7 +53,7 @@ Binary Interface)_ version of the file and finally flags indicating
 various ABI options such as RVC compression and which floating-
 point ABI that the executable code in the binary conforms to.
 
-_**Program Header**_
+#### Program Header
 
 Program Headers provide size and offsets of loadable segments
 within an executable file or shared object along with protection
@@ -62,7 +62,7 @@ Program headers are not present in relocatable object files
 and are primarily for use by the operating system to and dynamic
 linker to map code and data into memory.
 
-_**Section Header**_
+#### Section Header
 
 Section Headers provice size, offset, type, alignment and
 flags of the sections contained within the ELF file. Section
@@ -71,7 +71,7 @@ necessary for dynamic linking as well as program linking.
 Various section types refer to the location of the symbol
 table, relocations and dynamic symbols in the ELF binary file.
 
-_**Sections**_
+#### Sections
 
 An object file is made up of multiple sections, with each
 section corresponding to distinct types of executable code
@@ -83,14 +83,14 @@ list shows the four most common sections:
 - `.rodata` is a read-only section containing const variables
 - `.bss` is a read-write section containing uninitialised data
 
-_**Program linking**_
+#### Program linking
 
 Program linking is the process of reading multiple relocatable
 object files, merging the sections from each of the source files,
 calculating the new addresses for symbols and applying relocation
 fixups to text or data that is pointed to in relocation entries.
 
-_**Linker Script**_
+#### Linker Script
 
 A linker script is a text source file that is optionally input
 to the linker and it contains rules for the linker to use when
