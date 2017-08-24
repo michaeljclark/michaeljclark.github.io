@@ -578,77 +578,78 @@ sha512 | 3.41 | 3.16 | 1.00
 _(Geomean)_ | 2.90 | 2.22 | 1.00
 
 
-#### Instructions Per Second
+### Instructions Per Second
 
-Instructions per second in millions comparing rv8 and native x86:
+Instructions per second in millions comparing qemu, rv8 and native x86:
 
 ![operation counts -O3 64-bit]({{ site.url }}/plots/mips-O3-64.svg)
 _Figure 5: Millions of Instructions Per Second -O3 64-bit_
 
-**Instructions per second (MIPS) native vs rv8 64-bit -O3**
+**Instructions per second (MIPS) qemu, rv8 and native 64-bit -O3**
 
-program | native-x86-mips | rv8-riscv64-mips
-:-- | --: | --:
-aes | 11035 | 3395
-bigint | 10557 | 5712
-dhrystone | 8369 | 5274
-miniz | 5530 | 3622
-norx | 9112 | 2167
-primes | 6100 | 4421
-qsort | 5780 | 2518
-sha512 | 12177 | 4556
-_(Geomean)_ | 8232 | 3769
+program | qemu-riscv64-mips | rv8-riscv64-mips | native-x86-mips
+:-- | --: | --: | --:
+aes | 2414 | 3395 | 11035
+bigint | 3738 | 5712 | 10557
+dhrystone | 1843 | 5274 | 8369
+miniz | 2625 | 3622 | 5530
+norx | 2223 | 2167 | 9112
+primes | 2438 | 4421 | 6100
+qsort | 644 | 2518 | 5780
+sha512 | 2982 | 4556 | 12177
+_(Geomean)_ | 2149 | 3769 | 8232
 
 ![operation counts -Os 64-bit]({{ site.url }}/plots/mips-Os-64.svg)
 _Figure 6: Millions of Instructions Per Second -Os 64-bit_
 
-**Instructions per second (MIPS) native vs rv8 64-bit -Os**
+**Instructions per second (MIPS) qemu, rv8 and native 64-bit -Os**
 
-program | native-x86-mips | rv8-riscv64-mips
-:-- | --: | --:
-aes | 10072 | 3879
-bigint | 12873 | 1955
-dhrystone | 9073 | 2462
-miniz | 5052 | 3427
-norx | 8852 | 2439
-primes | 6101 | 3555
-qsort | 6063 | 3340
-sha512 | 12206 | 5567
-_(Geomean)_ | 8355 | 3175
+program | qemu-riscv64-mips | rv8-riscv64-mips | native-x86-mips
+:-- | --: | --: | --:
+aes | 2655 | 3879 | 10072
+bigint | 3973 | 1955 | 12873
+dhrystone | 1250 | 2462 | 9073
+miniz | 2650 | 3427 | 5052
+norx | 1817 | 2439 | 8852
+primes | 2226 | 3555 | 6101
+qsort | 572 | 3340 | 6063
+sha512 | 3269 | 5567 | 12206
+_(Geomean)_ | 2008 | 3175 | 8355
 
 ![operation counts -O3 32-bit]({{ site.url }}/plots/mips-O3-32.svg)
 _Figure 7: Millions of Instructions Per Second -O3 32-bit_
 
-**Instructions per second (MIPS) native vs rv8 32-bit -O3**
+**Instructions per second (MIPS) qemu, rv8 and native 32-bit -O3**
 
-program | native-x86-mips | rv8-riscv32-mips
-:-- | --: | --:
-aes | 9634 | 2851
-bigint | 9780 | 3835
-dhrystone | 3747 | 5667
-miniz | 4988 | 3379
-norx | 9146 | 2554
-primes | 6368 | 3652
-qsort | 6259 | 2658
-sha512 | 11074 | 3671
-_(Geomean)_ | 7186 | 3428
+program | qemu-riscv32-mips | rv8-riscv32-mips | native-x86-mips
+:-- | --: | --: | --:
+aes | 2442 | 2851 | 9634
+bigint | 3964 | 3835 | 9780
+dhrystone | 1998 | 5667 | 3747
+miniz | 2195 | 3379 | 4988
+norx | 2824 | 2554 | 9146
+primes | 3039 | 3652 | 6368
+qsort | 671 | 2658 | 6259
+sha512 | 2773 | 3671 | 11074
+_(Geomean)_ | 2259 | 3428 | 7186
 
 ![operation counts -Os 32-bit]({{ site.url }}/plots/mips-Os-32.svg)
 _Figure 8: Millions of Instructions Per Second -Os 32-bit_
 
-**Instructions per second (MIPS) native vs rv8 32-bit -Os**
+**Instructions per second (MIPS) qemu, rv8 and native 32-bit -Os**
 
-program | native-x86-mips | rv8-riscv32-mips
-:-- | --: | --:
-aes | 9472 | 3565
-bigint | 9817 | 2166
-dhrystone | 8479 | 2345
-miniz | 4171 | 3062
-norx | 8129 | 1970
-primes | 7105 | 2355
-qsort | 5892 | 3528
-sha512 | 8396 | 3131
-_(Geomean)_ | 7441 | 2702
+program | qemu-riscv32-mips | rv8-riscv32-mips | native-x86-mips
+:-- | --: | --: | --:
+aes | 2832 | 3565 | 9472
+bigint | 3856 | 2166 | 9817
+dhrystone | 1435 | 2345 | 8479
+miniz | 2177 | 3062 | 4171
+norx | 1965 | 1970 | 8129
+primes | 2928 | 2355 | 7105
+qsort | 576 | 3528 | 5892
+sha512 | 2901 | 3131 | 8396
+_(Geomean)_ | 2063 | 2702 | 7441
+
 
 #### Retired Micro-ops
 
