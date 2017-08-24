@@ -27,7 +27,7 @@ The current version is available at: [https://github.com/rv8-io/rv8](https://git
 
 ![rv8 binary translation]({{ site.url }}/images/bintrans.svg)
 
-_**RISC-V to x86-64 binary translator**_
+#### RISC-V to x86-64 binary translator
 
 The rv8 binary translation engine works by interpreting code while
 profiling it for hot paths. Hot paths are translated on the fly to
@@ -47,7 +47,7 @@ The rv8 binary translator supports a number of simple optimisations:
 - L1 jump target cache for indirect calls and returns
 - Macro-op fusion for common RISC-V instruction sequences
 
-_**RISC-V full system emulator**_
+#### RISC-V full system emulator
 
 The rv8 suite includes a full system emulator that implements the
 RISC-V privileged ISA with support for interrupts, MMIO _(memory
@@ -67,7 +67,7 @@ The rv8 full system emulator has the following features:
 - Extensible interpreter generated from ISA metadata
 - Protected address space
 
-_**RISC-V user mode simulator**_
+#### RISC-V user mode simulator
 
 The rv8 user mode simulator is a single address space
 implementation of the RISC-V ISA that implements a subset of the
@@ -90,7 +90,7 @@ The rv8 user mode simulator has the following features:
   - `0x000000001000 - 0x7ffdffffffff` (guest)
   - `0x7ffe00000000 - 0x7fffffffffff` (host)
 
-_**RISC-V instruction set metadata**_
+#### RISC-V instruction set metadata
 
 The `rv-bin` tool contains a meta-data driven disassembler and
 a histogram tool for analysing static register usage and static
@@ -181,7 +181,7 @@ of RISC-V code to X86-64 code. This is a challenging problem for
 many reasons; with the principle challange due to RISC-V having
 31 integer registers while x86-64 has only 16 integer registers.
 
-_**Register allocation**_
+#### Register allocation
 
 rv8 solves the register set size problem by spilling registers
 to memory _(L1 cache)_ using a static register allocation (a future
@@ -204,7 +204,7 @@ The remaining unallocated registers are stored in a memory spill
 area accessed using the `rbp` register. e.g. `qword [rbp+0xF8]`
 would be used to access `t4`.
 
-_**Translator temporaries**_
+#### Translator temporaries
 
 The rv8 translator needs to use several host registers to point
 to translator internal structures and for use as temporary
@@ -219,7 +219,7 @@ uses the following x86-64 host registers as temporaries leaving
 - `rax` - translator temporary register
 - `rcx` - translator temporary register
 
-_**CISC vs RISC operands**_
+#### CISC vs RISC operands
 
 The rv8 translator makes use of CISC memory operands to access
 registers residing in the memory backed register spill area,
@@ -241,7 +241,7 @@ Memory operands are used to access registers in the spill area:
 
 ![operands]({{ site.url }}/images/operands.svg)
 
-_**Indirect call acceleration**_
+#### Indirect call acceleration
 
 Indirect calls through function pointers cannot be statically
 translated as the target address of their translation is not
@@ -262,7 +262,7 @@ The direct mapped L1 translation cache is indexed by `bits[10:1]`
 of the guest address. Bit zero can be ignored because RISC-V
 instructions must start on a 2-byte boundary
 
-_**Inline caching**_
+#### Inline caching
 
 Returns also make use of the L1 translation cache, however a
 procedure call made inside of a hot trace can be inlined.
@@ -279,7 +279,7 @@ An inlined subroutine call needs to test the return address:
 
 ![inline caching]({{ site.url }}/images/inlining.svg)
 
-_**Branch tail dynamic linking**_
+#### Branch tail dynamic linking
 
 The translator performs lazy translation of the source program
 during tracing and when it reaches branches, it can only link
@@ -293,7 +293,7 @@ it has been translated, all relative branches that point to
 tail exit trampolines will be relinked to branch directly
 to the translated native code.
 
-_**Macro-op fusion**_
+#### Macro-op fusion
 
 The rv8 translator implements an optimisation known as macro-op
 fusion whereby specific patterns of adjacent instructions are
@@ -333,7 +333,7 @@ machine state precisely matches that which the ISA dictates. rv8
 does not presently implement deoptimisation, however it may
 be necessary to allow more sophisticated optimisations.
 
-_**Sign extension versus zero extension**_
+#### Sign extension versus zero extension
 
 In addition to the register allocation problem, rv8 has to make
 sure that 32-bit operations on registers are sign extended instead
@@ -350,7 +350,7 @@ Example of sign-extended vs zero-extended 32-bit arithmetic on RISC-V and x86-64
 
 ![sign-extension vs zero-extension]({{ site.url }}/images/extend.svg)
 
-_**Bit manipulation intrinsics**_
+#### Bit manipulation intrinsics
 
 The bencharks below contain digest algorithms and ciphers which
 can take advantage of bit manipulation instructions such as rotate
@@ -380,7 +380,7 @@ Deoptimisation would be required to elide the temporary register.
 - _64-bit rotate right or left pattern (2 shifts, 1 or)_
   - `(rs1 >> shamt) | (rs1 << (64 - shamt))`
 
-_**Measurement**_
+#### Measurement
 
 A future goal is to quantify the factors that contribute to the
 performance differences between native x86-64 code and translated
@@ -418,7 +418,7 @@ The following results have been plotted:
 - [Instructions Per Second](#instructions-per-second)
 - [Retired Micro-ops](#retired-micro-ops)
 
-**Benchmark details**
+#### Benchmark details
 
 Benchmark | Type        | Description
 :--       | :--         | :--
@@ -431,7 +431,7 @@ primes    | numeric     | calculate largest prime number below 33333333
 qsort     | sorting     | sort array containing 50 million items
 sha512    | digest      | calculate SHA-512 hash of 64MiB of data
 
-**Compiler details**
+#### Compiler details
 
 Architecture | Compiler  | C Library | Compile options
 :--          | :--       | :--       | :--
@@ -441,7 +441,7 @@ riscv32      | GCC 7.1.0 | musl libc | `'-O3 -fPIE'`, `'-Os -fPIE'`
 riscv64      | GCC 7.1.0 | musl libc | `'-O3 -fPIE'`, `'-Os -fPIE'`
 aarch64      | GCC 7.1.0 | musl libc | `'-O3 -fPIE'`, `'-Os -fPIE'`
 
-**Measurement details**
+#### Measurement details
 
 - rv8 benchmarks use `rv-jit`
 - Dynamic instruction counts are measured using `rv-sim -E`
