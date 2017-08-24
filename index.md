@@ -396,12 +396,14 @@ RISC-V code, so future benchmarks should measure:
 
 ### Benchmarks
 
-The following section shows benchmark results comparing qemu,
-rv8 and native x86. The benchmark programs are compiled for
-aarch64, riscv64, riscv32, x86-64 and x86-32. See the
-[Benchmarks Results](/bench) page for comprehensive results
-including macro-op fusion, executable file sizes and dynamic
-register usage charts.
+The following section contains benchmark runtime and instructions per
+second results comparing qemu and rv8 JIT engines with native x86.
+There are also runtime neutral results showing total retired RISC-V
+instructions compared to x86 micro-ops. The benchmark programs are
+compiled for aarch64, riscv64, riscv32, x86-64 and x86-32. See the
+[Benchmarks Results](/bench) page for the complete result set including
+macro-op fusion performance, executable file sizes and dynamic register
+usage charts.
 
 The following sources are used:
 
