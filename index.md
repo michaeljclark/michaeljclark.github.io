@@ -668,7 +668,7 @@ uops-retired  | `UOPS_RETIRED.ANY`          | uops retired
 Total retired micro-op/instruction counts comparing RISC-V and x86:
 
 ![operation counts -O3 64-bit]({{ site.url }}/plots/operations-O3-64.svg)
-_Figure 11: Retired operation counts -O3 64-bit_
+_Figure 9: Retired operation counts -O3 64-bit_
 
 **Retired Operations (Mops) x86-64 vs riscv64 -O3**
 
@@ -685,7 +685,7 @@ sha512 | 2947 | 2623 | 3073 | 3264 | 3045 | 3704
 _(Sum)_ | 24925 | 25860 | 25565 | 28114 | 24419 | 28555
 
 ![operation counts -Os 64-bit]({{ site.url }}/plots/operations-Os-64.svg)
-_Figure 12: Retired operation counts -Os 64-bit_
+_Figure 10: Retired operation counts -Os 64-bit_
 
 **Retired Operations (Mops) x86-64 vs riscv64 -Os**
 
@@ -702,7 +702,7 @@ sha512 | 3039 | 2750 | 3155 | 3359 | 3155 | 3730
 _(Sum)_ | 29088 | 31997 | 30216 | 34019 | 29214 | 32073
 
 ![operation counts -O3 32-bit]({{ site.url }}/plots/operations-O3-32.svg)
-_Figure 13: Retired operation counts -O3 32-bit_
+_Figure 11: Retired operation counts -O3 32-bit_
 
 **Retired Operations (Mops) x86-32 vs riscv32 -O3**
 
@@ -719,7 +719,7 @@ sha512 | 7010 | 6841 | 7074 | 8110 | 7056 | 8073
 _(Sum)_ | 41954 | 54691 | 48347 | 58102 | 46494 | 37437
 
 ![operation counts -Os 32-bit]({{ site.url }}/plots/operations-Os-32.svg)
-_Figure 14: Retired operation counts -Os 32-bit_
+_Figure 12: Retired operation counts -Os 32-bit_
 
 **Retired Operations (Mops) x86-32 vs riscv32 -Os**
 
