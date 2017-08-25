@@ -227,7 +227,7 @@ _Figure 5: Optimisation rv8 riscv -O3 vs -Os_
 
 **Optimisation rv8 riscv32 and riscv64, -O3 vs -Os**
 
-program | rv8-rv32-Os | rv8-rv32-Os | rv8-rv64-O3 | rv8-rv64-O3 | rv8-rv32-O3:Os | rv8-rv64-O3:Os
+program | rv8-rv32-O3 | rv8-rv32-Os | rv8-rv64-O3 | rv8-rv64-Os | rv8-rv32-O3:Os | rv8-rv64-O3:Os
 :-- | --: | --: | --: | --: | --: | --:
 aes | 1.62 | 1.25 | 1.53 | 1.31 | 1.30 | 1.17
 bigint | 1.41 | 3.21 | 0.71 | 2.85 | 0.44 | 0.25
