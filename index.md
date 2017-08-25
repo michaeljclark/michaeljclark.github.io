@@ -420,10 +420,7 @@ The following benchmark metrics have been plotted and tabulated:
 
 - [Runtimes](#runtimes)
 - [Instructions Per Second](#instructions-per-second)
-- [Macro-op Fusion](#macro-op-fusion)
 - [Retired Micro-ops](#retired-micro-ops)
-- [Executable File Sizes](#executable-file-sizes)
-- [Dynamic Register Usage](#dynamic-register-usage)
 
 #### Benchmark details
 
