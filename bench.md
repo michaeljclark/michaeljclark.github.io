@@ -24,6 +24,7 @@ The following sources have been used to run the benchmarks:
 The following benchmark metrics have been plotted and tabulated:
 
 - [Runtimes](#runtimes)
+- [Optimisation](#optimisation)
 - [Instructions Per Second](#instructions-per-second)
 - [Macro-op Fusion](#macro-op-fusion)
 - [Retired Micro-ops](#retired-micro-ops)
@@ -200,12 +201,51 @@ sha512 | 3.41 | 3.16 | 1.00
 _(Geomean)_ | 2.90 | 2.22 | 1.00
 
 
+### Optimisation
+
+Runtimes and ratios for optimisation levels (-O3 vs -Os):
+
+![optimisation comparison riscv -O3 vs -Os]({{ site.url }}/plots/optimisation-riscv.svg )
+_Figure 5: Optimisation riscv -O3 vs -Os_
+
+**Optimisation riscv32 and riscv64, -O3 vs -Os**
+
+program | rv8-rv32-Os | rv8-rv32-Os | rv8-rv64-O3 | rv8-rv64-O3 | rv8-rv32-O3:Os | rv8-rv64-O3:Os
+:-- | --: | --: | --: | --: | --: | --:
+aes | 1.62 | 1.25 | 1.53 | 1.31 | 1.30 | 1.17
+bigint | 1.41 | 3.21 | 0.71 | 2.85 | 0.44 | 0.25
+dhrystone | 0.39 | 1.42 | 0.20 | 1.31 | 0.28 | 0.15
+miniz | 1.41 | 1.56 | 1.60 | 1.73 | 0.90 | 0.92
+norx | 0.85 | 1.18 | 1.20 | 1.14 | 0.72 | 1.06
+primes | 1.95 | 2.73 | 0.70 | 0.77 | 0.71 | 0.91
+qsort | 1.15 | 0.82 | 1.22 | 0.90 | 1.41 | 1.35
+sha512 | 2.20 | 2.49 | 0.81 | 0.67 | 0.88 | 1.21
+_(Geomean)_ | 1.23 | 1.66 | 0.86 | 1.21 | 0.74 | 0.71
+
+![optimisation comparison x86 -O3 vs -Os]({{ site.url }}/plots/optimisation-x86.svg )
+_Figure 6: Optimisation x86 -O3 vs -Os_
+
+**Optimisation x86-32 and x86-64, -O3 vs -Os**
+
+program | x86-32-O3 | x86-32-Os | x86-64-O3 | x86-64-Os | x86-32-O3:Os | x86-64-O3:Os
+:-- | --: | --: | --: | --: | --: | --:
+aes | 0.48 | 0.50 | 0.32 | 0.37 | 0.96 | 0.86
+bigint | 0.88 | 1.02 | 0.38 | 0.38 | 0.86 | 1.01
+dhrystone | 0.28 | 0.58 | 0.10 | 0.39 | 0.49 | 0.25
+miniz | 0.88 | 1.26 | 0.77 | 0.83 | 0.70 | 0.93
+norx | 0.26 | 0.32 | 0.22 | 0.24 | 0.81 | 0.92
+primes | 1.51 | 1.38 | 0.60 | 0.59 | 1.09 | 1.01
+qsort | 0.70 | 0.77 | 0.64 | 0.66 | 0.90 | 0.98
+sha512 | 0.63 | 0.79 | 0.24 | 0.25 | 0.80 | 0.97
+_(Geomean)_ | 0.61 | 0.75 | 0.34 | 0.42 | 0.81 | 0.81
+
+
 ### Instructions Per Second
 
 Instructions per second in millions comparing qemu, rv8 and native x86:
 
 ![operation counts -O3 64-bit]({{ site.url }}/plots/mips-O3-64.svg)
-_Figure 5: Millions of Instructions Per Second -O3 64-bit_
+_Figure 7: Millions of Instructions Per Second -O3 64-bit_
 
 **Instructions per second (MIPS) qemu, rv8 and native 64-bit -O3**
 
@@ -222,7 +262,7 @@ sha512 | 2982 | 4556 | 12177
 _(Geomean)_ | 2149 | 3769 | 8232
 
 ![operation counts -Os 64-bit]({{ site.url }}/plots/mips-Os-64.svg)
-_Figure 6: Millions of Instructions Per Second -Os 64-bit_
+_Figure 8: Millions of Instructions Per Second -Os 64-bit_
 
 **Instructions per second (MIPS) qemu, rv8 and native 64-bit -Os**
 
@@ -239,7 +279,7 @@ sha512 | 3269 | 5567 | 12206
 _(Geomean)_ | 2008 | 3175 | 8355
 
 ![operation counts -O3 32-bit]({{ site.url }}/plots/mips-O3-32.svg)
-_Figure 7: Millions of Instructions Per Second -O3 32-bit_
+_Figure 9: Millions of Instructions Per Second -O3 32-bit_
 
 **Instructions per second (MIPS) qemu, rv8 and native 32-bit -O3**
 
@@ -256,7 +296,7 @@ sha512 | 2773 | 3671 | 11074
 _(Geomean)_ | 2259 | 3428 | 7186
 
 ![operation counts -Os 32-bit]({{ site.url }}/plots/mips-Os-32.svg)
-_Figure 8: Millions of Instructions Per Second -Os 32-bit_
+_Figure 10: Millions of Instructions Per Second -Os 32-bit_
 
 **Instructions per second (MIPS) qemu, rv8 and native 32-bit -Os**
 
@@ -278,7 +318,7 @@ _(Geomean)_ | 2063 | 2702 | 7441
 Runtimes and ratios for rv8 macro-op fusion (fusion=on,off):
 
 ![fusion runtimes and ratios 64-bit]({{ site.url }}/plots/fusion-64.svg)
-_Figure 9: Fusion disabled and enabled runtimes -Os 64-bit_
+_Figure 11: Fusion disabled and enabled runtimes -Os 64-bit_
 
 **Macro-op fusion performance 64-bit -O3**
 
@@ -309,7 +349,7 @@ sha512 | 0.69 | 0.67 | 0.97
 _(Geomean)_ | 1.27 | 1.21 | 0.95
 
 ![fusion runtimes and ratios 32-bit]({{ site.url }}/plots/fusion-32.svg)
-_Figure 10: Fusion disabled and enabled runtimes -Os 32-bit_
+_Figure 12: Fusion disabled and enabled runtimes -Os 32-bit_
 
 **Macro-op fusion performance 32-bit -O3**
 
@@ -355,7 +395,7 @@ uops-retired  | `UOPS_RETIRED.ANY`          | uops retired
 Total retired micro-op/instruction counts comparing RISC-V and x86:
 
 ![operation counts -O3 64-bit]({{ site.url }}/plots/operations-O3-64.svg)
-_Figure 11: Retired operation counts -O3 64-bit_
+_Figure 13: Retired operation counts -O3 64-bit_
 
 **Retired Operations (Mops) x86-64 vs riscv64 -O3**
 
@@ -372,7 +412,7 @@ sha512 | 2947 | 2623 | 3073 | 3264 | 3045 | 3704
 _(Sum)_ | 24925 | 25860 | 25565 | 28114 | 24419 | 28555
 
 ![operation counts -Os 64-bit]({{ site.url }}/plots/operations-Os-64.svg)
-_Figure 12: Retired operation counts -Os 64-bit_
+_Figure 14: Retired operation counts -Os 64-bit_
 
 **Retired Operations (Mops) x86-64 vs riscv64 -Os**
 
@@ -389,7 +429,7 @@ sha512 | 3039 | 2750 | 3155 | 3359 | 3155 | 3730
 _(Sum)_ | 29088 | 31997 | 30216 | 34019 | 29214 | 32073
 
 ![operation counts -O3 32-bit]({{ site.url }}/plots/operations-O3-32.svg)
-_Figure 13: Retired operation counts -O3 32-bit_
+_Figure 15: Retired operation counts -O3 32-bit_
 
 **Retired Operations (Mops) x86-32 vs riscv32 -O3**
 
@@ -406,7 +446,7 @@ sha512 | 7010 | 6841 | 7074 | 8110 | 7056 | 8073
 _(Sum)_ | 41954 | 54691 | 48347 | 58102 | 46494 | 37437
 
 ![operation counts -Os 32-bit]({{ site.url }}/plots/operations-Os-32.svg)
-_Figure 14: Retired operation counts -Os 32-bit_
+_Figure 16: Retired operation counts -Os 32-bit_
 
 **Retired Operations (Mops) x86-32 vs riscv32 -Os**
 
@@ -428,7 +468,7 @@ _(Sum)_ | 48526 | 59852 | 53104 | 63597 | 51354 | 38938
 GCC stripped executable sizes comparing aarch64, riscv32, riscv64, x86-32 and x86-64:
 
 ![benchmark filesizes -O3]({{ site.url }}/plots/filesize-O3.svg)
-_Figure 15: Compiled file sizes -O3_
+_Figure 17: Compiled file sizes -O3_
 
 **Compiled File Size (bytes) -O3**
 
@@ -445,7 +485,7 @@ sha512 | 30256 | 37872 | 26144 | 25632 | 22064
 _(Sum)_ | 999616 | 921728 | 852856 | 983172 | 897240
 
 ![benchmark filesizes -Os]({{ site.url }}/plots/filesize-Os.svg)
-_Figure 16: Compiled file sizes -Os_
+_Figure 18: Compiled file sizes -Os_
 
 **Compiled File Size (bytes) -Os**
 
@@ -467,52 +507,52 @@ _(Sum)_ | 934080 | 888960 | 815992 | 909488 | 827608
 Dynamic register usage results comparing riscv64 -O3 vs -Os
 
 ![aes register usage -O3 vs -Os]({{ site.url }}/plots/registers-aes-rv64-1.svg)
-_Figure 17: Dynamic register usage - aes -O3 vs -Os (sorted by frequency)_
+_Figure 19: Dynamic register usage - aes -O3 vs -Os (sorted by frequency)_
 
 ![aes register usage -O3 vs -Os]({{ site.url }}/plots/registers-aes-rv64-2.svg)
-_Figure 18: Dynamic register usage - aes -O3 vs -Os (sorted by alphabetically)_
+_Figure 20: Dynamic register usage - aes -O3 vs -Os (sorted by alphabetically)_
 
 ![bigint register usage -O3 vs -Os]({{ site.url }}/plots/registers-bigint-rv64-1.svg)
-_Figure 19: Dynamic register usage - bigint -O3 vs -Os (sorted by frequency)_
+_Figure 21: Dynamic register usage - bigint -O3 vs -Os (sorted by frequency)_
 
 ![bigint register usage -O3 vs -Os]({{ site.url }}/plots/registers-bigint-rv64-2.svg)
-_Figure 20: Dynamic register usage - bigint -O3 vs -Os (sorted by alphabetically)_
+_Figure 22: Dynamic register usage - bigint -O3 vs -Os (sorted by alphabetically)_
 
 ![dhrystone register usage -O3 vs -Os]({{ site.url }}/plots/registers-dhrystone-rv64-1.svg)
-_Figure 21: Dynamic register usage - dhrystone -O3 vs -Os (sorted by frequency)_
+_Figure 23: Dynamic register usage - dhrystone -O3 vs -Os (sorted by frequency)_
 
 ![dhrystone register usage -O3 vs -Os]({{ site.url }}/plots/registers-dhrystone-rv64-2.svg)
-_Figure 22: Dynamic register usage - dhrystone -O3 vs -Os (sorted by alphabetically)_
+_Figure 24: Dynamic register usage - dhrystone -O3 vs -Os (sorted by alphabetically)_
 
 ![miniz register usage -O3 vs -Os]({{ site.url }}/plots/registers-miniz-rv64-1.svg)
-_Figure 23: Dynamic register usage - miniz -O3 vs -Os (sorted by frequency)_
+_Figure 25: Dynamic register usage - miniz -O3 vs -Os (sorted by frequency)_
 
 ![miniz register usage -O3 vs -Os]({{ site.url }}/plots/registers-miniz-rv64-2.svg)
-_Figure 24: Dynamic register usage - miniz -O3 vs -Os (sorted by alphabetically)_
+_Figure 26: Dynamic register usage - miniz -O3 vs -Os (sorted by alphabetically)_
 
 ![norx register usage -O3 vs -Os]({{ site.url }}/plots/registers-norx-rv64-1.svg)
-_Figure 25: Dynamic register usage - norx -O3 vs -Os (sorted by frequency)_
+_Figure 27: Dynamic register usage - norx -O3 vs -Os (sorted by frequency)_
 
 ![norx register usage -O3 vs -Os]({{ site.url }}/plots/registers-norx-rv64-2.svg)
-_Figure 26: Dynamic register usage - norx -O3 vs -Os (sorted by alphabetically)_
+_Figure 28: Dynamic register usage - norx -O3 vs -Os (sorted by alphabetically)_
 
 ![primes register usage -O3 vs -Os]({{ site.url }}/plots/registers-primes-rv64-1.svg)
-_Figure 27: Dynamic register usage - primes -O3 vs -Os (sorted by frequency)_
+_Figure 29: Dynamic register usage - primes -O3 vs -Os (sorted by frequency)_
 
 ![primes register usage -O3 vs -Os]({{ site.url }}/plots/registers-primes-rv64-2.svg)
-_Figure 28: Dynamic register usage - primes -O3 vs -Os (sorted by alphabetically)_
+_Figure 30: Dynamic register usage - primes -O3 vs -Os (sorted by alphabetically)_
 
 ![qsort register usage -O3 vs -Os]({{ site.url }}/plots/registers-qsort-rv64-1.svg)
-_Figure 29: Dynamic register usage - qsort -O3 vs -Os (sorted by frequency)_
+_Figure 31: Dynamic register usage - qsort -O3 vs -Os (sorted by frequency)_
 
 ![qsort register usage -O3 vs -Os]({{ site.url }}/plots/registers-qsort-rv64-2.svg)
-_Figure 30: Dynamic register usage - qsort -O3 vs -Os (sorted by alphabetically)_
+_Figure 32: Dynamic register usage - qsort -O3 vs -Os (sorted by alphabetically)_
 
 ![sha512 register usage -O3 vs -Os]({{ site.url }}/plots/registers-sha512-rv64-1.svg)
-_Figure 31: Dynamic register usage - sha512 -O3 vs -Os (sorted by frequency)_
+_Figure 33: Dynamic register usage - sha512 -O3 vs -Os (sorted by frequency)_
 
 ![sha512 register usage -O3 vs -Os]({{ site.url }}/plots/registers-sha512-rv64-2.svg)
-_Figure 32: Dynamic register usage - sha512 -O3 vs -Os (sorted by alphabetically)_
+_Figure 34: Dynamic register usage - sha512 -O3 vs -Os (sorted by alphabetically)_
 
 
 ### Dynamic Instruction Usage
@@ -520,49 +560,49 @@ _Figure 32: Dynamic register usage - sha512 -O3 vs -Os (sorted by alphabetically
 Dynamic instruction usage results comparing riscv64 -O3 vs -Os
 
 ![aes instruction usage -O3 vs -Os]({{ site.url }}/plots/instructions-aes-rv64-1.svg)
-_Figure 33: Dynamic instruction usage - aes -O3 vs -Os (sorted by frequency)_
+_Figure 35: Dynamic instruction usage - aes -O3 vs -Os (sorted by frequency)_
 
 ![aes instruction usage -O3 vs -Os]({{ site.url }}/plots/instructions-aes-rv64-2.svg)
-_Figure 34: Dynamic instruction usage - aes -O3 vs -Os (sorted by alphabetically)_
+_Figure 36: Dynamic instruction usage - aes -O3 vs -Os (sorted by alphabetically)_
 
 ![bigint instruction usage -O3 vs -Os]({{ site.url }}/plots/instructions-bigint-rv64-1.svg)
-_Figure 35: Dynamic instruction usage - bigint -O3 vs -Os (sorted by frequency)_
+_Figure 37: Dynamic instruction usage - bigint -O3 vs -Os (sorted by frequency)_
 
 ![bigint instruction usage -O3 vs -Os]({{ site.url }}/plots/instructions-bigint-rv64-2.svg)
-_Figure 36: Dynamic instruction usage - bigint -O3 vs -Os (sorted by alphabetically)_
+_Figure 38: Dynamic instruction usage - bigint -O3 vs -Os (sorted by alphabetically)_
 
 ![dhrystone instruction usage -O3 vs -Os]({{ site.url }}/plots/instructions-dhrystone-rv64-1.svg)
-_Figure 37: Dynamic instruction usage - dhrystone -O3 vs -Os (sorted by frequency)_
+_Figure 39: Dynamic instruction usage - dhrystone -O3 vs -Os (sorted by frequency)_
 
 ![dhrystone instruction usage -O3 vs -Os]({{ site.url }}/plots/instructions-dhrystone-rv64-2.svg)
-_Figure 38: Dynamic instruction usage - dhrystone -O3 vs -Os (sorted by alphabetically)_
+_Figure 40: Dynamic instruction usage - dhrystone -O3 vs -Os (sorted by alphabetically)_
 
 ![miniz instruction usage -O3 vs -Os]({{ site.url }}/plots/instructions-miniz-rv64-1.svg)
-_Figure 39: Dynamic instruction usage - miniz -O3 vs -Os (sorted by frequency)_
+_Figure 41: Dynamic instruction usage - miniz -O3 vs -Os (sorted by frequency)_
 
 ![miniz instruction usage -O3 vs -Os]({{ site.url }}/plots/instructions-miniz-rv64-2.svg)
-_Figure 40: Dynamic instruction usage - miniz -O3 vs -Os (sorted by alphabetically)_
+_Figure 42: Dynamic instruction usage - miniz -O3 vs -Os (sorted by alphabetically)_
 
 ![norx instruction usage -O3 vs -Os]({{ site.url }}/plots/instructions-norx-rv64-1.svg)
-_Figure 41: Dynamic instruction usage - norx -O3 vs -Os (sorted by frequency)_
+_Figure 43: Dynamic instruction usage - norx -O3 vs -Os (sorted by frequency)_
 
 ![norx instruction usage -O3 vs -Os]({{ site.url }}/plots/instructions-norx-rv64-2.svg)
-_Figure 42: Dynamic instruction usage - norx -O3 vs -Os (sorted by alphabetically)_
+_Figure 44: Dynamic instruction usage - norx -O3 vs -Os (sorted by alphabetically)_
 
 ![primes instruction usage -O3 vs -Os]({{ site.url }}/plots/instructions-primes-rv64-1.svg)
-_Figure 43: Dynamic instruction usage - primes -O3 vs -Os (sorted by frequency)_
+_Figure 45: Dynamic instruction usage - primes -O3 vs -Os (sorted by frequency)_
 
 ![primes instruction usage -O3 vs -Os]({{ site.url }}/plots/instructions-primes-rv64-2.svg)
-_Figure 44: Dynamic instruction usage - primes -O3 vs -Os (sorted by alphabetically)_
+_Figure 46: Dynamic instruction usage - primes -O3 vs -Os (sorted by alphabetically)_
 
 ![qsort instruction usage -O3 vs -Os]({{ site.url }}/plots/instructions-qsort-rv64-1.svg)
-_Figure 45: Dynamic instruction usage - qsort -O3 vs -Os (sorted by frequency)_
+_Figure 47: Dynamic instruction usage - qsort -O3 vs -Os (sorted by frequency)_
 
 ![qsort instruction usage -O3 vs -Os]({{ site.url }}/plots/instructions-qsort-rv64-2.svg)
-_Figure 46: Dynamic instruction usage - qsort -O3 vs -Os (sorted by alphabetically)_
+_Figure 48: Dynamic instruction usage - qsort -O3 vs -Os (sorted by alphabetically)_
 
 ![sha512 instruction usage -O3 vs -Os]({{ site.url }}/plots/instructions-sha512-rv64-1.svg)
-_Figure 47: Dynamic instruction usage - sha512 -O3 vs -Os (sorted by frequency)_
+_Figure 49: Dynamic instruction usage - sha512 -O3 vs -Os (sorted by frequency)_
 
 ![sha512 instruction usage -O3 vs -Os]({{ site.url }}/plots/instructions-sha512-rv64-2.svg)
-_Figure 48: Dynamic instruction usage - sha512 -O3 vs -Os (sorted by alphabetically)_
+_Figure 50: Dynamic instruction usage - sha512 -O3 vs -Os (sorted by alphabetically)_
