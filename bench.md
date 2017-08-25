@@ -205,23 +205,6 @@ _(Geomean)_ | 2.90 | 2.22 | 1.00
 
 Runtimes and ratios for optimisation levels (-O3 vs -Os):
 
-![optimisation comparison riscv -O3 vs -Os]({{ site.url }}/plots/optimisation-riscv.svg )
-_Figure 5: Optimisation riscv -O3 vs -Os_
-
-**Optimisation riscv32 and riscv64, -O3 vs -Os**
-
-program | rv8-rv32-Os | rv8-rv32-Os | rv8-rv64-O3 | rv8-rv64-O3 | rv8-rv32-O3:Os | rv8-rv64-O3:Os
-:-- | --: | --: | --: | --: | --: | --:
-aes | 1.62 | 1.25 | 1.53 | 1.31 | 1.30 | 1.17
-bigint | 1.41 | 3.21 | 0.71 | 2.85 | 0.44 | 0.25
-dhrystone | 0.39 | 1.42 | 0.20 | 1.31 | 0.28 | 0.15
-miniz | 1.41 | 1.56 | 1.60 | 1.73 | 0.90 | 0.92
-norx | 0.85 | 1.18 | 1.20 | 1.14 | 0.72 | 1.06
-primes | 1.95 | 2.73 | 0.70 | 0.77 | 0.71 | 0.91
-qsort | 1.15 | 0.82 | 1.22 | 0.90 | 1.41 | 1.35
-sha512 | 2.20 | 2.49 | 0.81 | 0.67 | 0.88 | 1.21
-_(Geomean)_ | 1.23 | 1.66 | 0.86 | 1.21 | 0.74 | 0.71
-
 ![optimisation comparison x86 -O3 vs -Os]({{ site.url }}/plots/optimisation-x86.svg )
 _Figure 6: Optimisation x86 -O3 vs -Os_
 
@@ -238,6 +221,23 @@ primes | 1.51 | 1.38 | 0.60 | 0.59 | 1.09 | 1.01
 qsort | 0.70 | 0.77 | 0.64 | 0.66 | 0.90 | 0.98
 sha512 | 0.63 | 0.79 | 0.24 | 0.25 | 0.80 | 0.97
 _(Geomean)_ | 0.61 | 0.75 | 0.34 | 0.42 | 0.81 | 0.81
+
+![optimisation comparison riscv -O3 vs -Os]({{ site.url }}/plots/optimisation-riscv.svg )
+_Figure 5: Optimisation riscv -O3 vs -Os_
+
+**Optimisation riscv32 and riscv64, -O3 vs -Os**
+
+program | rv8-rv32-Os | rv8-rv32-Os | rv8-rv64-O3 | rv8-rv64-O3 | rv8-rv32-O3:Os | rv8-rv64-O3:Os
+:-- | --: | --: | --: | --: | --: | --:
+aes | 1.62 | 1.25 | 1.53 | 1.31 | 1.30 | 1.17
+bigint | 1.41 | 3.21 | 0.71 | 2.85 | 0.44 | 0.25
+dhrystone | 0.39 | 1.42 | 0.20 | 1.31 | 0.28 | 0.15
+miniz | 1.41 | 1.56 | 1.60 | 1.73 | 0.90 | 0.92
+norx | 0.85 | 1.18 | 1.20 | 1.14 | 0.72 | 1.06
+primes | 1.95 | 2.73 | 0.70 | 0.77 | 0.71 | 0.91
+qsort | 1.15 | 0.82 | 1.22 | 0.90 | 1.41 | 1.35
+sha512 | 2.20 | 2.49 | 0.81 | 0.67 | 0.88 | 1.21
+_(Geomean)_ | 1.23 | 1.66 | 0.86 | 1.21 | 0.74 | 0.71
 
 
 ### Instructions Per Second
