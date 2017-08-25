@@ -205,10 +205,10 @@ _(Geomean)_ | 2.90 | 2.22 | 1.00
 
 Runtimes and ratios for optimisation levels (-O3 vs -Os):
 
-![optimisation comparison x86 -O3 vs -Os]({{ site.url }}/plots/optimisation-x86.svg )
-_Figure 6: Optimisation x86 -O3 vs -Os_
+![optimisation comparison native x86 -O3 vs -Os]({{ site.url }}/plots/optimisation-x86.svg )
+_Figure 6: Optimisation native x86 -O3 vs -Os_
 
-**Optimisation x86-32 and x86-64, -O3 vs -Os**
+**Optimisation native x86-32 and x86-64, -O3 vs -Os**
 
 program | x86-32-O3 | x86-32-Os | x86-64-O3 | x86-64-Os | x86-32-O3:Os | x86-64-O3:Os
 :-- | --: | --: | --: | --: | --: | --:
@@ -222,10 +222,10 @@ qsort | 0.70 | 0.77 | 0.64 | 0.66 | 0.90 | 0.98
 sha512 | 0.63 | 0.79 | 0.24 | 0.25 | 0.80 | 0.97
 _(Geomean)_ | 0.61 | 0.75 | 0.34 | 0.42 | 0.81 | 0.81
 
-![optimisation comparison riscv -O3 vs -Os]({{ site.url }}/plots/optimisation-riscv.svg )
-_Figure 5: Optimisation riscv -O3 vs -Os_
+![optimisation comparison rv8 riscv -O3 vs -Os]({{ site.url }}/plots/optimisation-riscv.svg )
+_Figure 5: Optimisation rv8 riscv -O3 vs -Os_
 
-**Optimisation riscv32 and riscv64, -O3 vs -Os**
+**Optimisation rv8 riscv32 and riscv64, -O3 vs -Os**
 
 program | rv8-rv32-Os | rv8-rv32-Os | rv8-rv64-O3 | rv8-rv64-O3 | rv8-rv32-O3:Os | rv8-rv64-O3:Os
 :-- | --: | --: | --: | --: | --: | --:

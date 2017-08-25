@@ -273,7 +273,7 @@
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(315.1,31.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >rv8-bench (Optimisation riscv -Os vs -O3)</tspan></text>
+		<text><tspan font-family="Arial" >rv8-bench (Optimisation rv8 riscv -O3 vs -Os)</tspan></text>
 	</g>
 </g>
 	<g id="gnuplot_plot_1" ><title>rv8-riscv64-O3-runtime</title>
