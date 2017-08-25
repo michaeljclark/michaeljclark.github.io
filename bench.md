@@ -206,7 +206,7 @@ _(Geomean)_ | 2.90 | 2.22 | 1.00
 Runtimes and ratios for optimisation levels (-O3 vs -Os):
 
 ![optimisation comparison native x86 -O3 vs -Os]({{ site.url }}/plots/optimisation-x86.svg )
-_Figure 6: Optimisation native x86 -O3 vs -Os_
+_Figure 6: Optimisation native x86-32 and x86-64, -O3 vs -Os_
 
 **Optimisation native x86-32 and x86-64, -O3 vs -Os**
 
@@ -223,7 +223,7 @@ sha512 | 0.63 | 0.79 | 0.24 | 0.25 | 0.80 | 0.97
 _(Geomean)_ | 0.61 | 0.75 | 0.34 | 0.42 | 0.81 | 0.81
 
 ![optimisation comparison rv8 riscv -O3 vs -Os]({{ site.url }}/plots/optimisation-riscv.svg )
-_Figure 5: Optimisation rv8 riscv -O3 vs -Os_
+_Figure 5: Optimisation rv8 riscv32 and riscv64, -O3 vs -Os_
 
 **Optimisation rv8 riscv32 and riscv64, -O3 vs -Os**
 
