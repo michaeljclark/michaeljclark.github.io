@@ -650,7 +650,7 @@
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(327.6,31.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="middle">
-		<text><tspan font-family="Arial" >rv8-bench (primes registers riscv64 -O3 vs -Os)</tspan></text>
+		<text><tspan font-family="Arial" >rv8-bench (primes instructions riscv64 -O3 vs -Os)</tspan></text>
 	</g>
 </g>
 	<g id="gnuplot_plot_1" ><title>O3</title>
