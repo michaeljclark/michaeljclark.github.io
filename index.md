@@ -402,8 +402,8 @@ This section also contains runtime neutral results comparing total
 retired RISC-V instructions to x86 micro-ops. The benchmark programs are
 compiled for aarch64, riscv64, riscv32, x86-64 and x86-32. See the
 [Benchmarks Results](/bench) page for the complete result set including
-macro-op fusion performance, executable file sizes, dynamic register
-and instruction usage charts.
+optimisation level comparisons, macro-op fusion performance, executable
+file sizes, dynamic register and instruction usage charts.
 
 #### Benchmark source
 
