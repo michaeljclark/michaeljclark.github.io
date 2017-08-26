@@ -183,9 +183,9 @@ many reasons; with the principle challange due to RISC-V having
 
 #### Register allocation
 
-rv8 solves the register set size problem by spilling registers
-to memory _(L1 cache)_ using a static register allocation (a future
-versions may use dynamic register allocator). A large amount of
+rv8 solves the register set size problem by using a static register
+allocation and spilling registers to memory _(L1 cache)_ (a future
+versions may use dynamic register allocator). A significant amount of
 performance is lost due to register allocations that take advantage
 of the larger number of available registers and less frequent stack
 spills. It is not possible for the translator to rearrange memory
