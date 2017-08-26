@@ -223,9 +223,9 @@ uses the following x86-64 host registers as temporaries leaving
 
 The rv8 translator makes use of CISC memory operands to access
 registers residing in the memory backed register spill area,
-which should stay present in L1 cache. The complex memory operands
-end up being cracked back into micro-ops in the CISC pipeline
-however the use of complex memory operands helps increase instruction
+which resides in L1 cache. The complex memory operands end up
+being cracked back into micro-ops in the CISC pipeline however
+the use of complex memory operands helps increase instruction
 density, which increases performance due to better use of I$
 _(instruction cache)_.
 
