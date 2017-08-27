@@ -614,422 +614,136 @@
 		L179.2,380.7 L195.7,380.7 L212.1,384.0 L228.6,384.0 L245.1,437.3 L261.6,437.3 L278.1,440.5 L294.6,440.5
 		L311.1,440.5 L327.6,440.5 L344.1,440.5 L360.6,440.5 L377.1,440.5 L393.6,440.5 L410.1,440.5 L426.6,440.5
 		L443.1,440.5 L459.5,440.5 L476.0,440.5 L492.5,440.5 L509.0,440.5 L525.5,440.5 L542.0,440.5 L558.5,440.5
-		L575.0,440.5  '/>	<use xlink:href='#gpPt6' transform='translate(80.2,81.9) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(80.2,81.9) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(96.7,151.3) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(96.7,151.3) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(113.2,211.1) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(113.2,211.1) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(129.7,270.9) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(129.7,270.9) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(146.2,327.4) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(146.2,327.4) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(162.7,361.4) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(162.7,361.4) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(179.2,380.7) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(179.2,380.7) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(195.7,380.7) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(195.7,380.7) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(212.1,384.0) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(212.1,384.0) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(228.6,384.0) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(228.6,384.0) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(245.1,437.3) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(245.1,437.3) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(261.6,437.3) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(261.6,437.3) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(278.1,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(278.1,440.5) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(294.6,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(294.6,440.5) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(311.1,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(311.1,440.5) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(327.6,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(327.6,440.5) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(344.1,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(344.1,440.5) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(360.6,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(360.6,440.5) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(377.1,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(377.1,440.5) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(393.6,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(393.6,440.5) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(410.1,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(410.1,440.5) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(426.6,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(426.6,440.5) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(443.1,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(443.1,440.5) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(459.5,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(459.5,440.5) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(476.0,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(476.0,440.5) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(492.5,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(492.5,440.5) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(509.0,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(509.0,440.5) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(525.5,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(525.5,440.5) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(542.0,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(542.0,440.5) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(558.5,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(558.5,440.5) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(575.0,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(575.0,440.5) scale(1.80)' color='rgb(148,   0, 211)'/>
-	<use xlink:href='#gpPt6' transform='translate(537.3,72.1) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(537.3,72.1) scale(1.80)' color='rgb(148,   0, 211)'/>
+		L575.0,440.5  '/>	<use xlink:href='#gpPt6' transform='translate(80.2,81.9) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(96.7,151.3) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(113.2,211.1) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(129.7,270.9) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(146.2,327.4) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(162.7,361.4) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(179.2,380.7) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(195.7,380.7) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(212.1,384.0) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(228.6,384.0) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(245.1,437.3) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(261.6,437.3) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(278.1,440.5) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(294.6,440.5) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(311.1,440.5) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(327.6,440.5) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(344.1,440.5) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(360.6,440.5) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(377.1,440.5) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(393.6,440.5) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(410.1,440.5) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(426.6,440.5) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(443.1,440.5) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(459.5,440.5) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(476.0,440.5) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(492.5,440.5) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(509.0,440.5) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(525.5,440.5) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(542.0,440.5) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(558.5,440.5) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(575.0,440.5) scale(2.25)' color='rgb(148,   0, 211)'/>
+	<use xlink:href='#gpPt6' transform='translate(537.3,72.1) scale(2.25)' color='rgb(148,   0, 211)'/>
 </g>
 	</g>
 	<g id="gnuplot_plot_2" ><title>O2</title>
-<g fill="none" color="white" stroke="rgb(148,   0, 211)" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
+<g fill="none" color="white" stroke="rgb(148,   0, 211)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(507.9,94.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
 		<text><tspan font-family="Arial" >O2</tspan></text>
 	</g>
 </g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
+<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb( 34, 139,  34)'  d='M516.2,90.1 L558.4,90.1 M80.2,81.9 L96.7,151.3 L113.2,211.1 L129.7,270.9 L146.2,327.4 L162.7,361.4
 		L179.2,380.7 L195.7,380.7 L212.1,384.0 L228.6,384.0 L245.1,437.3 L261.6,437.3 L278.1,440.5 L294.6,440.5
 		L311.1,440.5 L327.6,440.5 L344.1,440.5 L360.6,440.5 L377.1,440.5 L393.6,440.5 L410.1,440.5 L426.6,440.5
 		L443.1,440.5 L459.5,440.5 L476.0,440.5 L492.5,440.5 L509.0,440.5 L525.5,440.5 L542.0,440.5 L558.5,440.5
-		L575.0,440.5  '/>	<use xlink:href='#gpPt6' transform='translate(80.2,81.9) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(80.2,81.9) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(96.7,151.3) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(96.7,151.3) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(113.2,211.1) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(113.2,211.1) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(129.7,270.9) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(129.7,270.9) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(146.2,327.4) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(146.2,327.4) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(162.7,361.4) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(162.7,361.4) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(179.2,380.7) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(179.2,380.7) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(195.7,380.7) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(195.7,380.7) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(212.1,384.0) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(212.1,384.0) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(228.6,384.0) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(228.6,384.0) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(245.1,437.3) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(245.1,437.3) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(261.6,437.3) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(261.6,437.3) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(278.1,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(278.1,440.5) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(294.6,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(294.6,440.5) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(311.1,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(311.1,440.5) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(327.6,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(327.6,440.5) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(344.1,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(344.1,440.5) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(360.6,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(360.6,440.5) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(377.1,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(377.1,440.5) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(393.6,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(393.6,440.5) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(410.1,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(410.1,440.5) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(426.6,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(426.6,440.5) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(443.1,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(443.1,440.5) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(459.5,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(459.5,440.5) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(476.0,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(476.0,440.5) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(492.5,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(492.5,440.5) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(509.0,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(509.0,440.5) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(525.5,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(525.5,440.5) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(542.0,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(542.0,440.5) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(558.5,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(558.5,440.5) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(575.0,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(575.0,440.5) scale(1.80)' color='rgb( 34, 139,  34)'/>
-	<use xlink:href='#gpPt6' transform='translate(537.3,90.1) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt4' transform='translate(537.3,90.1) scale(1.80)' color='rgb( 34, 139,  34)'/>
+		L575.0,440.5  '/>	<use xlink:href='#gpPt6' transform='translate(80.2,81.9) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(96.7,151.3) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(113.2,211.1) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(129.7,270.9) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(146.2,327.4) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(162.7,361.4) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(179.2,380.7) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(195.7,380.7) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(212.1,384.0) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(228.6,384.0) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(245.1,437.3) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(261.6,437.3) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(278.1,440.5) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(294.6,440.5) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(311.1,440.5) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(327.6,440.5) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(344.1,440.5) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(360.6,440.5) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(377.1,440.5) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(393.6,440.5) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(410.1,440.5) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(426.6,440.5) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(443.1,440.5) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(459.5,440.5) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(476.0,440.5) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(492.5,440.5) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(509.0,440.5) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(525.5,440.5) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(542.0,440.5) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(558.5,440.5) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(575.0,440.5) scale(2.25)' color='rgb( 34, 139,  34)'/>
+	<use xlink:href='#gpPt6' transform='translate(537.3,90.1) scale(2.25)' color='rgb( 34, 139,  34)'/>
 </g>
 	</g>
 	<g id="gnuplot_plot_3" ><title>Os</title>
-<g fill="none" color="white" stroke="rgb( 34, 139,  34)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+<g fill="none" color="white" stroke="rgb( 34, 139,  34)" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
 	<g transform="translate(507.9,112.0)" stroke="none" fill="black" font-family="Arial" font-size="12.00"  text-anchor="end">
 		<text><tspan font-family="Arial" >Os</tspan></text>
 	</g>
 </g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+<g fill="none" color="black" stroke="currentColor" stroke-width="1.50" stroke-linecap="butt" stroke-linejoin="miter">
 	<path stroke='rgb(  0, 191, 255)'  d='M516.2,108.1 L558.4,108.1 M80.2,98.0 L96.7,154.5 L113.2,317.8 L129.7,324.2 L146.2,327.4 L162.7,367.9
 		L179.2,384.0 L195.7,384.0 L212.1,384.0 L228.6,384.0 L245.1,437.3 L261.6,437.3 L278.1,440.5 L294.6,440.5
 		L311.1,440.5 L327.6,440.5 L344.1,440.5 L360.6,440.5 L377.1,440.5 L393.6,440.5 L410.1,440.5 L426.6,440.5
 		L443.1,440.5 L459.5,440.5 L476.0,440.5 L492.5,440.5 L509.0,440.5 L525.5,440.5 L542.0,440.5 L558.5,440.5
-		L575.0,440.5  '/>	<use xlink:href='#gpPt6' transform='translate(80.2,98.0) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(80.2,98.0) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(96.7,154.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(96.7,154.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(113.2,317.8) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(113.2,317.8) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(129.7,324.2) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(129.7,324.2) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(146.2,327.4) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(146.2,327.4) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(162.7,367.9) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(162.7,367.9) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(179.2,384.0) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(179.2,384.0) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(195.7,384.0) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(195.7,384.0) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(212.1,384.0) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(212.1,384.0) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(228.6,384.0) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(228.6,384.0) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(245.1,437.3) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(245.1,437.3) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(261.6,437.3) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(261.6,437.3) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(278.1,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(278.1,440.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(294.6,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(294.6,440.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(311.1,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(311.1,440.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(327.6,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(327.6,440.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(344.1,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(344.1,440.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(360.6,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(360.6,440.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(377.1,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(377.1,440.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(393.6,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(393.6,440.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(410.1,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(410.1,440.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(426.6,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(426.6,440.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(443.1,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(443.1,440.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(459.5,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(459.5,440.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(476.0,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(476.0,440.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(492.5,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(492.5,440.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(509.0,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(509.0,440.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(525.5,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(525.5,440.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(542.0,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(542.0,440.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(558.5,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(558.5,440.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(575.0,440.5) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(575.0,440.5) scale(1.80)' color='rgb(  0, 191, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(537.3,108.1) scale(4.50)' color='white'/>
-</g>
-<g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(537.3,108.1) scale(1.80)' color='rgb(  0, 191, 255)'/>
+		L575.0,440.5  '/>	<use xlink:href='#gpPt6' transform='translate(80.2,98.0) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(96.7,154.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(113.2,317.8) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(129.7,324.2) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(146.2,327.4) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(162.7,367.9) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(179.2,384.0) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(195.7,384.0) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(212.1,384.0) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(228.6,384.0) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(245.1,437.3) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(261.6,437.3) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(278.1,440.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(294.6,440.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(311.1,440.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(327.6,440.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(344.1,440.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(360.6,440.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(377.1,440.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(393.6,440.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(410.1,440.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(426.6,440.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(443.1,440.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(459.5,440.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(476.0,440.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(492.5,440.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(509.0,440.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(525.5,440.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(542.0,440.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(558.5,440.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(575.0,440.5) scale(2.25)' color='rgb(  0, 191, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(537.3,108.1) scale(2.25)' color='rgb(  0, 191, 255)'/>
 </g>
 	</g>
+<g fill="none" color="white" stroke="rgb(  0, 191, 255)" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
+</g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="2.00" stroke-linecap="butt" stroke-linejoin="miter">
 </g>
 <g fill="none" color="black" stroke="black" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
