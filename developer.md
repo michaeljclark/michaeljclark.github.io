@@ -10,10 +10,10 @@ This page contains information on git repositories and the rv8 developer mailing
 
 ### rv8 mailing list
 
-To post a message to all the list members, send email to
+To post a message to the list members, send email to
 [rv8-dev@lists.anarch128.org](mailto:rv8-dev@lists.anarch128.org)
 
-To subscribe to the rmailing list, send email to
+To subscribe to the mailing list, send email to
 [rv8-dev-subscribe@lists.anarch128.org](mailto:rv8-dev-subscribe@lists.anarch128.org)
 or visit the list info page:
 
