@@ -1,5 +1,3 @@
-<a href="https://rv8.io/"><img style="float: right;" src="/images/rv8.svg"></a>
-
 ## RISC-V Open Source Software Implementations
 
 This document contains a list of Open Source RISC-V software
@@ -63,6 +61,3 @@ a full system emulator, a dynamic binary translator along with
 metadata tools and a model for generating artefacts based on
 instruction set metadata. rv8 implements an 16550-like UART
 and supports RV32GC and RV64GC.
-
-
-[![rv8]({{ site.url }}/images/rv8.svg)](https://rv8.io/)

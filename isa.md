@@ -1,5 +1,3 @@
-<a href="https://rv8.io/"><img style="float: right;" src="/images/rv8.svg"></a>
-
 ## RISC-V Instruction Set Reference
 
 This document contains a brief listing of instructions and pseudocode
@@ -102,5 +100,3 @@ Format | Name | Pseudocode
 
 - [RISC-V Foundation](http://riscv.org/)
 - [RISC-V ISA Specification](http://riscv.org/specifications/)
-
-[![rv8]({{ site.url }}/images/rv8.svg)](https://rv8.io/)

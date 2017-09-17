@@ -1051,5 +1051,3 @@ Enter 'help' for a list of built-in commands.
 - [RISC-V Open Source Software Implementations](/software)
 - [RISC-V Assembler Reference](/asm)
 - [RISC-V Instruction Set Reference](/isa)
-
-[![rv8]({{ site.url }}/images/rv8.svg)](https://rv8.io/)

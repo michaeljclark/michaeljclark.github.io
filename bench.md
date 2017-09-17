@@ -1,5 +1,3 @@
-<a href="https://rv8.io/"><img style="float: right;" src="/images/rv8.svg"></a>
-
 ## rv8 benchmark results
 
 This document contains [rv8-bench](https://github.com/rv8-io/rv8-bench/)
@@ -77,6 +75,7 @@ aarch64      | GCC 7.1.0 | musl libc | `'-O3'`, `'-O2'` and `'-Os'`
 Runtime results comparing qemu, rv8 and native x86:
 
 ![benchmark runtimes -O3 64-bit]({{ site.url }}/plots/runtime-O3-64.svg)
+
 _Figure 1: Benchmark runtimes -O3 64-bit_
 
 **Runtime 64-bit -O3 (seconds)**
@@ -108,6 +107,7 @@ sha512 | 2.66 | 5.13 | 3.36 | 1.00
 _(Geomean)_ | 4.44 | 4.39 | 2.51 | 1.00
 
 ![benchmark runtimes -O2 64-bit]({{ site.url }}/plots/runtime-O2-64.svg)
+
 _Figure 2: Benchmark runtimes -O2 64-bit_
 
 **Runtime 64-bit -O2 (seconds)**
@@ -139,6 +139,7 @@ sha512 | 2.80 | 5.45 | 3.96 | 1.00
 _(Geomean)_ | 4.75 | 4.64 | 2.82 | 1.00
 
 ![benchmark runtimes -Os 64-bit]({{ site.url }}/plots/runtime-Os-64.svg)
+
 _Figure 3: Benchmark runtimes -Os 64-bit_
 
 **Runtime 64-bit -Os (seconds)**
@@ -170,6 +171,7 @@ sha512 | 2.56 | 4.58 | 2.69 | 1.00
 _(Geomean)_ | 5.07 | 4.49 | 2.84 | 1.00
 
 ![benchmark runtimes -O3 32-bit]({{ site.url }}/plots/runtime-O3-32.svg)
+
 _Figure 4: Benchmark runtimes -O3 32-bit_
 
 **Runtime 32-bit -O3 (seconds)**
@@ -201,6 +203,7 @@ sha512 | 4.60 | 3.47 | 1.00
 _(Geomean)_ | 3.09 | 2.03 | 1.00
 
 ![benchmark runtimes -O2 32-bit]({{ site.url }}/plots/runtime-O2-32.svg)
+
 _Figure 5: Benchmark runtimes -O2 32-bit_
 
 **Runtime 32-bit -O2 (seconds)**
@@ -232,6 +235,7 @@ sha512 | 6.92 | 4.21 | 1.00
 _(Geomean)_ | 3.37 | 2.08 | 1.00
 
 ![benchmark runtimes -Os 32-bit]({{ site.url }}/plots/runtime-Os-32.svg)
+
 _Figure 6: Benchmark runtimes -Os 32-bit_
 
 **Runtime 32-bit -Os (seconds)**
@@ -268,6 +272,7 @@ _(Geomean)_ | 2.90 | 2.22 | 1.00
 Runtimes and ratios for optimisation levels (-O3, -O2 and -Os):
 
 ![optimisation comparison native x86-64, -O3, -O2 and -Os]({{ site.url }}/plots/optimisation-x86-64.svg )
+
 _Figure 7: Optimisation native x86-64, -O3, -O2 and -Os_
 
 **Optimisation native x86-64, -O3, -O2 and -Os**
@@ -285,6 +290,7 @@ sha512 | 0.24 | 0.24 | 0.25 | 1.00 | 0.97 | 0.97
 _(Geomean)_ | 0.34 | 0.35 | 0.42 | 0.98 | 0.81 | 0.82
 
 ![optimisation comparison native x86-32, -O3, -O2 and -Os]({{ site.url }}/plots/optimisation-x86-32.svg )
+
 _Figure 8: Optimisation native x86-32, -O3, -O2 and -Os_
 
 **Optimisation native x86-32, -O3, -O2 and -Os**
@@ -302,6 +308,7 @@ sha512 | 0.63 | 0.57 | 0.79 | 1.11 | 0.80 | 0.72
 _(Geomean)_ | 0.61 | 0.62 | 0.75 | 0.98 | 0.81 | 0.82
 
 ![optimisation comparison rv8 riscv64, -O3, -O2 and -Os]({{ site.url }}/plots/optimisation-riscv64.svg )
+
 _Figure 9: Optimisation rv8 riscv64, -O3, -O2 and -Os_
 
 **Optimisation rv8 riscv64, -O3, -O2 and -Os**
@@ -319,6 +326,7 @@ sha512 | 0.81 | 0.96 | 0.67 | 0.85 | 1.21 | 1.43
 _(Geomean)_ | 0.86 | 0.98 | 1.21 | 0.87 | 0.71 | 0.81
 
 ![optimisation comparison rv8 riscv32, -O3, -O2 and -Os]({{ site.url }}/plots/optimisation-riscv32.svg )
+
 _Figure 10: Optimisation rv8 riscv32, -O3, -O2 and -Os_
 
 **Optimisation rv8 riscv32, -O3, -O2 and -Os**
@@ -341,6 +349,7 @@ _(Geomean)_ | 1.23 | 1.29 | 1.66 | 0.96 | 0.74 | 0.77
 Instructions per second in millions comparing qemu, rv8 and native x86:
 
 ![operation counts -O3 64-bit]({{ site.url }}/plots/mips-O3-64.svg)
+
 _Figure 11: Millions of Instructions Per Second -O3 64-bit_
 
 **Instructions per second (MIPS) qemu, rv8 and native 64-bit -O3**
@@ -358,6 +367,7 @@ sha512 | 2982 | 4556 | 12177
 _(Geomean)_ | 2149 | 3769 | 8232
 
 ![operation counts -O2 64-bit]({{ site.url }}/plots/mips-O2-64.svg)
+
 _Figure 12: Millions of Instructions Per Second -O2 64-bit_
 
 **Instructions per second (MIPS) qemu, rv8 and native 64-bit -O2**
@@ -375,6 +385,7 @@ sha512 | 2860 | 3936 | 12395
 _(Geomean)_ | 2085 | 3436 | 8525
 
 ![operation counts -Os 64-bit]({{ site.url }}/plots/mips-Os-64.svg)
+
 _Figure 13: Millions of Instructions Per Second -Os 64-bit_
 
 **Instructions per second (MIPS) qemu, rv8 and native 64-bit -Os**
@@ -392,6 +403,7 @@ sha512 | 3269 | 5567 | 12206
 _(Geomean)_ | 2008 | 3175 | 8355
 
 ![operation counts -O3 32-bit]({{ site.url }}/plots/mips-O3-32.svg)
+
 _Figure 14: Millions of Instructions Per Second -O3 32-bit_
 
 **Instructions per second (MIPS) qemu, rv8 and native 32-bit -O3**
@@ -409,6 +421,7 @@ sha512 | 2773 | 3671 | 11074
 _(Geomean)_ | 2259 | 3428 | 7186
 
 ![operation counts -O2 32-bit]({{ site.url }}/plots/mips-O2-32.svg)
+
 _Figure 15: Millions of Instructions Per Second -O2 32-bit_
 
 **Instructions per second (MIPS) qemu, rv8 and native 32-bit -O2**
@@ -426,6 +439,7 @@ sha512 | 2477 | 4072 | 11191
 _(Geomean)_ | 2096 | 3387 | 7349
 
 ![operation counts -Os 32-bit]({{ site.url }}/plots/mips-Os-32.svg)
+
 _Figure 16: Millions of Instructions Per Second -Os 32-bit_
 
 **Instructions per second (MIPS) qemu, rv8 and native 32-bit -Os**
@@ -458,6 +472,7 @@ uops-retired  | `UOPS_RETIRED.ANY`          | uops retired
 Total retired micro-op/instruction counts comparing RISC-V and x86:
 
 ![operation counts -O3 64-bit]({{ site.url }}/plots/operations-O3-64.svg)
+
 _Figure 17: Retired operation counts -O3 64-bit_
 
 **Retired Operations (Mops) x86-64 vs riscv64 -O3**
@@ -475,6 +490,7 @@ sha512 | 2947 | 2623 | 3073 | 3264 | 3045 | 3704
 _(Sum)_ | 24925 | 25860 | 25565 | 28114 | 24419 | 28555
 
 ![operation counts -Os 64-bit]({{ site.url }}/plots/operations-O2-64.svg)
+
 _Figure 18: Retired operation counts -O2 64-bit_
 
 **Retired Operations (Mops) x86-64 vs riscv64 -O2**
@@ -492,6 +508,7 @@ sha512 | 3000 | 2709 | 3068 | 3276 | 3064 | 3775
 _(Sum)_ | 25533 | 25728 | 25761 | 28313 | 24887 | 29242
 
 ![operation counts -O2 64-bit]({{ site.url }}/plots/operations-Os-64.svg)
+
 _Figure 19: Retired operation counts -Os 64-bit_
 
 **Retired Operations (Mops) x86-64 vs riscv64 -Os**
@@ -509,6 +526,7 @@ sha512 | 3039 | 2750 | 3155 | 3359 | 3155 | 3730
 _(Sum)_ | 29088 | 31997 | 30216 | 34019 | 29214 | 32073
 
 ![operation counts -O3 32-bit]({{ site.url }}/plots/operations-O3-32.svg)
+
 _Figure 20: Retired operation counts -O3 32-bit_
 
 **Retired Operations (Mops) x86-32 vs riscv32 -O3**
@@ -526,6 +544,7 @@ sha512 | 7010 | 6841 | 7074 | 8110 | 7056 | 8073
 _(Sum)_ | 41954 | 54691 | 48347 | 58102 | 46494 | 37437
 
 ![operation counts -O2 32-bit]({{ site.url }}/plots/operations-O2-32.svg)
+
 _Figure 21: Retired operation counts -O2 32-bit_
 
 **Retired Operations (Mops) x86-32 vs riscv32 -O2**
@@ -543,6 +562,7 @@ sha512 | 6379 | 6511 | 6471 | 7394 | 6472 | 9777
 _(Sum)_ | 41552 | 54503 | 47446 | 57644 | 45868 | 39206
 
 ![operation counts -Os 32-bit]({{ site.url }}/plots/operations-Os-32.svg)
+
 _Figure 22: Retired operation counts -Os 32-bit_
 
 **Retired Operations (Mops) x86-32 vs riscv32 -Os**
@@ -565,6 +585,7 @@ _(Sum)_ | 48526 | 59852 | 53104 | 63597 | 51354 | 38938
 GCC stripped executable sizes comparing aarch64, riscv32, riscv64, x86-32 and x86-64:
 
 ![benchmark filesizes -O3]({{ site.url }}/plots/filesize-O3.svg)
+
 _Figure 23: Compiled file sizes -O3_
 
 **Compiled File Size (bytes) -O3**
@@ -582,6 +603,7 @@ sha512 | 30256 | 37872 | 26144 | 25632 | 22064
 _(Sum)_ | 999616 | 921728 | 852856 | 983172 | 897240
 
 ![benchmark filesizes -O2]({{ site.url }}/plots/filesize-O2.svg)
+
 _Figure 24: Compiled file sizes -O2_
 
 **Compiled File Size (bytes) -O2**
@@ -599,6 +621,7 @@ sha512 | 30256 | 37872 | 26144 | 25632 | 22064
 _(Sum)_ | 954560 | 901248 | 824184 | 938116 | 856280
 
 ![benchmark filesizes -Os]({{ site.url }}/plots/filesize-Os.svg)
+
 _Figure 25: Compiled file sizes -Os_
 
 **Compiled File Size (bytes) -Os**
@@ -621,51 +644,67 @@ _(Sum)_ | 934080 | 888960 | 815992 | 909488 | 827608
 Dynamic register usage results comparing riscv64 -O3, -O2, -Os
 
 ![aes register usage -O3, -O2, -Os]({{ site.url }}/plots/registers-aes-rv64-1.svg)
+
 _Figure 26: Dynamic register usage - aes -O3, -O2, -Os (sorted by frequency)_
 
 ![aes register usage -O3, -O2, -Os]({{ site.url }}/plots/registers-aes-rv64-2.svg)
+
 _Figure 27: Dynamic register usage - aes -O3, -O2, -Os (sorted by alphabetically)_
 
 ![bigint register usage -O3, -O2, -Os]({{ site.url }}/plots/registers-bigint-rv64-1.svg)
+
 _Figure 28: Dynamic register usage - bigint -O3, -O2, -Os (sorted by frequency)_
 
 ![bigint register usage -O3, -O2, -Os]({{ site.url }}/plots/registers-bigint-rv64-2.svg)
+
 _Figure 29: Dynamic register usage - bigint -O3, -O2, -Os (sorted by alphabetically)_
 
 ![dhrystone register usage -O3, -O2, -Os]({{ site.url }}/plots/registers-dhrystone-rv64-1.svg)
+
 _Figure 30: Dynamic register usage - dhrystone -O3, -O2, -Os (sorted by frequency)_
 
 ![dhrystone register usage -O3, -O2, -Os]({{ site.url }}/plots/registers-dhrystone-rv64-2.svg)
+
 _Figure 31: Dynamic register usage - dhrystone -O3, -O2, -Os (sorted by alphabetically)_
 
 ![miniz register usage -O3, -O2, -Os]({{ site.url }}/plots/registers-miniz-rv64-1.svg)
+
 _Figure 32: Dynamic register usage - miniz -O3, -O2, -Os (sorted by frequency)_
 
 ![miniz register usage -O3, -O2, -Os]({{ site.url }}/plots/registers-miniz-rv64-2.svg)
+
 _Figure 33: Dynamic register usage - miniz -O3, -O2, -Os (sorted by alphabetically)_
 
 ![norx register usage -O3, -O2, -Os]({{ site.url }}/plots/registers-norx-rv64-1.svg)
+
 _Figure 34: Dynamic register usage - norx -O3, -O2, -Os (sorted by frequency)_
 
 ![norx register usage -O3, -O2, -Os]({{ site.url }}/plots/registers-norx-rv64-2.svg)
+
 _Figure 35: Dynamic register usage - norx -O3, -O2, -Os (sorted by alphabetically)_
 
 ![primes register usage -O3, -O2, -Os]({{ site.url }}/plots/registers-primes-rv64-1.svg)
+
 _Figure 36: Dynamic register usage - primes -O3, -O2, -Os (sorted by frequency)_
 
 ![primes register usage -O3, -O2, -Os]({{ site.url }}/plots/registers-primes-rv64-2.svg)
+
 _Figure 37: Dynamic register usage - primes -O3, -O2, -Os (sorted by alphabetically)_
 
 ![qsort register usage -O3, -O2, -Os]({{ site.url }}/plots/registers-qsort-rv64-1.svg)
+
 _Figure 38: Dynamic register usage - qsort -O3, -O2, -Os (sorted by frequency)_
 
 ![qsort register usage -O3, -O2, -Os]({{ site.url }}/plots/registers-qsort-rv64-2.svg)
+
 _Figure 39: Dynamic register usage - qsort -O3, -O2, -Os (sorted by alphabetically)_
 
 ![sha512 register usage -O3, -O2, -Os]({{ site.url }}/plots/registers-sha512-rv64-1.svg)
+
 _Figure 40: Dynamic register usage - sha512 -O3, -O2, -Os (sorted by frequency)_
 
 ![sha512 register usage -O3, -O2, -Os]({{ site.url }}/plots/registers-sha512-rv64-2.svg)
+
 _Figure 41: Dynamic register usage - sha512 -O3, -O2, -Os (sorted by alphabetically)_
 
 
@@ -674,49 +713,65 @@ _Figure 41: Dynamic register usage - sha512 -O3, -O2, -Os (sorted by alphabetica
 Dynamic instruction usage results comparing riscv64 -O3, -O2, -Os
 
 ![aes instruction usage -O3, -O2, -Os]({{ site.url }}/plots/instructions-aes-rv64-1.svg)
+
 _Figure 42: Dynamic instruction usage - aes -O3, -O2, -Os (sorted by frequency)_
 
 ![aes instruction usage -O3, -O2, -Os]({{ site.url }}/plots/instructions-aes-rv64-2.svg)
+
 _Figure 43: Dynamic instruction usage - aes -O3, -O2, -Os (sorted by alphabetically)_
 
 ![bigint instruction usage -O3, -O2, -Os]({{ site.url }}/plots/instructions-bigint-rv64-1.svg)
+
 _Figure 44: Dynamic instruction usage - bigint -O3, -O2, -Os (sorted by frequency)_
 
 ![bigint instruction usage -O3, -O2, -Os]({{ site.url }}/plots/instructions-bigint-rv64-2.svg)
+
 _Figure 45: Dynamic instruction usage - bigint -O3, -O2, -Os (sorted by alphabetically)_
 
 ![dhrystone instruction usage -O3, -O2, -Os]({{ site.url }}/plots/instructions-dhrystone-rv64-1.svg)
+
 _Figure 46: Dynamic instruction usage - dhrystone -O3, -O2, -Os (sorted by frequency)_
 
 ![dhrystone instruction usage -O3, -O2, -Os]({{ site.url }}/plots/instructions-dhrystone-rv64-2.svg)
+
 _Figure 47: Dynamic instruction usage - dhrystone -O3, -O2, -Os (sorted by alphabetically)_
 
 ![miniz instruction usage -O3, -O2, -Os]({{ site.url }}/plots/instructions-miniz-rv64-1.svg)
+
 _Figure 48: Dynamic instruction usage - miniz -O3, -O2, -Os (sorted by frequency)_
 
 ![miniz instruction usage -O3, -O2, -Os]({{ site.url }}/plots/instructions-miniz-rv64-2.svg)
+
 _Figure 49: Dynamic instruction usage - miniz -O3, -O2, -Os (sorted by alphabetically)_
 
 ![norx instruction usage -O3, -O2, -Os]({{ site.url }}/plots/instructions-norx-rv64-1.svg)
+
 _Figure 50: Dynamic instruction usage - norx -O3, -O2, -Os (sorted by frequency)_
 
 ![norx instruction usage -O3, -O2, -Os]({{ site.url }}/plots/instructions-norx-rv64-2.svg)
+
 _Figure 51: Dynamic instruction usage - norx -O3, -O2, -Os (sorted by alphabetically)_
 
 ![primes instruction usage -O3, -O2, -Os]({{ site.url }}/plots/instructions-primes-rv64-1.svg)
+
 _Figure 52: Dynamic instruction usage - primes -O3, -O2, -Os (sorted by frequency)_
 
 ![primes instruction usage -O3, -O2, -Os]({{ site.url }}/plots/instructions-primes-rv64-2.svg)
+
 _Figure 53: Dynamic instruction usage - primes -O3, -O2, -Os (sorted by alphabetically)_
 
 ![qsort instruction usage -O3, -O2, -Os]({{ site.url }}/plots/instructions-qsort-rv64-1.svg)
+
 _Figure 54: Dynamic instruction usage - qsort -O3, -O2, -Os (sorted by frequency)_
 
 ![qsort instruction usage -O3, -O2, -Os]({{ site.url }}/plots/instructions-qsort-rv64-2.svg)
+
 _Figure 55: Dynamic instruction usage - qsort -O3, -O2, -Os (sorted by alphabetically)_
 
 ![sha512 instruction usage -O3, -O2, -Os]({{ site.url }}/plots/instructions-sha512-rv64-1.svg)
+
 _Figure 56: Dynamic instruction usage - sha512 -O3, -O2, -Os (sorted by frequency)_
 
 ![sha512 instruction usage -O3, -O2, -Os]({{ site.url }}/plots/instructions-sha512-rv64-2.svg)
+
 _Figure 57: Dynamic instruction usage - sha512 -O3, -O2, -Os (sorted by alphabetically)_

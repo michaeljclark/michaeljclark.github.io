@@ -1,5 +1,3 @@
-<a href="https://rv8.io/"><img style="float: right;" src="/images/rv8.svg"></a>
-
 ## Linux syscalls
 
 The following tables list the syscalls supported by the user-mode
@@ -34,5 +32,3 @@ open            | 1024
 unlink          | 1026
 stat            | 1038
 chown           | 1039
-
-[![rv8]({{ site.url }}/images/rv8.svg)](https://rv8.io/)
