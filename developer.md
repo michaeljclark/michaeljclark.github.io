@@ -1,6 +1,6 @@
 ## rv8 developer
 
-This page contains information on git repositories and the rv8 developer mailing list.
+This page contains information on rv8 git repositories and the rv8 developer mailing list.
 
 ### rv8 git repositories
 
