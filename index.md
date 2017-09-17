@@ -420,7 +420,6 @@ The following benchmark metrics have been plotted and tabulated:
 
 - [Runtimes](#runtimes)
 - [Instructions Per Second](#instructions-per-second)
-- [Retired Micro-ops](#retired-micro-ops)
 
 #### Benchmark details
 
@@ -661,89 +660,6 @@ primes | 2928 | 2355 | 7105
 qsort | 576 | 3528 | 5892
 sha512 | 2901 | 3131 | 8396
 _(Geomean)_ | 2063 | 2702 | 7441
-
-
-#### Retired Micro-ops
-
-The following table describes the measured x86 performance counters:
-
-counter       | x86 event mask              | description
-:------------ | :-------------------------- | :-----------------------------------
-instret       | `INST_RETIRED`              | instructions retired
-uops-executed | `UOPS_EXECUTED.THREAD`      | uops executed
-uops-issued   | `UOPS_ISSUED.ANY`           | uops issued
-uops-slots    | `UOPS_RETIRED.RETIRE_SLOTS` | uop retirement slots used
-uops-retired  | `UOPS_RETIRED.ANY`          | uops retired
-
-Total retired micro-op/instruction counts comparing RISC-V and x86:
-
-![operation counts -O3 64-bit]({{ site.url }}/plots/operations-O3-64.svg)
-_Figure 9: Retired operation counts -O3 64-bit_
-
-**Retired Operations (Mops) x86-64 vs riscv64 -O3**
-
-program | x86-instret | x86-uops-executed | x86-uops-issued | x86-uops-retired | x86-uops-slots | riscv64-instret
-:-- | --: | --: | --: | --: | --: | --:
-aes | 3520 | 3855 | 3455 | 4335 | 3442 | 5205
-bigint | 4033 | 3927 | 4033 | 4355 | 4045 | 4044
-dhrystone | 820 | 1131 | 860 | 1151 | 854 | 1060
-miniz | 4264 | 4151 | 4224 | 4232 | 3832 | 5791
-norx | 2005 | 1970 | 2029 | 2230 | 2002 | 2607
-primes | 3642 | 3151 | 3855 | 3650 | 3653 | 3077
-qsort | 3694 | 5052 | 4036 | 4897 | 3546 | 3067
-sha512 | 2947 | 2623 | 3073 | 3264 | 3045 | 3704
-_(Sum)_ | 24925 | 25860 | 25565 | 28114 | 24419 | 28555
-
-![operation counts -Os 64-bit]({{ site.url }}/plots/operations-Os-64.svg)
-_Figure 10: Retired operation counts -Os 64-bit_
-
-**Retired Operations (Mops) x86-64 vs riscv64 -Os**
-
-program | x86-instret | x86-uops-executed | x86-uops-issued | x86-uops-retired | x86-uops-slots | riscv64-instret
-:-- | --: | --: | --: | --: | --: | --:
-aes | 3737 | 4323 | 3711 | 4789 | 3697 | 5081
-bigint | 4879 | 4617 | 4593 | 4896 | 4595 | 5579
-dhrystone | 3520 | 5401 | 4293 | 5540 | 4257 | 3230
-miniz | 4193 | 4519 | 4251 | 4446 | 3875 | 5928
-norx | 2124 | 2294 | 2177 | 2459 | 2148 | 2775
-primes | 3624 | 3161 | 3793 | 3633 | 3629 | 2734
-qsort | 3972 | 4932 | 4243 | 4897 | 3858 | 3016
-sha512 | 3039 | 2750 | 3155 | 3359 | 3155 | 3730
-_(Sum)_ | 29088 | 31997 | 30216 | 34019 | 29214 | 32073
-
-![operation counts -O3 32-bit]({{ site.url }}/plots/operations-O3-32.svg)
-_Figure 11: Retired operation counts -O3 32-bit_
-
-**Retired Operations (Mops) x86-32 vs riscv32 -O3**
-
-program | x86-instret | x86-uops-executed | x86-uops-issued | x86-uops-retired | x86-uops-slots | riscv32-instret
-:-- | --: | --: | --: | --: | --: | --:
-aes | 4586 | 5246 | 4590 | 5864 | 4573 | 4618
-bigint | 8587 | 9909 | 9219 | 11659 | 9203 | 5418
-dhrystone | 1060 | 3151 | 2651 | 3251 | 2631 | 2210
-miniz | 4389 | 5253 | 4587 | 5024 | 4097 | 4775
-norx | 2369 | 2380 | 2361 | 2683 | 2347 | 2166
-primes | 9591 | 14598 | 11931 | 14999 | 11612 | 7115
-qsort | 4362 | 7313 | 5934 | 6512 | 4975 | 3062
-sha512 | 7010 | 6841 | 7074 | 8110 | 7056 | 8073
-_(Sum)_ | 41954 | 54691 | 48347 | 58102 | 46494 | 37437
-
-![operation counts -Os 32-bit]({{ site.url }}/plots/operations-Os-32.svg)
-_Figure 12: Retired operation counts -Os 32-bit_
-
-**Retired Operations (Mops) x86-32 vs riscv32 -Os**
-
-program | x86-instret | x86-uops-executed | x86-uops-issued | x86-uops-retired | x86-uops-slots | riscv32-instret
-:-- | --: | --: | --: | --: | --: | --:
-aes | 4717 | 5756 | 4775 | 6063 | 4737 | 4446
-bigint | 10033 | 11596 | 11049 | 13471 | 11033 | 6953
-dhrystone | 4901 | 7398 | 5669 | 7591 | 5634 | 3320
-miniz | 5256 | 6571 | 5568 | 6460 | 4983 | 4783
-norx | 2601 | 3120 | 2675 | 3268 | 2641 | 2325
-primes | 9834 | 10948 | 10661 | 12072 | 10429 | 6429
-qsort | 4560 | 7633 | 6052 | 7033 | 5226 | 2886
-sha512 | 6624 | 6830 | 6655 | 7639 | 6671 | 7796
-_(Sum)_ | 48526 | 59852 | 53104 | 63597 | 51354 | 38938
 
 
 ---
