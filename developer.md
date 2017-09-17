@@ -14,7 +14,7 @@ on the rv8 developer mailing list.
 To post a message to all the list members, send email to
 [rv8-dev@lists.anarch128.org](mailto:rv8-dev@lists.anarch128.org)
 
-To subscribe to the rv8-dev mailing list, send an email to
+To subscribe to the rmailing list, send email to
 [rv8-dev-subscribe@lists.anarch128.org](mailto:rv8-dev-subscribe@lists.anarch128.org)
 or visit the list info page:
 
