@@ -5,9 +5,9 @@ on the rv8 developer mailing list.
 
 ### rv8 git repositories
 
-- [github.com/rv8-io/rv8](https://github.com/rv8-io/rv8)
-- [github.com/rv8-io/rv8-bench](https://github.com/rv8-io/rv8-bench)
-- [github.com/rv8-io/musl-riscv-toolchain](https://github.com/rv8-io/musl-riscv-toolchain)
+- git clone [https://github.com/rv8-io/rv8.git](https://github.com/rv8-io/rv8)
+- git clone [https://github.com/rv8-io/rv8-bench.git](https://github.com/rv8-io/rv8-bench)
+- git clone [https://github.com/rv8-io/musl-riscv-toolchain.git](https://github.com/rv8-io/musl-riscv-toolchain)
 
 ### rv8 mailing list
 
