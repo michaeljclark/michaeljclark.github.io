@@ -2,11 +2,13 @@
 
 This page contains information on rv8 git repositories and the rv8 developer mailing list.
 
+
 ### rv8 git repositories
 
 - git clone [https://github.com/rv8-io/rv8.git](https://github.com/rv8-io/rv8)
 - git clone [https://github.com/rv8-io/rv8-bench.git](https://github.com/rv8-io/rv8-bench)
 - git clone [https://github.com/rv8-io/musl-riscv-toolchain.git](https://github.com/rv8-io/musl-riscv-toolchain)
+
 
 ### rv8 mailing list
 
@@ -15,9 +17,11 @@ To post a message to the list members, send email to
 
 To subscribe to the mailing list, send email to
 [rv8-dev-subscribe@lists.anarch128.org](mailto:rv8-dev-subscribe@lists.anarch128.org)
-or visit the list info page:
+
+To visit the mailing list information page follow this link:
 
 - [lists.anarch128.org/mailman/listinfo/rv8-dev](https://lists.anarch128.org/mailman/listinfo/rv8-dev)
+
 
 ### rv8 quick start
 
