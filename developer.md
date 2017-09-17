@@ -1,4 +1,4 @@
-## rv8 developer
+## Developer information
 
 This page contains information on rv8 git repositories and the rv8 developer mailing list.
 
