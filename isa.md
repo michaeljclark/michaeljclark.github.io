@@ -34,12 +34,12 @@ Format | Name | Pseudocode
 <code><sub>ADDI rd,rs1,imm</sub></code> | <sub>Add Immediate</sub> | <sub>rd ← rs1 + sx(imm)</sub>
 <code><sub>SLTI rd,rs1,imm</sub></code> | <sub>Set Less Than Immediate</sub> | <sub>rd ← sx(rs1) < sx(imm)</sub>
 <code><sub>SLTIU rd,rs1,imm</sub></code> | <sub>Set Less Than Immediate Unsigned</sub> | <sub>rd ← ux(rs1) < ux(imm)</sub>
-<code><sub>XORI rd,rs1,imm</sub></code> | <sub>Xor Immediate</sub> | <sub>rd ← ux(rs1) ⊕ sx(imm)</sub>
-<code><sub>ORI rd,rs1,imm</sub></code> | <sub>Or Immediate</sub> | <sub>rd ← ux(rs1) ∨ sx(imm)</sub>
-<code><sub>ANDI rd,rs1,imm</sub></code> | <sub>And Immediate</sub> | <sub>rd ← ux(rs1) ∧ sx(imm)</sub>
-<code><sub>SLLI rd,rs1,imm</sub></code> | <sub>Shift Left Logical Immediate</sub> | <sub>rd ← ux(rs1) « sx(imm)</sub>
-<code><sub>SRLI rd,rs1,imm</sub></code> | <sub>Shift Right Logical Immediate</sub> | <sub>rd ← ux(rs1) » sx(imm)</sub>
-<code><sub>SRAI rd,rs1,imm</sub></code> | <sub>Shift Right Arithmetic Immediate</sub> | <sub>rd ← sx(rs1) » sx(imm)</sub>
+<code><sub>XORI rd,rs1,imm</sub></code> | <sub>Xor Immediate</sub> | <sub>rd ← ux(rs1) ⊕ ux(imm)</sub>
+<code><sub>ORI rd,rs1,imm</sub></code> | <sub>Or Immediate</sub> | <sub>rd ← ux(rs1) ∨ ux(imm)</sub>
+<code><sub>ANDI rd,rs1,imm</sub></code> | <sub>And Immediate</sub> | <sub>rd ← ux(rs1) ∧ ux(imm)</sub>
+<code><sub>SLLI rd,rs1,imm</sub></code> | <sub>Shift Left Logical Immediate</sub> | <sub>rd ← ux(rs1) « ux(imm)</sub>
+<code><sub>SRLI rd,rs1,imm</sub></code> | <sub>Shift Right Logical Immediate</sub> | <sub>rd ← ux(rs1) » ux(imm)</sub>
+<code><sub>SRAI rd,rs1,imm</sub></code> | <sub>Shift Right Arithmetic Immediate</sub> | <sub>rd ← sx(rs1) » ux(imm)</sub>
 <code><sub>ADD rd,rs1,rs2</sub></code> | <sub>Add</sub> | <sub>rd ← sx(rs1) + sx(rs2)</sub>
 <code><sub>SUB rd,rs1,rs2</sub></code> | <sub>Subtract</sub> | <sub>rd ← sx(rs1) - sx(rs2)</sub>
 <code><sub>SLL rd,rs1,rs2</sub></code> | <sub>Shift Left Logical</sub> | <sub>rd ← ux(rs1) « rs2</sub>
@@ -48,8 +48,8 @@ Format | Name | Pseudocode
 <code><sub>XOR rd,rs1,rs2</sub></code> | <sub>Xor</sub> | <sub>rd ← ux(rs1) ⊕ ux(rs2)</sub>
 <code><sub>SRL rd,rs1,rs2</sub></code> | <sub>Shift Right Logical</sub> | <sub>rd ← ux(rs1) » rs2</sub>
 <code><sub>SRA rd,rs1,rs2</sub></code> | <sub>Shift Right Arithmetic</sub> | <sub>rd ← sx(rs1) » rs2</sub>
-<code><sub>OR rd,rs1,rs2</sub></code> | <sub>Or</sub> | <sub>rd ← sx(rs1) ∨ sx(rs2)</sub>
-<code><sub>AND rd,rs1,rs2</sub></code> | <sub>And</sub> | <sub>rd ← sx(rs1) ∧ sx(rs2)</sub>
+<code><sub>OR rd,rs1,rs2</sub></code> | <sub>Or</sub> | <sub>rd ← ux(rs1) ∨ ux(rs2)</sub>
+<code><sub>AND rd,rs1,rs2</sub></code> | <sub>And</sub> | <sub>rd ← ux(rs1) ∧ ux(rs2)</sub>
 <code><sub>FENCE pred,succ</sub></code> | <sub>Fence</sub> | <sub></sub>
 <code><sub>FENCE.I </sub></code> | <sub>Fence Instruction</sub> | <sub></sub>
 
