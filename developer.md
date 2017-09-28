@@ -68,3 +68,22 @@ $ make test-sim
 $ make test-sys
 $ rv-jit build/riscv64-unknown-elf/bin/test-dhrystone
 ```
+
+### musl libc RISC-V toolchain
+
+_Building musl-riscv-toolchain_
+
+The `riscv64-linux-musl` musl libc toolchain is required to compile
+and run the benchmarks in the [rv8-bench](/bench) repository.
+
+```
+$ git clone https://github.com/rv8-io/musl-riscv-toolchain.git
+$ cd musl-riscv-toolchain
+$ sh bootstrap.sh rv64
+$ export PATH=$PATH:/opt/riscv/musl-riscv-toolchain-7.2.0-5/bin
+$ riscv64-linux-musl-gcc --version
+riscv64-linux-musl-gcc (GCC) 7.2.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. 
+```
