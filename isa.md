@@ -7,6 +7,17 @@ information on programming in assembly language for RISC-V.
 For detailed information on the instruction set refer to the
 [RISC-V ISA Specification](http://riscv.org/specifications/).
 
+The following notation is used in the psuedocode:
+
+Notation          | Description
+:--               | :---
+**ux(reg)**       | unsigned XLEN-bit value (32-bit on RV32, 64-bit on RV64)
+**sx(reg)**       | signed XLEN-bit value (32-bit on RV32, 64-bit on RV64)
+**uN(reg)**       | zero extended N-bit value
+**sN(reg)**       | sign extended N-bit value
+**uN[reg + imm]** | unsigned N-bit memory reference
+**sN[reg + imm]** | signed N-bit memory reference
+
 The following tables list the RISC-V RV32IM and RV64IM instructions.
 
 #### RV32I Base Integer Instruction Set
