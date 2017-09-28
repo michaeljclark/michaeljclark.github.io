@@ -71,6 +71,12 @@ $ rv-jit build/riscv64-unknown-elf/bin/test-dhrystone
 
 ### musl libc RISC-V toolchain
 
+The `musl-riscv-toolchain` project contains a script that downloads
+and builds a RISC-V cross-compiler configured to link again the linux
+musl C library:
+
+- git clone [https://github.com/rv8-io/musl-riscv-toolchain.git](https://github.com/rv8-io/musl-riscv-toolchain)
+
 _Building musl-riscv-toolchain_
 
 The `riscv64-linux-musl` musl libc toolchain is required to compile
