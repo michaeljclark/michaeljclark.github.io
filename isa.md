@@ -18,8 +18,8 @@ Notation | Description
 <sub><strong>offset</strong></sub>        | <sub>immediate program counter relative offset</sub>
 <sub><strong>ux(reg)</strong></sub>       | <sub>unsigned XLEN-bit integer (32-bit on RV32, 64-bit on RV64)</sub>
 <sub><strong>sx(reg)</strong></sub>       | <sub>signed XLEN-bit integer (32-bit on RV32, 64-bit on RV64)</sub>
-<sub><strong>uN(reg)</strong></sub>       | <sub>zero extended N-bit integer</sub>
-<sub><strong>sN(reg)</strong></sub>       | <sub>sign extended N-bit integer</sub>
+<sub><strong>uN(reg)</strong></sub>       | <sub>zero extended N-bit integer register value</sub>
+<sub><strong>sN(reg)</strong></sub>       | <sub>sign extended N-bit integer register value</sub>
 <sub><strong>uN[reg + imm]</strong></sub> | <sub>unsigned N-bit memory reference</sub>
 <sub><strong>sN[reg + imm]</strong></sub> | <sub>signed N-bit memory reference</sub>
 
