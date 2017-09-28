@@ -14,6 +14,7 @@ Notation | Description
 <sub><strong>pc</strong></sub>            | <sub>program counter</sub>
 <sub><strong>rd</strong></sub>            | <sub>integer register destination</sub>
 <sub><strong>rsN</strong></sub>           | <sub>integer register source N</sub>
+<sub><strong>imm</strong></sub>           | <sub>immediate value</sub>
 <sub><strong>ux(reg)</strong></sub>       | <sub>unsigned XLEN-bit integer (32-bit on RV32, 64-bit on RV64)</sub>
 <sub><strong>sx(reg)</strong></sub>       | <sub>signed XLEN-bit integer (32-bit on RV32, 64-bit on RV64)</sub>
 <sub><strong>uN(reg)</strong></sub>       | <sub>zero extended N-bit integer</sub>
