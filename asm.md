@@ -534,7 +534,7 @@ fail_msg:
         .string "FAIL\n"
 ```
 
-### [References](#references)
+### References
 
 - [RISC-V Foundation](http://riscv.org/)
 - [RISC-V ISA Specification](http://riscv.org/specifications/)

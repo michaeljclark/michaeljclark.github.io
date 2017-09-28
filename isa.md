@@ -96,7 +96,7 @@ Format | Name | Pseudocode
 <code><sub>REMW rd,rs1,rs2</sub></code> | <sub>Remainder Signed Word</sub> | <sub>rd ← s32(rs1) mod s32(rs2)</sub>
 <code><sub>REMUW rd,rs1,rs2</sub></code> | <sub>Remainder Unsigned Word</sub> | <sub>rd ← u32(rs1) mod u32(rs2)</sub>
 
-### [References](#references)
+### References
 
 - [RISC-V Foundation](http://riscv.org/)
 - [RISC-V ISA Specification](http://riscv.org/specifications/)
