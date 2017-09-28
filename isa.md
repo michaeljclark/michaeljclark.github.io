@@ -11,12 +11,13 @@ The following notation is used in the psuedocode:
 
 Notation          | Description
 :--               | :---
-**rd**            | register destination
-**rsN**           | register source N
-**ux(reg)**       | unsigned XLEN-bit value (32-bit on RV32, 64-bit on RV64)
-**sx(reg)**       | signed XLEN-bit value (32-bit on RV32, 64-bit on RV64)
-**uN(reg)**       | zero extended N-bit value
-**sN(reg)**       | sign extended N-bit value
+**pc**            | program counter
+**rd**            | integer register destination
+**rsN**           | integer register source N
+**ux(reg)**       | unsigned XLEN-bit integer (32-bit on RV32, 64-bit on RV64)
+**sx(reg)**       | signed XLEN-bit integer (32-bit on RV32, 64-bit on RV64)
+**uN(reg)**       | zero extended N-bit integer
+**sN(reg)**       | sign extended N-bit integer
 **uN[reg + imm]** | unsigned N-bit memory reference
 **sN[reg + imm]** | signed N-bit memory reference
 
