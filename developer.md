@@ -5,9 +5,9 @@ This page contains information on rv8 git repositories and the rv8 developer mai
 
 ### rv8 git repositories
 
-- git clone [https://github.com/rv8-io/rv8.git](https://github.com/rv8-io/rv8)
-- git clone [https://github.com/rv8-io/rv8-bench.git](https://github.com/rv8-io/rv8-bench)
-- git clone [https://github.com/rv8-io/musl-riscv-toolchain.git](https://github.com/rv8-io/musl-riscv-toolchain)
+- git clone [https://github.com/rv8-io/rv8.git](https://github.com/rv8-io/rv8) _(simulator)_
+- git clone [https://github.com/rv8-io/rv8-bench.git](https://github.com/rv8-io/rv8-bench) _(benchmark suite)_
+- git clone [https://github.com/rv8-io/musl-riscv-toolchain.git](https://github.com/rv8-io/musl-riscv-toolchain) _(benchmark toolchain)_
 
 
 ### rv8 mailing list
