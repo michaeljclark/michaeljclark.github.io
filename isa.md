@@ -15,6 +15,7 @@ Notation | Description
 <sub><strong>rd</strong></sub>            | <sub>integer register destination</sub>
 <sub><strong>rsN</strong></sub>           | <sub>integer register source N</sub>
 <sub><strong>imm</strong></sub>           | <sub>immediate value</sub>
+<sub><strong>offset</strong></sub>        | <sub>immediate program counter relative offset</sub>
 <sub><strong>ux(reg)</strong></sub>       | <sub>unsigned XLEN-bit integer (32-bit on RV32, 64-bit on RV64)</sub>
 <sub><strong>sx(reg)</strong></sub>       | <sub>signed XLEN-bit integer (32-bit on RV32, 64-bit on RV64)</sub>
 <sub><strong>uN(reg)</strong></sub>       | <sub>zero extended N-bit integer</sub>
@@ -29,23 +30,23 @@ The following tables list the RISC-V RV32IM and RV64IM instructions.
 Format | Name | Pseudocode
 :-- | :-- | :--
 <code><sub>LUI rd,imm</sub></code> | <sub>Load Upper Immediate</sub> | <sub>rd ← imm</sub>
-<code><sub>AUIPC rd,offset</sub></code> | <sub>Add Upper Immediate to PC</sub> | <sub>rd ← pc + imm</sub>
-<code><sub>JAL rd,offset</sub></code> | <sub>Jump and Link</sub> | <sub>rd ← pc + length(inst)<br/>pc ← pc + imm</sub>
-<code><sub>JALR rd,rs1,offset</sub></code> | <sub>Jump and Link Register</sub> | <sub>rd ← pc + length(inst)<br/>pc ← (rs1 + imm) ∧ -2</sub>
-<code><sub>BEQ rs1,rs2,offset</sub></code> | <sub>Branch Equal</sub> | <sub>if rs1 = rs2 then pc ← pc + imm</sub>
-<code><sub>BNE rs1,rs2,offset</sub></code> | <sub>Branch Not Equal</sub> | <sub>if rs1 ≠ rs2 then pc ← pc + imm</sub>
-<code><sub>BLT rs1,rs2,offset</sub></code> | <sub>Branch Less Than</sub> | <sub>if rs1 < rs2 then pc ← pc + imm</sub>
-<code><sub>BGE rs1,rs2,offset</sub></code> | <sub>Branch Greater than Equal</sub> | <sub>if rs1 ≥ rs2 then pc ← pc + imm</sub>
-<code><sub>BLTU rs1,rs2,offset</sub></code> | <sub>Branch Less Than Unsigned</sub> | <sub>if rs1 < rs2 then pc ← pc + imm</sub>
-<code><sub>BGEU rs1,rs2,offset</sub></code> | <sub>Branch Greater than Equal Unsigned</sub> | <sub>if rs1 ≥ rs2 then pc ← pc + imm</sub>
-<code><sub>LB rd,offset(rs1)</sub></code> | <sub>Load Byte</sub> | <sub>rd ← s8[rs1 + imm]</sub>
-<code><sub>LH rd,offset(rs1)</sub></code> | <sub>Load Half</sub> | <sub>rd ← s16[rs1 + imm]</sub>
-<code><sub>LW rd,offset(rs1)</sub></code> | <sub>Load Word</sub> | <sub>rd ← s32[rs1 + imm]</sub>
-<code><sub>LBU rd,offset(rs1)</sub></code> | <sub>Load Byte Unsigned</sub> | <sub>rd ← u8[rs1 + imm]</sub>
-<code><sub>LHU rd,offset(rs1)</sub></code> | <sub>Load Half Unsigned</sub> | <sub>rd ← u16[rs1 + imm]</sub>
-<code><sub>SB rs2,offset(rs1)</sub></code> | <sub>Store Byte</sub> | <sub>u8[rs1 + imm] ← rs2</sub>
-<code><sub>SH rs2,offset(rs1)</sub></code> | <sub>Store Half</sub> | <sub>u16[rs1 + imm] ← rs2</sub>
-<code><sub>SW rs2,offset(rs1)</sub></code> | <sub>Store Word</sub> | <sub>u32[rs1 + imm] ← rs2</sub>
+<code><sub>AUIPC rd,offset</sub></code> | <sub>Add Upper Immediate to PC</sub> | <sub>rd ← pc + offset</sub>
+<code><sub>JAL rd,offset</sub></code> | <sub>Jump and Link</sub> | <sub>rd ← pc + length(inst)<br/>pc ← pc + offset</sub>
+<code><sub>JALR rd,rs1,offset</sub></code> | <sub>Jump and Link Register</sub> | <sub>rd ← pc + length(inst)<br/>pc ← (rs1 + offset) ∧ -2</sub>
+<code><sub>BEQ rs1,rs2,offset</sub></code> | <sub>Branch Equal</sub> | <sub>if rs1 = rs2 then pc ← pc + offset</sub>
+<code><sub>BNE rs1,rs2,offset</sub></code> | <sub>Branch Not Equal</sub> | <sub>if rs1 ≠ rs2 then pc ← pc + offset</sub>
+<code><sub>BLT rs1,rs2,offset</sub></code> | <sub>Branch Less Than</sub> | <sub>if rs1 < rs2 then pc ← pc + offset</sub>
+<code><sub>BGE rs1,rs2,offset</sub></code> | <sub>Branch Greater than Equal</sub> | <sub>if rs1 ≥ rs2 then pc ← pc + offset</sub>
+<code><sub>BLTU rs1,rs2,offset</sub></code> | <sub>Branch Less Than Unsigned</sub> | <sub>if rs1 < rs2 then pc ← pc + offset</sub>
+<code><sub>BGEU rs1,rs2,offset</sub></code> | <sub>Branch Greater than Equal Unsigned</sub> | <sub>if rs1 ≥ rs2 then pc ← pc + offset</sub>
+<code><sub>LB rd,offset(rs1)</sub></code> | <sub>Load Byte</sub> | <sub>rd ← s8[rs1 + offset]</sub>
+<code><sub>LH rd,offset(rs1)</sub></code> | <sub>Load Half</sub> | <sub>rd ← s16[rs1 + offset]</sub>
+<code><sub>LW rd,offset(rs1)</sub></code> | <sub>Load Word</sub> | <sub>rd ← s32[rs1 + offset]</sub>
+<code><sub>LBU rd,offset(rs1)</sub></code> | <sub>Load Byte Unsigned</sub> | <sub>rd ← u8[rs1 + offset]</sub>
+<code><sub>LHU rd,offset(rs1)</sub></code> | <sub>Load Half Unsigned</sub> | <sub>rd ← u16[rs1 + offset]</sub>
+<code><sub>SB rs2,offset(rs1)</sub></code> | <sub>Store Byte</sub> | <sub>u8[rs1 + offset] ← rs2</sub>
+<code><sub>SH rs2,offset(rs1)</sub></code> | <sub>Store Half</sub> | <sub>u16[rs1 + offset] ← rs2</sub>
+<code><sub>SW rs2,offset(rs1)</sub></code> | <sub>Store Word</sub> | <sub>u32[rs1 + offset] ← rs2</sub>
 <code><sub>ADDI rd,rs1,imm</sub></code> | <sub>Add Immediate</sub> | <sub>rd ← rs1 + sx(imm)</sub>
 <code><sub>SLTI rd,rs1,imm</sub></code> | <sub>Set Less Than Immediate</sub> | <sub>rd ← sx(rs1) < sx(imm)</sub>
 <code><sub>SLTIU rd,rs1,imm</sub></code> | <sub>Set Less Than Immediate Unsigned</sub> | <sub>rd ← ux(rs1) < ux(imm)</sub>
@@ -72,9 +73,9 @@ Format | Name | Pseudocode
 
 Format | Name | Pseudocode
 :-- | :-- | :--
-<code><sub>LWU rd,offset(rs1)</sub></code> | <sub>Load Word Unsigned</sub> | <sub>rd ← u32[rs1 + imm]</sub>
-<code><sub>LD rd,offset(rs1)</sub></code> | <sub>Load Double</sub> | <sub>rd ← u64[rs1 + imm]</sub>
-<code><sub>SD rs2,offset(rs1)</sub></code> | <sub>Store Double</sub> | <sub>u64[rs1 + imm] ← rs2</sub>
+<code><sub>LWU rd,offset(rs1)</sub></code> | <sub>Load Word Unsigned</sub> | <sub>rd ← u32[rs1 + offset]</sub>
+<code><sub>LD rd,offset(rs1)</sub></code> | <sub>Load Double</sub> | <sub>rd ← u64[rs1 + offset]</sub>
+<code><sub>SD rs2,offset(rs1)</sub></code> | <sub>Store Double</sub> | <sub>u64[rs1 + offset] ← rs2</sub>
 <code><sub>SLLI rd,rs1,imm</sub></code> | <sub>Shift Left Logical Immediate</sub> | <sub>rd ← ux(rs1) « sx(imm)</sub>
 <code><sub>SRLI rd,rs1,imm</sub></code> | <sub>Shift Right Logical Immediate</sub> | <sub>rd ← ux(rs1) » sx(imm)</sub>
 <code><sub>SRAI rd,rs1,imm</sub></code> | <sub>Shift Right Arithmetic Immediate</sub> | <sub>rd ← sx(rs1) » sx(imm)</sub>
