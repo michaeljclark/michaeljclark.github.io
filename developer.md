@@ -12,11 +12,13 @@ This page contains information on rv8 git repositories and the rv8 developer mai
 
 ### rv8 mailing list
 
-To post a message to the list members, send email to
-[rv8-dev@lists.anarch128.org](mailto:rv8-dev@lists.anarch128.org)
+To post a message to the list members, send email to:
 
-To subscribe to the mailing list, send email to
-[rv8-dev-subscribe@lists.anarch128.org](mailto:rv8-dev-subscribe@lists.anarch128.org)
+- [rv8-dev@lists.anarch128.org](mailto:rv8-dev@lists.anarch128.org)
+
+To subscribe to the mailing list, send email to:
+
+- [rv8-dev-subscribe@lists.anarch128.org](mailto:rv8-dev-subscribe@lists.anarch128.org)
 
 To visit the mailing list information page follow this link:
 
