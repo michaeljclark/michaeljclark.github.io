@@ -82,29 +82,29 @@ _Figure 1: Benchmark runtimes -O3 64-bit_
 
 program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | native-x86-64
 :-- | --: | --: | --: | --:
-aes | 1.31 | 2.16 | 1.53 | 0.32
+aes | 1.31 | 2.16 | 1.49 | 0.32
 bigint | 1.38 | 1.08 | 0.71 | 0.38
 dhrystone | 0.98 | 0.57 | 0.20 | 0.10
-miniz | 2.66 | 2.21 | 1.60 | 0.77
-norx | 0.60 | 1.17 | 1.20 | 0.22
-primes | 2.09 | 1.26 | 0.70 | 0.60
-qsort | 7.38 | 4.76 | 1.22 | 0.64
+miniz | 2.66 | 2.21 | 1.53 | 0.77
+norx | 0.60 | 1.17 | 0.99 | 0.22
+primes | 2.09 | 1.26 | 0.65 | 0.60
+qsort | 7.38 | 4.76 | 1.21 | 0.64
 sha512 | 0.64 | 1.24 | 0.81 | 0.24
-_(Sum)_ | 17.04 | 14.45 | 7.97 | 3.27
+_(Sum)_ | 17.04 | 14.45 | 7.59 | 3.27
 
 **Performance Ratio 64-bit -O3 (smaller is better)**
 
 program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | native-x86-64
 :-- | --: | --: | --: | --:
-aes | 4.12 | 6.76 | 4.81 | 1.00
+aes | 4.12 | 6.76 | 4.68 | 1.00
 bigint | 3.62 | 2.83 | 1.85 | 1.00
-dhrystone | 9.96 | 5.87 | 2.05 | 1.00
-miniz | 3.46 | 2.86 | 2.07 | 1.00
-norx | 2.73 | 5.33 | 5.47 | 1.00
-primes | 3.49 | 2.11 | 1.17 | 1.00
-qsort | 11.55 | 7.46 | 1.91 | 1.00
+dhrystone | 9.96 | 5.87 | 2.03 | 1.00
+miniz | 3.46 | 2.86 | 1.99 | 1.00
+norx | 2.73 | 5.33 | 4.51 | 1.00
+primes | 3.49 | 2.11 | 1.09 | 1.00
+qsort | 11.55 | 7.46 | 1.90 | 1.00
 sha512 | 2.66 | 5.13 | 3.36 | 1.00
-_(Geomean)_ | 4.44 | 4.39 | 2.51 | 1.00
+_(Geomean)_ | 4.44 | 4.39 | 2.40 | 1.00
 
 ![benchmark runtimes -O2 64-bit]({{ site.url }}/plots/runtime-O2-64.svg)
 
@@ -114,29 +114,29 @@ _Figure 2: Benchmark runtimes -O2 64-bit_
 
 program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | native-x86-64
 :-- | --: | --: | --: | --:
-aes | 1.32 | 2.18 | 1.53 | 0.32
+aes | 1.32 | 2.18 | 1.49 | 0.32
 bigint | 1.34 | 1.03 | 1.44 | 0.38
-dhrystone | 1.77 | 1.06 | 0.24 | 0.12
-miniz | 2.72 | 2.22 | 1.61 | 0.77
-norx | 0.66 | 1.16 | 1.29 | 0.22
-primes | 2.11 | 1.25 | 0.70 | 0.59
-qsort | 7.35 | 4.74 | 1.20 | 0.62
+dhrystone | 1.77 | 1.06 | 0.23 | 0.12
+miniz | 2.72 | 2.22 | 1.52 | 0.77
+norx | 0.66 | 1.16 | 1.08 | 0.22
+primes | 2.11 | 1.25 | 0.66 | 0.59
+qsort | 7.35 | 4.74 | 1.19 | 0.62
 sha512 | 0.68 | 1.32 | 0.96 | 0.24
-_(Sum)_ | 17.95 | 14.96 | 8.97 | 3.26
+_(Sum)_ | 17.95 | 14.96 | 8.57 | 3.26
 
 **Performance Ratio 64-bit -O2 (smaller is better)**
 
 program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | native-x86-64
 :-- | --: | --: | --: | --:
-aes | 4.13 | 6.84 | 4.81 | 1.00
-bigint | 3.51 | 2.70 | 3.77 | 1.00
-dhrystone | 14.73 | 8.81 | 2.01 | 1.00
-miniz | 3.52 | 2.87 | 2.08 | 1.00
-norx | 2.94 | 5.20 | 5.75 | 1.00
-primes | 3.58 | 2.13 | 1.19 | 1.00
-qsort | 11.79 | 7.60 | 1.92 | 1.00
+aes | 4.13 | 6.84 | 4.68 | 1.00
+bigint | 3.51 | 2.70 | 3.76 | 1.00
+dhrystone | 14.73 | 8.81 | 1.95 | 1.00
+miniz | 3.52 | 2.87 | 1.96 | 1.00
+norx | 2.94 | 5.20 | 4.81 | 1.00
+primes | 3.58 | 2.13 | 1.12 | 1.00
+qsort | 11.79 | 7.60 | 1.91 | 1.00
 sha512 | 2.80 | 5.45 | 3.96 | 1.00
-_(Geomean)_ | 4.75 | 4.64 | 2.82 | 1.00
+_(Geomean)_ | 4.75 | 4.64 | 2.69 | 1.00
 
 ![benchmark runtimes -Os 64-bit]({{ site.url }}/plots/runtime-Os-64.svg)
 
@@ -146,29 +146,29 @@ _Figure 3: Benchmark runtimes -Os 64-bit_
 
 program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | native-x86-64
 :-- | --: | --: | --: | --:
-aes | 1.22 | 1.91 | 1.31 | 0.37
+aes | 1.22 | 1.91 | 1.26 | 0.37
 bigint | 1.60 | 1.40 | 2.85 | 0.38
-dhrystone | 5.42 | 2.59 | 1.31 | 0.39
+dhrystone | 5.42 | 2.59 | 1.28 | 0.39
 miniz | 2.74 | 2.24 | 1.73 | 0.83
-norx | 1.58 | 1.53 | 1.14 | 0.24
-primes | 1.97 | 1.23 | 0.77 | 0.59
+norx | 1.58 | 1.53 | 0.96 | 0.24
+primes | 1.97 | 1.23 | 0.74 | 0.59
 qsort | 7.99 | 5.27 | 0.90 | 0.66
 sha512 | 0.64 | 1.14 | 0.67 | 0.25
-_(Sum)_ | 23.16 | 17.31 | 10.68 | 3.71
+_(Sum)_ | 23.16 | 17.31 | 10.39 | 3.71
 
 **Performance Ratio 64-bit -Os (smaller is better)**
 
 program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | native-x86-64
 :-- | --: | --: | --: | --:
-aes | 3.29 | 5.16 | 3.53 | 1.00
+aes | 3.29 | 5.16 | 3.39 | 1.00
 bigint | 4.22 | 3.70 | 7.53 | 1.00
-dhrystone | 13.97 | 6.66 | 3.38 | 1.00
-miniz | 3.30 | 2.70 | 2.08 | 1.00
-norx | 6.59 | 6.36 | 4.74 | 1.00
-primes | 3.31 | 2.07 | 1.29 | 1.00
-qsort | 12.20 | 8.05 | 1.38 | 1.00
-sha512 | 2.56 | 4.58 | 2.69 | 1.00
-_(Geomean)_ | 5.07 | 4.49 | 2.84 | 1.00
+dhrystone | 13.97 | 6.66 | 3.30 | 1.00
+miniz | 3.30 | 2.70 | 2.09 | 1.00
+norx | 6.59 | 6.36 | 4.00 | 1.00
+primes | 3.31 | 2.07 | 1.25 | 1.00
+qsort | 12.20 | 8.05 | 1.37 | 1.00
+sha512 | 2.56 | 4.58 | 2.68 | 1.00
+_(Geomean)_ | 5.07 | 4.49 | 2.75 | 1.00
 
 ![benchmark runtimes -O3 32-bit]({{ site.url }}/plots/runtime-O3-32.svg)
 
@@ -315,15 +315,15 @@ _Figure 9: Optimisation rv8 riscv64, -O3, -O2 and -Os_
 
 program | rv8-rv64-O3 | rv8-rv64-O2 | rv8-rv64-Os | rv8-rv64-O3:O2 | rv8-rv64-O3:Os | rv8-rv64-O2:Os
 :-- | --: | --: | --: | --: | --: | --:
-aes | 1.53 | 1.53 | 1.31 | 1.00 | 1.17 | 1.17
+aes | 1.49 | 1.49 | 1.26 | 1.00 | 1.19 | 1.19
 bigint | 0.71 | 1.44 | 2.85 | 0.49 | 0.25 | 0.50
-dhrystone | 0.20 | 0.24 | 1.31 | 0.83 | 0.15 | 0.18
-miniz | 1.60 | 1.61 | 1.73 | 1.00 | 0.92 | 0.93
-norx | 1.20 | 1.29 | 1.14 | 0.93 | 1.06 | 1.13
-primes | 0.70 | 0.70 | 0.77 | 0.99 | 0.91 | 0.91
-qsort | 1.22 | 1.20 | 0.90 | 1.02 | 1.35 | 1.33
-sha512 | 0.81 | 0.96 | 0.67 | 0.85 | 1.21 | 1.43
-_(Geomean)_ | 0.86 | 0.98 | 1.21 | 0.87 | 0.71 | 0.81
+dhrystone | 0.20 | 0.23 | 1.28 | 0.85 | 0.16 | 0.18
+miniz | 1.53 | 1.52 | 1.73 | 1.01 | 0.88 | 0.87
+norx | 0.99 | 1.08 | 0.96 | 0.92 | 1.03 | 1.12
+primes | 0.65 | 0.66 | 0.74 | 1.00 | 0.88 | 0.88
+qsort | 1.21 | 1.19 | 0.90 | 1.02 | 1.35 | 1.33
+sha512 | 0.81 | 0.96 | 0.67 | 0.85 | 1.22 | 1.44
+_(Geomean)_ | 0.82 | 0.94 | 1.17 | 0.87 | 0.71 | 0.80
 
 ![optimisation comparison rv8 riscv32, -O3, -O2 and -Os]({{ site.url }}/plots/optimisation-riscv32.svg )
 
@@ -356,15 +356,15 @@ _Figure 11: Millions of Instructions Per Second -O3 64-bit_
 
 program | qemu-riscv64-mips | rv8-riscv64-mips | native-x86-mips
 :-- | --: | --: | --:
-aes | 2414 | 3395 | 11035
-bigint | 3738 | 5712 | 10557
-dhrystone | 1843 | 5274 | 8369
-miniz | 2625 | 3622 | 5530
-norx | 2223 | 2167 | 9112
-primes | 2438 | 4421 | 6100
-qsort | 644 | 2518 | 5780
-sha512 | 2982 | 4556 | 12177
-_(Geomean)_ | 2149 | 3769 | 8232
+aes | 2414 | 3489 | 11035
+bigint | 3738 | 5720 | 10557
+dhrystone | 1843 | 5327 | 8369
+miniz | 2625 | 3778 | 5530
+norx | 2223 | 2628 | 9112
+primes | 2438 | 4712 | 6100
+qsort | 644 | 2527 | 5780
+sha512 | 2982 | 4550 | 12177
+_(Geomean)_ | 2149 | 3932 | 8232
 
 ![operation counts -O2 64-bit]({{ site.url }}/plots/mips-O2-64.svg)
 
@@ -374,15 +374,15 @@ _Figure 12: Millions of Instructions Per Second -O2 64-bit_
 
 program | qemu-riscv64-mips | rv8-riscv64-mips | native-x86-mips
 :-- | --: | --: | --:
-aes | 2384 | 3393 | 10984
-bigint | 4155 | 2983 | 10584
-dhrystone | 1353 | 5934 | 9930
-miniz | 2617 | 3618 | 5468
-norx | 2309 | 2088 | 9342
-primes | 2461 | 4383 | 6238
-qsort | 627 | 2481 | 6118
+aes | 2384 | 3489 | 10984
+bigint | 4155 | 2985 | 10584
+dhrystone | 1353 | 6111 | 9930
+miniz | 2617 | 3833 | 5468
+norx | 2309 | 2493 | 9342
+primes | 2461 | 4690 | 6238
+qsort | 627 | 2491 | 6118
 sha512 | 2860 | 3936 | 12395
-_(Geomean)_ | 2085 | 3436 | 8525
+_(Geomean)_ | 2085 | 3596 | 8525
 
 ![operation counts -Os 64-bit]({{ site.url }}/plots/mips-Os-64.svg)
 
@@ -392,15 +392,15 @@ _Figure 13: Millions of Instructions Per Second -Os 64-bit_
 
 program | qemu-riscv64-mips | rv8-riscv64-mips | native-x86-mips
 :-- | --: | --: | --:
-aes | 2655 | 3879 | 10072
-bigint | 3973 | 1955 | 12873
-dhrystone | 1250 | 2462 | 9073
-miniz | 2650 | 3427 | 5052
-norx | 1817 | 2439 | 8852
-primes | 2226 | 3555 | 6101
-qsort | 572 | 3340 | 6063
-sha512 | 3269 | 5567 | 12206
-_(Geomean)_ | 2008 | 3175 | 8355
+aes | 2655 | 4046 | 10072
+bigint | 3973 | 1956 | 12873
+dhrystone | 1250 | 2525 | 9073
+miniz | 2650 | 3419 | 5052
+norx | 1817 | 2888 | 8852
+primes | 2226 | 3675 | 6101
+qsort | 572 | 3355 | 6063
+sha512 | 3269 | 5583 | 12206
+_(Geomean)_ | 2008 | 3286 | 8355
 
 ![operation counts -O3 32-bit]({{ site.url }}/plots/mips-O3-32.svg)
 
