@@ -400,7 +400,7 @@ The following section contains benchmark runtime and instructions per
 second results comparing the QEMU and rv8 JIT engines against native x86.
 This section also contains runtime neutral results comparing total
 retired RISC-V instructions to x86 micro-ops. The benchmark programs are
-compiled for aarch64, riscv64, riscv32, x86-64 and x86-32. See the
+compiled for aarch64, arm32, riscv64, riscv32, x86-64 and x86-32. See the
 [Benchmarks Results](/bench) page for the complete result set including
 optimisation level comparisons, macro-op fusion performance, executable
 file sizes, dynamic register and instruction usage charts.
@@ -444,18 +444,18 @@ and runtime libraries are used to run the benchmarks:
 
 Architecture | Compiler  | C Library | Compile options
 :--          | :--       | :--       | :--
-x86-32       | GCC 7.1.0 | musl libc | `'-O3 -fPIE'`, `'-Os -fPIE'`
-x86-64       | GCC 7.1.0 | musl libc | `'-O3 -fPIE'`, `'-Os -fPIE'`
-riscv32      | GCC 7.1.0 | musl libc | `'-O3 -fPIE'`, `'-Os -fPIE'`
-riscv64      | GCC 7.1.0 | musl libc | `'-O3 -fPIE'`, `'-Os -fPIE'`
-aarch64      | GCC 7.1.0 | musl libc | `'-O3 -fPIE'`, `'-Os -fPIE'`
+x86-32       | GCC 7.1.0 | musl libc | `'-O3'`, `'-O2'` and `'-Os'`
+x86-64       | GCC 7.1.0 | musl libc | `'-O3'`, `'-O2'` and `'-Os'`
+riscv32      | GCC 7.1.0 | musl libc | `'-O3'`, `'-O2'` and `'-Os'`
+riscv64      | GCC 7.1.0 | musl libc | `'-O3'`, `'-O2'` and `'-Os'`
+arm32        | GCC 7.2.0 | musl libc | `'-O3'`, `'-O2'` and `'-Os'`
+aarch64      | GCC 7.1.0 | musl libc | `'-O3'`, `'-O2'` and `'-Os'`
 
 #### Measurement details
 
-- rv8 benchmarks use `rv-jit`
 - Dynamic instruction counts are measured using `rv-sim -E`
-- QEMU benchmarks use `qemu-riscv32`, `qemu-riscv64` and `qemu-aarch64`
 - Benchmarks are run 20 times and the best result is taken
+- All programs are compiled as position independent executables (`-fPIE`)
 - Host: Intel® 6th-gen Core™ i7-5557U Broadwell (3.10-3.40GHz, 4MB cache)
 - x86-64 μops measured with
   - `perf stat -e cycles,instructions,r1b1,r10e,r2c2,r1c2 <cmd>`
@@ -465,128 +465,196 @@ aarch64      | GCC 7.1.0 | musl libc | `'-O3 -fPIE'`, `'-Os -fPIE'`
 Runtime results comparing qemu, rv8 and native x86:
 
 ![benchmark runtimes -O3 64-bit]({{ site.url }}/plots/runtime-O3-64.svg)
+
 _Figure 1: Benchmark runtimes -O3 64-bit_
 
 **Runtime 64-bit -O3 (seconds)**
 
 program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | native-x86-64
 :-- | --: | --: | --: | --:
-aes | 1.31 | 2.16 | 1.53 | 0.32
+aes | 1.31 | 2.16 | 1.49 | 0.32
 bigint | 1.38 | 1.08 | 0.71 | 0.38
 dhrystone | 0.98 | 0.57 | 0.20 | 0.10
-miniz | 2.66 | 2.21 | 1.60 | 0.77
-norx | 0.60 | 1.17 | 1.20 | 0.22
-primes | 2.09 | 1.26 | 0.70 | 0.60
-qsort | 7.38 | 4.76 | 1.22 | 0.64
+miniz | 2.66 | 2.21 | 1.53 | 0.77
+norx | 0.60 | 1.17 | 0.99 | 0.22
+primes | 2.09 | 1.26 | 0.65 | 0.60
+qsort | 7.38 | 4.76 | 1.21 | 0.64
 sha512 | 0.64 | 1.24 | 0.81 | 0.24
-_(Sum)_ | 17.04 | 14.45 | 7.97 | 3.27
+_(Sum)_ | 17.04 | 14.45 | 7.59 | 3.27
 
 **Performance Ratio 64-bit -O3 (smaller is better)**
 
 program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | native-x86-64
 :-- | --: | --: | --: | --:
-aes | 4.12 | 6.76 | 4.81 | 1.00
+aes | 4.12 | 6.76 | 4.68 | 1.00
 bigint | 3.62 | 2.83 | 1.85 | 1.00
-dhrystone | 9.96 | 5.87 | 2.05 | 1.00
-miniz | 3.46 | 2.86 | 2.07 | 1.00
-norx | 2.73 | 5.33 | 5.47 | 1.00
-primes | 3.49 | 2.11 | 1.17 | 1.00
-qsort | 11.55 | 7.46 | 1.91 | 1.00
+dhrystone | 9.96 | 5.87 | 2.03 | 1.00
+miniz | 3.46 | 2.86 | 1.99 | 1.00
+norx | 2.73 | 5.33 | 4.51 | 1.00
+primes | 3.49 | 2.11 | 1.09 | 1.00
+qsort | 11.55 | 7.46 | 1.90 | 1.00
 sha512 | 2.66 | 5.13 | 3.36 | 1.00
-_(Geomean)_ | 4.44 | 4.39 | 2.51 | 1.00
+_(Geomean)_ | 4.44 | 4.39 | 2.40 | 1.00
+
+![benchmark runtimes -O2 64-bit]({{ site.url }}/plots/runtime-O2-64.svg)
+
+_Figure 2: Benchmark runtimes -O2 64-bit_
+
+**Runtime 64-bit -O2 (seconds)**
+
+program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | native-x86-64
+:-- | --: | --: | --: | --:
+aes | 1.32 | 2.18 | 1.49 | 0.32
+bigint | 1.34 | 1.03 | 1.44 | 0.38
+dhrystone | 1.77 | 1.06 | 0.23 | 0.12
+miniz | 2.72 | 2.22 | 1.52 | 0.77
+norx | 0.66 | 1.16 | 1.08 | 0.22
+primes | 2.11 | 1.25 | 0.66 | 0.59
+qsort | 7.35 | 4.74 | 1.19 | 0.62
+sha512 | 0.68 | 1.32 | 0.96 | 0.24
+_(Sum)_ | 17.95 | 14.96 | 8.57 | 3.26
+
+**Performance Ratio 64-bit -O2 (smaller is better)**
+
+program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | native-x86-64
+:-- | --: | --: | --: | --:
+aes | 4.13 | 6.84 | 4.68 | 1.00
+bigint | 3.51 | 2.70 | 3.76 | 1.00
+dhrystone | 14.73 | 8.81 | 1.95 | 1.00
+miniz | 3.52 | 2.87 | 1.96 | 1.00
+norx | 2.94 | 5.20 | 4.81 | 1.00
+primes | 3.58 | 2.13 | 1.12 | 1.00
+qsort | 11.79 | 7.60 | 1.91 | 1.00
+sha512 | 2.80 | 5.45 | 3.96 | 1.00
+_(Geomean)_ | 4.75 | 4.64 | 2.69 | 1.00
 
 ![benchmark runtimes -Os 64-bit]({{ site.url }}/plots/runtime-Os-64.svg)
-_Figure 2: Benchmark runtimes -Os 64-bit_
+
+_Figure 3: Benchmark runtimes -Os 64-bit_
 
 **Runtime 64-bit -Os (seconds)**
 
 program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | native-x86-64
 :-- | --: | --: | --: | --:
-aes | 1.22 | 1.91 | 1.31 | 0.37
+aes | 1.22 | 1.91 | 1.26 | 0.37
 bigint | 1.60 | 1.40 | 2.85 | 0.38
-dhrystone | 5.42 | 2.59 | 1.31 | 0.39
+dhrystone | 5.42 | 2.59 | 1.28 | 0.39
 miniz | 2.74 | 2.24 | 1.73 | 0.83
-norx | 1.58 | 1.53 | 1.14 | 0.24
-primes | 1.97 | 1.23 | 0.77 | 0.59
+norx | 1.58 | 1.53 | 0.96 | 0.24
+primes | 1.97 | 1.23 | 0.74 | 0.59
 qsort | 7.99 | 5.27 | 0.90 | 0.66
 sha512 | 0.64 | 1.14 | 0.67 | 0.25
-_(Sum)_ | 23.16 | 17.31 | 10.68 | 3.71
+_(Sum)_ | 23.16 | 17.31 | 10.39 | 3.71
 
 **Performance Ratio 64-bit -Os (smaller is better)**
 
 program | qemu-aarch64 | qemu-riscv64 | rv8-riscv64 | native-x86-64
 :-- | --: | --: | --: | --:
-aes | 3.29 | 5.16 | 3.53 | 1.00
+aes | 3.29 | 5.16 | 3.39 | 1.00
 bigint | 4.22 | 3.70 | 7.53 | 1.00
-dhrystone | 13.97 | 6.66 | 3.38 | 1.00
-miniz | 3.30 | 2.70 | 2.08 | 1.00
-norx | 6.59 | 6.36 | 4.74 | 1.00
-primes | 3.31 | 2.07 | 1.29 | 1.00
-qsort | 12.20 | 8.05 | 1.38 | 1.00
-sha512 | 2.56 | 4.58 | 2.69 | 1.00
-_(Geomean)_ | 5.07 | 4.49 | 2.84 | 1.00
+dhrystone | 13.97 | 6.66 | 3.30 | 1.00
+miniz | 3.30 | 2.70 | 2.09 | 1.00
+norx | 6.59 | 6.36 | 4.00 | 1.00
+primes | 3.31 | 2.07 | 1.25 | 1.00
+qsort | 12.20 | 8.05 | 1.37 | 1.00
+sha512 | 2.56 | 4.58 | 2.68 | 1.00
+_(Geomean)_ | 5.07 | 4.49 | 2.75 | 1.00
 
 ![benchmark runtimes -O3 32-bit]({{ site.url }}/plots/runtime-O3-32.svg)
-_Figure 3: Benchmark runtimes -O3 32-bit_
+
+_Figure 4: Benchmark runtimes -O3 32-bit_
 
 **Runtime 32-bit -O3 (seconds)**
 
-program | qemu-riscv32 | rv8-riscv32 | native-x86-32
-:-- | --: | --: | --:
-aes | 1.89 | 1.62 | 0.48
-bigint | 1.37 | 1.41 | 0.88
-dhrystone | 1.11 | 0.39 | 0.28
-miniz | 2.17 | 1.41 | 0.88
-norx | 0.77 | 0.85 | 0.26
-primes | 2.34 | 1.95 | 1.51
-qsort | 4.56 | 1.15 | 0.70
-sha512 | 2.91 | 2.20 | 0.63
-_(Sum)_ | 17.12 | 10.98 | 5.62
+program | qemu-arm32 | qemu-riscv32 | rv8-riscv32 | native-x86-32
+:-- | --: | --: | --: | --:
+aes | 1.70 | 1.89 | 1.47 | 0.48
+bigint | 2.98 | 1.37 | 1.41 | 0.88
+dhrystone | 1.17 | 1.11 | 0.39 | 0.28
+miniz | 2.99 | 2.17 | 1.41 | 0.88
+norx | 0.77 | 0.77 | 0.78 | 0.26
+primes | 4.20 | 2.34 | 1.89 | 1.51
+qsort | 8.39 | 4.56 | 1.15 | 0.70
+sha512 | 3.82 | 2.91 | 1.92 | 0.63
+_(Sum)_ | 26.02 | 17.12 | 10.42 | 5.62
 
 **Performance Ratio 32-bit -O3 (smaller is better)**
 
-program | qemu-riscv32 | rv8-riscv32 | native-x86-32
-:-- | --: | --: | --:
-aes | 3.97 | 3.40 | 1.00
-bigint | 1.56 | 1.61 | 1.00
-dhrystone | 3.91 | 1.38 | 1.00
-miniz | 2.47 | 1.61 | 1.00
-norx | 2.96 | 3.27 | 1.00
-primes | 1.55 | 1.29 | 1.00
-qsort | 6.54 | 1.65 | 1.00
-sha512 | 4.60 | 3.47 | 1.00
-_(Geomean)_ | 3.09 | 2.03 | 1.00
+program | qemu-arm32 | qemu-riscv32 | rv8-riscv32 | native-x86-32
+:-- | --: | --: | --: | --:
+aes | 3.56 | 3.97 | 3.09 | 1.00
+bigint | 3.39 | 1.56 | 1.61 | 1.00
+dhrystone | 4.13 | 3.91 | 1.37 | 1.00
+miniz | 3.40 | 2.47 | 1.60 | 1.00
+norx | 2.98 | 2.96 | 3.00 | 1.00
+primes | 2.79 | 1.55 | 1.25 | 1.00
+qsort | 12.04 | 6.54 | 1.65 | 1.00
+sha512 | 6.04 | 4.60 | 3.04 | 1.00
+_(Geomean)_ | 4.23 | 3.09 | 1.95 | 1.00
+
+![benchmark runtimes -O2 32-bit]({{ site.url }}/plots/runtime-O2-32.svg)
+
+_Figure 5: Benchmark runtimes -O2 32-bit_
+
+**Runtime 32-bit -O2 (seconds)**
+
+program | qemu-arm32 | qemu-riscv32 | rv8-riscv32 | native-x86-32
+:-- | --: | --: | --: | --:
+aes | 1.73 | 1.88 | 1.41 | 0.48
+bigint | 2.73 | 1.46 | 1.76 | 0.85
+dhrystone | 2.19 | 1.80 | 0.41 | 0.36
+miniz | 2.98 | 2.16 | 1.36 | 0.88
+norx | 0.84 | 0.78 | 0.83 | 0.27
+primes | 4.32 | 2.31 | 1.91 | 1.54
+qsort | 10.53 | 4.55 | 1.16 | 0.68
+sha512 | 3.78 | 3.95 | 2.19 | 0.57
+_(Sum)_ | 29.10 | 18.89 | 11.03 | 5.63
+
+**Performance Ratio 32-bit -O2 (smaller is better)**
+
+program | qemu-arm32 | qemu-riscv32 | rv8-riscv32 | native-x86-32
+:-- | --: | --: | --: | --:
+aes | 3.59 | 3.92 | 2.93 | 1.00
+bigint | 3.19 | 1.71 | 2.06 | 1.00
+dhrystone | 6.11 | 5.02 | 1.13 | 1.00
+miniz | 3.39 | 2.46 | 1.54 | 1.00
+norx | 3.10 | 2.87 | 3.04 | 1.00
+primes | 2.81 | 1.50 | 1.24 | 1.00
+qsort | 15.44 | 6.67 | 1.70 | 1.00
+sha512 | 6.64 | 6.92 | 3.84 | 1.00
+_(Geomean)_ | 4.63 | 3.37 | 2.00 | 1.00
 
 ![benchmark runtimes -Os 32-bit]({{ site.url }}/plots/runtime-Os-32.svg)
-_Figure 4: Benchmark runtimes -Os 32-bit_
+
+_Figure 6: Benchmark runtimes -Os 32-bit_
 
 **Runtime 32-bit -Os (seconds)**
 
-program | qemu-riscv32 | rv8-riscv32 | native-x86-32
-:-- | --: | --: | --:
-aes | 1.57 | 1.25 | 0.50
-bigint | 1.80 | 3.21 | 1.02
-dhrystone | 2.31 | 1.42 | 0.58
-miniz | 2.20 | 1.56 | 1.26
-norx | 1.18 | 1.18 | 0.32
-primes | 2.20 | 2.73 | 1.38
-qsort | 5.01 | 0.82 | 0.77
-sha512 | 2.69 | 2.49 | 0.79
-_(Sum)_ | 18.96 | 14.66 | 6.62
+program | qemu-arm32 | qemu-riscv32 | rv8-riscv32 | native-x86-32
+:-- | --: | --: | --: | --:
+aes | 1.62 | 1.57 | 1.13 | 0.50
+bigint | 3.62 | 1.80 | 3.21 | 1.02
+dhrystone | 4.71 | 2.31 | 1.43 | 0.58
+miniz | 3.06 | 2.20 | 1.56 | 1.26
+norx | 1.38 | 1.18 | 1.00 | 0.32
+primes | 4.46 | 2.20 | 2.74 | 1.38
+qsort | 8.70 | 5.01 | 0.81 | 0.77
+sha512 | 3.52 | 2.69 | 2.20 | 0.79
+_(Sum)_ | 31.07 | 18.96 | 14.08 | 6.62
 
 **Performance Ratio 32-bit -Os (smaller is better)**
 
-program | qemu-riscv32 | rv8-riscv32 | native-x86-32
-:-- | --: | --: | --:
-aes | 3.15 | 2.50 | 1.00
-bigint | 1.76 | 3.14 | 1.00
-dhrystone | 4.00 | 2.45 | 1.00
-miniz | 1.74 | 1.24 | 1.00
-norx | 3.70 | 3.69 | 1.00
-primes | 1.59 | 1.97 | 1.00
-qsort | 6.47 | 1.06 | 1.00
-sha512 | 3.41 | 3.16 | 1.00
-_(Geomean)_ | 2.90 | 2.22 | 1.00
+program | qemu-arm32 | qemu-riscv32 | rv8-riscv32 | native-x86-32
+:-- | --: | --: | --: | --:
+aes | 3.24 | 3.15 | 2.26 | 1.00
+bigint | 3.55 | 1.76 | 3.14 | 1.00
+dhrystone | 8.14 | 4.00 | 2.48 | 1.00
+miniz | 2.43 | 1.74 | 1.24 | 1.00
+norx | 4.32 | 3.70 | 3.12 | 1.00
+primes | 3.22 | 1.59 | 1.98 | 1.00
+qsort | 11.24 | 6.47 | 1.05 | 1.00
+sha512 | 4.47 | 3.41 | 2.78 | 1.00
+_(Geomean)_ | 4.47 | 2.90 | 2.11 | 1.00
 
 
 ### Instructions Per Second
