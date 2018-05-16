@@ -7,8 +7,8 @@ and native x86. The benchmark suite is compiled for aarch64, arm32, riscv64,
 riscv32, x86-64 and x86-32.
 
 The results include runtime neutral metrics such as retired RISC-V
-instructions, x86 micro-ops, executable file sizes plus dynamic register and
-instruction  histograms for RISC-V.
+instructions, x86 micro-ops plus dynamic register and instruction
+histograms for RISC-V.
 
 #### Benchmark source
 
@@ -27,7 +27,6 @@ The following benchmark metrics have been plotted and tabulated:
 - [Optimisation](#optimisation)
 - [Instructions Per Second](#instructions-per-second)
 - [Retired Micro-ops](#retired-micro-ops)
-- [Executable File Sizes](#executable-file-sizes)
 - [Dynamic Register Usage](#dynamic-register-usage)
 - [Dynamic Instruction Usage](#dynamic-instruction-usage)
 
@@ -579,66 +578,6 @@ primes | 9834 | 10948 | 10661 | 12072 | 10429 | 6429
 qsort | 4560 | 7633 | 6052 | 7033 | 5226 | 2886
 sha512 | 6624 | 6830 | 6655 | 7639 | 6671 | 7796
 _(Sum)_ | 48526 | 59852 | 53104 | 63597 | 51354 | 38938
-
-
-### Executable File Sizes
-
-GCC stripped executable sizes comparing aarch64, riscv32, riscv64, x86-32 and x86-64:
-
-![benchmark filesizes -O3]({{ site.url }}/plots/filesize-O3.svg)
-
-_Figure 23: Compiled file sizes -O3_
-
-**Compiled File Size (bytes) -O3**
-
-program | arm32 | aarch64 | riscv32 | riscv64 | x86-32 | x86-64
-:-- | --: | --: | --: | --: | --: | --:
-aes | 46116 | 46400 | 54100 | 42280 | 41856 | 38192
-bigint | 527392 | 661792 | 571180 | 572440 | 669216 | 612736
-dhrystone | 25680 | 30032 | 37756 | 25968 | 25476 | 21816
-miniz | 115916 | 116272 | 103420 | 95800 | 132128 | 120368
-norx | 33980 | 42544 | 46064 | 34336 | 33824 | 30256
-primes | 25636 | 30016 | 37716 | 25896 | 21376 | 17712
-qsort | 29732 | 42304 | 37716 | 29992 | 33664 | 34096
-sha512 | 25788 | 30256 | 37872 | 26144 | 25632 | 22064
-_(Sum)_ | 830240 | 999616 | 925824 | 852856 | 983172 | 897240
-
-![benchmark filesizes -O2]({{ site.url }}/plots/filesize-O2.svg)
-
-_Figure 24: Compiled file sizes -O2_
-
-**Compiled File Size (bytes) -O2**
-
-program | arm32 | aarch64 | riscv32 | riscv64 | x86-32 | x86-64
-:-- | --: | --: | --: | --: | --: | --:
-aes | 42020 | 46400 | 54100 | 42280 | 41856 | 38192
-bigint | 523296 | 649504 | 567084 | 568344 | 656928 | 604544
-dhrystone | 25680 | 30032 | 37756 | 25968 | 25476 | 21816
-miniz | 99532 | 99888 | 91132 | 79416 | 111648 | 99888
-norx | 33980 | 38448 | 41968 | 30240 | 29728 | 30256
-primes | 25636 | 30016 | 37716 | 25896 | 21376 | 17712
-qsort | 25636 | 30016 | 37716 | 25896 | 25472 | 21808
-sha512 | 25788 | 30256 | 37872 | 26144 | 25632 | 22064
-_(Sum)_ | 801568 | 954560 | 905344 | 824184 | 938116 | 856280
-
-![benchmark filesizes -Os]({{ site.url }}/plots/filesize-Os.svg)
-
-_Figure 25: Compiled file sizes -Os_
-
-**Compiled File Size (bytes) -Os**
-
-program | arm32 | aarch64 | riscv32 | riscv64 | x86-32 | x86-64
-:-- | --: | --: | --: | --: | --: | --:
-aes | 42020 | 46400 | 54100 | 42280 | 41856 | 38192
-bigint | 515104 | 641312 | 562988 | 564248 | 648736 | 592256
-dhrystone | 25680 | 30032 | 37756 | 25968 | 25520 | 21816
-miniz | 91340 | 87600 | 87036 | 75320 | 95264 | 83504
-norx | 33980 | 38448 | 41968 | 30240 | 29728 | 30256
-primes | 25636 | 30016 | 37716 | 25896 | 21376 | 17712
-qsort | 25636 | 30016 | 37716 | 25896 | 21376 | 21808
-sha512 | 25788 | 30256 | 37872 | 26144 | 25632 | 22064
-_(Sum)_ | 785184 | 934080 | 897152 | 815992 | 909488 | 827608
-
 
 ### Dynamic Register Usage
 
