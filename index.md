@@ -662,6 +662,7 @@ _(Geomean)_ | 4.47 | 2.90 | 2.11 | 1.00
 Instructions per second in millions comparing qemu, rv8 and native x86:
 
 ![operation counts -O3 64-bit]({{ site.url }}/plots/mips-O3-64.svg)
+
 _Figure 5: Millions of Instructions Per Second -O3 64-bit_
 
 **Instructions per second (MIPS) qemu, rv8 and native 64-bit -O3**
@@ -679,6 +680,7 @@ sha512 | 2982 | 4556 | 12177
 _(Geomean)_ | 2149 | 3769 | 8232
 
 ![operation counts -Os 64-bit]({{ site.url }}/plots/mips-Os-64.svg)
+
 _Figure 6: Millions of Instructions Per Second -Os 64-bit_
 
 **Instructions per second (MIPS) qemu, rv8 and native 64-bit -Os**
@@ -696,6 +698,7 @@ sha512 | 3269 | 5567 | 12206
 _(Geomean)_ | 2008 | 3175 | 8355
 
 ![operation counts -O3 32-bit]({{ site.url }}/plots/mips-O3-32.svg)
+
 _Figure 7: Millions of Instructions Per Second -O3 32-bit_
 
 **Instructions per second (MIPS) qemu, rv8 and native 32-bit -O3**
@@ -713,6 +716,7 @@ sha512 | 2773 | 3671 | 11074
 _(Geomean)_ | 2259 | 3428 | 7186
 
 ![operation counts -Os 32-bit]({{ site.url }}/plots/mips-Os-32.svg)
+
 _Figure 8: Millions of Instructions Per Second -Os 32-bit_
 
 **Instructions per second (MIPS) qemu, rv8 and native 32-bit -Os**
