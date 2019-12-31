@@ -7,7 +7,7 @@ information on programming in assembly language for RISC-V.
 For detailed information on the instruction set refer to the
 [RISC-V ISA Specification](http://riscv.org/specifications/).
 
-The following notation is used in the psuedocode:
+The following notation is used in the pseudocode:
 
 Notation | Description
 :-- | :---
