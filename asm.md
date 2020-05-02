@@ -64,7 +64,7 @@ linker to map code and data into memory.
 
 #### Section Header
 
-Section Headers provice size, offset, type, alignment and
+Section Headers provide size, offset, type, alignment and
 flags of the sections contained within the ELF file. Section
 headers are not required to execute a static binary but are
 necessary for dynamic linking as well as program linking.
@@ -81,7 +81,7 @@ list shows the four most common sections:
 - `.text` is a read-only section containing executable code
 - `.data` is a read-write section containing global or static variables
 - `.rodata` is a read-only section containing const variables
-- `.bss` is a read-write section containing uninitialised data
+- `.bss` is a read-write section containing uninitialized data
 
 #### Program linking
 

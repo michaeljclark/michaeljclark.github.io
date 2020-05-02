@@ -10,7 +10,7 @@ __*Spike*__
 URL: [https://github.com/riscv/riscv-isa-sim/](https://github.com/riscv/riscv-isa-sim/)
 
 Spike is the official RISC-V Instruction Set Simulator. Spike
-serves as the behavioural reference model for the RISC-V ISA.
+serves as the behavioral reference model for the RISC-V ISA.
 Spike is easily extended to add new instructions. Spike
 supports RV32GC and RV64GC, and has Debug and GDB support.
 
@@ -49,7 +49,7 @@ URL: [http://gem5.org/](http://gem5.org/)
 The gem5 simulator is a modular platform for computer-system
 architecture research, encompassing system-level architecture
 as well as processor microarchitecture. It features a detailed
-pipeline model for a wide variety of architecures.
+pipeline model for a wide variety of architectures.
 
 
 __*rv8*__
@@ -58,6 +58,6 @@ URL: [https://github.com/michaeljclark/rv8/](https://github.com/michaeljclark/rv
 
 rv8 is a simulation suite that features a user mode simulator,
 a full system emulator, a dynamic binary translator along with
-metadata tools and a model for generating artefacts based on
+metadata tools and a model for generating artifacts based on
 instruction set metadata. rv8 implements an 16550-like UART
 and supports RV32GC and RV64GC.
