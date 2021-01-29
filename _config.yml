@@ -2,5 +2,5 @@ title: rv8
 description: RISC-V simulator for x86-64
 theme: jekyll-theme-cayman
 show_downloads: false
-github_url: https://github.com/rv8-io/rv8
+github_url: https://github.com/michaeljclark/rv8
 google_analytics: UA-100126872-1

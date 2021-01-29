@@ -1,6 +1,6 @@
 ## Benchmark results
 
-This document contains [rv8-bench](https://github.com/rv8-io/rv8-bench/)
+This document contains [rv8-bench](https://github.com/michaeljclark/rv8-bench/)
 results compiled using GCC 7.1.0 and musl libc. The results include runtime
 and instructions per second comparisons for the QEMU and rv8 JIT engines
 and native x86. The benchmark suite is compiled for aarch64, arm32, riscv64,
@@ -14,10 +14,10 @@ histograms for RISC-V.
 
 The following sources have been used to run the benchmarks:
 
-- rv8 - [https://github.com/rv8-io/rv8/](https://github.com/rv8-io/rv8/)
-- rv8-bench - [https://github.com/rv8-io/rv8-bench/](https://github.com/rv8-io/rv8-bench/)
+- rv8 - [https://github.com/michaeljclark/rv8/](https://github.com/michaeljclark/rv8/)
+- rv8-bench - [https://github.com/michaeljclark/rv8-bench/](https://github.com/michaeljclark/rv8-bench/)
 - qemu-riscv - [https://github.com/riscv/riscv-qemu/](https://github.com/riscv/riscv-qemu/)
-- musl-riscv-toolchain - [https://github.com/rv8-io/musl-riscv-toolchain/](https://github.com/rv8-io/musl-riscv-toolchain/)
+- musl-riscv-toolchain - [https://github.com/michaeljclark/musl-riscv-toolchain/](https://github.com/michaeljclark/musl-riscv-toolchain/)
 
 #### Benchmark metrics
 
@@ -32,7 +32,7 @@ The following benchmark metrics have been plotted and tabulated:
 
 #### Benchmark details
 
-The [rv8-bench](https://github.com/rv8-io/rv8-bench/)
+The [rv8-bench](https://github.com/michaeljclark/rv8-bench/)
 benchmark suite contains the following test programs:
 
 Benchmark | Type        | Description

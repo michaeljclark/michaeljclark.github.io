@@ -5,9 +5,9 @@ This page contains information on rv8 git repositories and the rv8 developer mai
 
 ### rv8 git repositories
 
-- git clone [https://github.com/rv8-io/rv8.git](https://github.com/rv8-io/rv8) _(simulator)_
-- git clone [https://github.com/rv8-io/rv8-bench.git](https://github.com/rv8-io/rv8-bench) _(benchmark suite)_
-- git clone [https://github.com/rv8-io/musl-riscv-toolchain.git](https://github.com/rv8-io/musl-riscv-toolchain) _(benchmark toolchain)_
+- git clone [https://github.com/michaeljclark/rv8.git](https://github.com/michaeljclark/rv8) _(simulator)_
+- git clone [https://github.com/michaeljclark/rv8-bench.git](https://github.com/michaeljclark/rv8-bench) _(benchmark suite)_
+- git clone [https://github.com/michaeljclark/musl-riscv-toolchain.git](https://github.com/michaeljclark/musl-riscv-toolchain) _(benchmark toolchain)_
 
 
 ### rv8 mailing list
@@ -49,7 +49,7 @@ the C/C++ standard libraries and the `asmjit` submodule.
 _Building rv8_
 
 ``` bash
-$ git clone https://github.com/rv8-io/rv8.git
+$ git clone https://github.com/michaeljclark/rv8.git
 $ cd rv8
 $ git submodule update --init --recursive
 $ make
@@ -77,7 +77,7 @@ The `musl-riscv-toolchain` project contains a script that downloads
 and builds a RISC-V cross-compiler configured to link again the linux
 musl C library:
 
-- git clone [https://github.com/rv8-io/musl-riscv-toolchain.git](https://github.com/rv8-io/musl-riscv-toolchain)
+- git clone [https://github.com/michaeljclark/musl-riscv-toolchain.git](https://github.com/michaeljclark/musl-riscv-toolchain)
 
 _Building musl-riscv-toolchain_
 
@@ -85,7 +85,7 @@ The `riscv64-linux-musl` musl libc toolchain is required to compile
 and run the benchmarks in the [rv8-bench](/bench) repository.
 
 ```
-$ git clone https://github.com/rv8-io/musl-riscv-toolchain.git
+$ git clone https://github.com/michaeljclark/musl-riscv-toolchain.git
 $ cd musl-riscv-toolchain
 $ sh bootstrap.sh rv64
 $ export PATH=$PATH:/opt/riscv/musl-riscv-toolchain-7.2.0-5/bin

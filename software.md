@@ -54,7 +54,7 @@ pipeline model for a wide variety of architecures.
 
 __*rv8*__
 
-URL: [https://github.com/rv8-io/rv8/](https://github.com/rv8-io/rv8/)
+URL: [https://github.com/michaeljclark/rv8/](https://github.com/michaeljclark/rv8/)
 
 rv8 is a simulation suite that features a user mode simulator,
 a full system emulator, a dynamic binary translator along with
