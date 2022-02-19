@@ -206,7 +206,7 @@ Pesudo-instruction                          | Expansion                         
 <code><sub>bgt rs, rt, offset</sub></code>  | <code><sub>blt rt, rs, offset</sub></code>     | <sub>Branch if ></sub>
 <code><sub>ble rs, rt, offset</sub></code>  | <code><sub>bge rt, rs, offset</sub></code>     | <sub>Branch if ≤</sub>
 <code><sub>bgtu rs, rt, offset</sub></code> | <code><sub>bltu rt, rs, offset</sub></code>    | <sub>Branch if >, unsigned</sub>
-<code><sub>bleu rs, rt, offset</sub></code> | <code><sub>bltu rt, rs, offset</sub></code>    | <sub>Branch if ≤, unsigned</sub>
+<code><sub>bleu rs, rt, offset</sub></code> | <code><sub>bgeu rt, rs, offset</sub></code>    | <sub>Branch if ≤, unsigned</sub>
 <code><sub>j offset</sub></code>            | <code><sub>jal x0, offset</sub></code>         | <sub>Jump</sub>
 <code><sub>jr offset</sub></code>           | <code><sub>jal x1, offset</sub></code>         | <sub>Jump register</sub>
 <code><sub>ret</sub></code>                 | <code><sub>jalr x0, x1, 0</sub></code>         | <sub>Return from subroutine</sub>
